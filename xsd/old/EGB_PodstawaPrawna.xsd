@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:egb="urn:gugik:specyfikacje:gmlas:ewidencjaGruntowBudynkow:1.0" xmlns:bt="urn:gugik:specyfikacje:gmlas:modelPodstawowy:1.0" targetNamespace="urn:gugik:specyfikacje:gmlas:ewidencjaGruntowBudynkow:1.0" elementFormDefault="qualified" version="2.0">
+	<import namespace="urn:gugik:specyfikacje:gmlas:modelPodstawowy:1.0" schemaLocation="BT_ModelPodstawowy.xsd"/>
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<include schemaLocation="EGB_OgolnyObiekt.xsd"/>
+	<!-- ============================================================= -->
+	<element name="EGB_Zmiana" type="egb:EGB_ZmianaType" substitutionGroup="gml:AbstractFeature"/>
+	<complexType name="EGB_ZmianaType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="idIIP" type="bt:BT_IdentyfikatorPropertyType"/>
+					<element name="startObiekt" type="dateTime"/>
+					<element name="dataAkceptacjiZmiany" type="dateTime"/>
+					<element name="dataPrzyjeciaZgloszeniaZmiany" type="date"/>
+					<element name="nrZmiany" type="string" minOccurs="0"/>
+					<element name="opisZmiany" type="string" minOccurs="0"/>
+					<!-- Roles -->
+					<element name="dokument1" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="operatTechniczny" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_ZmianaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_Zmiana"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_OperatTechniczny" type="egb:EGB_OperatTechnicznyType" substitutionGroup="gml:AbstractFeature"/>
+	<complexType name="EGB_OperatTechnicznyType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="idIIP" type="bt:BT_IdentyfikatorPropertyType"/>
+					<element name="startObiekt" type="dateTime"/>
+					<element name="startWersjaObiekt" type="dateTime"/>
+					<element name="koniecWersjaObiekt" type="dateTime" minOccurs="0"/>
+					<element name="koniecObiekt" type="dateTime" minOccurs="0"/>
+					<element name="dataSporzadzenia" type="date" minOccurs="0"/>
+					<element name="nazwaTworcy" type="string" minOccurs="0"/>
+					<element name="opisOperatu" type="string" minOccurs="0"/>
+					<element name="dataPrzyjeciaDoPZGIK" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="identyfikatorOperatuWgPZGIK" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_OperatTechnicznyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_OperatTechniczny"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+</schema>

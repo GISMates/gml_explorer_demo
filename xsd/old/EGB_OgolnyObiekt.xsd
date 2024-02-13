@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:egb="urn:gugik:specyfikacje:gmlas:ewidencjaGruntowBudynkow:1.0" xmlns:bt="urn:gugik:specyfikacje:gmlas:modelPodstawowy:1.0" targetNamespace="urn:gugik:specyfikacje:gmlas:ewidencjaGruntowBudynkow:1.0" elementFormDefault="qualified" version="2.0">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<import namespace="urn:gugik:specyfikacje:gmlas:modelPodstawowy:1.0" schemaLocation="BT_ModelPodstawowy.xsd"/>
+	<include schemaLocation="EGB_DanePrzedmiotowe.xsd"/>
+	<include schemaLocation="EGB_DanePodmiotowe.xsd"/>
+	<include schemaLocation="EGB_PrawaDoNieruchomosci.xsd"/>
+	<include schemaLocation="EGB_Adres.xsd"/>
+	<include schemaLocation="EGB_PunktGraniczny.xsd"/>
+	<include schemaLocation="EGB_Dzierzawa.xsd"/>
+	<include schemaLocation="EGB_PodstawaPrawna.xsd"/>
+	<!-- ============================================================= -->
+	<element name="EGB_OgolnyObiekt" type="egb:EGB_OgolnyObiektType" abstract="true" substitutionGroup="gml:AbstractFeature"/>
+	<complexType name="EGB_OgolnyObiektType" abstract="true">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="idIIP" type="bt:BT_IdentyfikatorPropertyType"/>
+					<element name="startObiekt" type="dateTime"/>
+					<element name="startWersjaObiekt" type="dateTime"/>
+					<element name="koniecWersjaObiekt" type="dateTime" minOccurs="0"/>
+					<element name="koniecObiekt" type="dateTime" minOccurs="0"/>
+					<!-- Roles -->
+					<element name="podstawaPrawnaUtworzeniaWersjiObiektu" type="gml:ReferenceType"/>
+					<element name="podstawaPrawnaUsunieciaObiektu" type="gml:ReferenceType" minOccurs="0"/>
+					<element name="dokument2" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_OgolnyObiektPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_OgolnyObiekt"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+</schema>

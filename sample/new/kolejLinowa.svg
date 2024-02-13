@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmsvgsym="http://www.intergraph.com/GeoMedia/svgsym">
+<symbol id="KolejLinowa" viewBox="-0.00059827638324350119 -0.00059991533635184169 0.00120000011520460250 0.00120000011520460250" style="stroke-linejoin:round"><!-- Creator: SVG Document for Symbols-->
+<g id = "ComplexString2d_0" style = " fill-rule: evenodd; stroke-width: 0.0000000000;stroke: #ffffff; fill: #ffffff; " >
+<path d="M -0.0005982763 0.0006000847 L 0.0006017237 0.0006000847 L 0.0006017237 -0.0005999153 L -0.0005982763 -0.0005999153 L -0.0005982763 0.0006000847 Z"/>
+</g>
+<polyline points= " -0.0005982763 -0.0005999153 -0.0005982763 0.0006000847"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #0a0909; fill: none; " />
+<polyline points= " -0.0005982763 0.0006000847 0.0006017237 0.0006000847"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #0a0909; fill: none; " />
+<polyline points= " 0.0006017237 0.0006000847 0.0006017237 -0.0005999153"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #0a0909; fill: none; " />
+<polyline points= " 0.0006017237 -0.0005999153 -0.0005982763 -0.0005999153"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #0a0909; fill: none; " />
+</symbol>
+</svg>

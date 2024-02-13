@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:egb="urn:gugik:specyfikacje:gmlas:ewidencjaGruntowBudynkow:1.0" targetNamespace="urn:gugik:specyfikacje:gmlas:ewidencjaGruntowBudynkow:1.0" elementFormDefault="qualified" version="2.0">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<include schemaLocation="EGB_OgolnyObiekt.xsd"/>
+	<!-- ============================================================= -->
+	<element name="EGB_JednostkaRejestrowaGruntow" type="egb:EGB_JednostkaRejestrowaGruntowType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_JednostkaRejestrowaGruntowType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="idJednostkiRejestrowej" type="string"/>
+					<element name="wyroznienieGospodarstwRolnychLesnych" type="egb:EGB_WyroznienieGospodarstwRolnychLesnychType"/>
+					<!-- Roles -->
+					<element name="lokalizacjaJRG" type="gml:ReferenceType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_JednostkaRejestrowaGruntowPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_JednostkaRejestrowaGruntow"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_JednostkaRejestrowaBudynkow" type="egb:EGB_JednostkaRejestrowaBudynkowType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_JednostkaRejestrowaBudynkowType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="idJednostkiRejestrowej" type="string"/>
+					<!-- Roles -->
+					<element name="JRGZwiazanaZJRB" type="gml:ReferenceType" maxOccurs="unbounded"/>
+					<element name="lokalizacjaJRB" type="gml:ReferenceType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_JednostkaRejestrowaBudynkowPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_JednostkaRejestrowaBudynkow"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_JednostkaRejestrowaLokali" type="egb:EGB_JednostkaRejestrowaLokaliType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_JednostkaRejestrowaLokaliType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="idJednostkiRejestrowej" type="string"/>
+					<element name="licznikUdzialuWNieruchomosciWspolnej" type="nonNegativeInteger"/>
+					<element name="mianownikUdzialuWNieruchomosciWspolnej" type="positiveInteger"/>
+					<!-- Roles -->
+					<element name="JRGZwiazanaZJRL" type="gml:ReferenceType" maxOccurs="unbounded"/>
+					<element name="lokalizacjaJRL" type="gml:ReferenceType"/>
+					<element name="nieruchomoscWspolnaDlaLokalu" type="gml:ReferenceType" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_JednostkaRejestrowaLokaliPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_JednostkaRejestrowaLokali"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_UdzialWlasnosci" type="egb:EGB_UdzialWlasnosciType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_UdzialWlasnosciType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="rodzajPrawa" type="egb:EGB_RodzajPrawaType"/>
+					<element name="licznikUlamkaOkreslajacegoWartoscUdzialu" type="nonNegativeInteger"/>
+					<element name="mianownikUlamkaOkreslajacegoWartoscUdzialu" type="positiveInteger"/>
+					<element name="grupaRejestrowa" type="egb:EGB_GrupaRejType" minOccurs="0"/>
+					<element name="podgrupaRej" type="egb:EGB_PodgrupaRejType" minOccurs="0"/>
+					<element name="waznoscOd" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="waznoscDo" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<!-- Roles -->
+					<element name="udzialWNieruchomosciWspolnej" type="gml:ReferenceType"/>
+					<element name="przedmiotUdzialuWlasnosci" type="egb:EGB_JednostkaRejestrowaPropertyType"/>
+					<element name="podmiotUdzialuWlasnosci" type="egb:EGB_PodmiotPropertyType"/>
+					<element name="udzialZwiazany" type="gml:ReferenceType"/>
+					<element name="udzialWeWladaniuGruntem" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="udzialGospNierSPLubJST" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_UdzialWlasnosciPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_UdzialWlasnosci"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_UdzialWeWladaniuNieruchomosciaSPLubJST" type="egb:EGB_UdzialWeWladaniuNieruchomosciaSPLubJSTType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_UdzialWeWladaniuNieruchomosciaSPLubJSTType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="rodzajWladania" type="egb:EGB_RodzajWladaniaType"/>
+					<element name="licznikUlamkaOkreslajacegoWartoscUdzialu" type="nonNegativeInteger"/>
+					<element name="mianownikUlamkaOkreslajacegoWartoscUdzialu" type="positiveInteger"/>
+					<element name="podgrupaRej" type="egb:EGB_PodgrupaRejType"/>
+					<element name="waznoscOd" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="waznoscDo" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<!-- Roles -->
+					<element name="podmiotUdzialuWeWladaniu" type="egb:EGB_PodmiotPropertyType"/>
+					<element name="przedmiotUdzialuWladania" type="egb:EGB_JednostkaRejestrowaPropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_UdzialWeWladaniuNieruchomosciaSPLubJSTPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_UdzialWeWladaniuNieruchomosciaSPLubJST"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_UdzialGospodarowaniaNieruchomosciaSPLubJST" type="egb:EGB_UdzialGospodarowaniaNieruchomosciaSPLubJSTType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_UdzialGospodarowaniaNieruchomosciaSPLubJSTType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="rodzajUprawnien" type="egb:EGB_RodzajUprawnienType"/>
+					<element name="licznikUlamkaOkreslajacegoWartoscUdzialu" type="integer"/>
+					<element name="mianownikUlamkaOkreslajacegoWartoscUdzialu" type="integer"/>
+					<element name="podgrupaRej" type="egb:EGB_PodgrupaRejType"/>
+					<element name="waznoscOd" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="waznoscDo" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<!-- Roles -->
+					<element name="przedmiotUdzialuGZ1" type="egb:EGB_JednostkaRejestrowaPropertyType"/>
+					<element name="podmiotUdzialuGZ" type="egb:EGB_PodmiotPropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_UdzialGospodarowaniaNieruchomosciaSPLubJSTPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_UdzialGospodarowaniaNieruchomosciaSPLubJST"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_Podmiot" type="egb:EGB_PodmiotType" substitutionGroup="gml:AbstractObject"/>
+	<complexType name="EGB_PodmiotType">
+		<choice>
+			<element name="osobaFizyczna5" type="gml:ReferenceType"/>
+			<element name="malzenstwo4" type="gml:ReferenceType"/>
+			<element name="podmiotGrupowy1" type="gml:ReferenceType"/>
+			<element name="instytucja3" type="gml:ReferenceType"/>
+		</choice>
+	</complexType>
+	<complexType name="EGB_PodmiotPropertyType">
+		<sequence>
+			<element ref="egb:EGB_Podmiot"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_JednostkaRejestrowa" type="egb:EGB_JednostkaRejestrowaType" substitutionGroup="gml:AbstractObject"/>
+	<complexType name="EGB_JednostkaRejestrowaType">
+		<choice>
+			<element name="JRG" type="gml:ReferenceType"/>
+			<element name="JRB" type="gml:ReferenceType"/>
+			<element name="JRL" type="gml:ReferenceType"/>
+		</choice>
+	</complexType>
+	<complexType name="EGB_JednostkaRejestrowaPropertyType">
+		<sequence>
+			<element ref="egb:EGB_JednostkaRejestrowa"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<simpleType name="EGB_RodzajUprawnienType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>wykonywaniePrawaWlasnosciSPIInnychPrawRzeczowych</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>gospodarowanieZasobemNieruchomosciSPLubGmPowWoj</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="3">
+				<annotation>
+					<appinfo>
+						<gml:description>gospodarowanieGruntemSPPokrytymWodamiPowierzchniowymi</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="4">
+				<annotation>
+					<appinfo>
+						<gml:description>wykonywanieZadanZarzadcyDrogPub</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_WyroznienieGospodarstwRolnychLesnychType">
+		<restriction base="string">
+			<enumeration value="0">
+				<annotation>
+					<appinfo>
+						<gml:description>jednostkaRejestrowaNieBedacaGospodarstwemRolnymLubLesnym</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>jednostkaRejestrowaWchodzacaWSkladGospodarstwaRolnego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>jednostkaRejestrowaWchodzacaWSkladGospodarstwaLesnego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_RodzajPrawaType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>wlasnosc</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>wladanieSamoistne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="3">
+				<annotation>
+					<appinfo>
+						<gml:description>udzialWeWspolnocieGruntowej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="4">
+				<annotation>
+					<appinfo>
+						<gml:description>nieustalonaWlasnosc</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="5">
+				<annotation>
+					<appinfo>
+						<gml:description>wspolnotaGruntowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_RodzajWladaniaType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>uzytkowanieWieczyste</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>trwalyZarzad</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="3">
+				<annotation>
+					<appinfo>
+						<gml:description>zarzad</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="4">
+				<annotation>
+					<appinfo>
+						<gml:description>uzytkowanie</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="5">
+				<annotation>
+					<appinfo>
+						<gml:description>innyRodzajWladania</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_GrupaRejType">
+		<restriction base="string">
+			<enumeration value="3">
+				<annotation>
+					<appinfo>
+						<gml:description>panstwowaOsobaPrawna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="9">
+				<annotation>
+					<appinfo>
+						<gml:description>kosciolIZwiazekWyznaniowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="10">
+				<annotation>
+					<appinfo>
+						<gml:description>wspolnotaGruntowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_PodgrupaRejType">
+		<restriction base="string">
+			<enumeration value="1.1">
+				<annotation>
+					<appinfo>
+						<gml:description>agencjaNieruchomRolnych</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1.2">
+				<annotation>
+					<appinfo>
+						<gml:description>lasPanstwowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1.3">
+				<annotation>
+					<appinfo>
+						<gml:description>panstwowaJednOrganizacyjnaNiePosiadajacaOsobowosciPrawnej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1.4">
+				<annotation>
+					<appinfo>
+						<gml:description>organAdmPubGospodarujacyGruntamiSP</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1.5">
+				<annotation>
+					<appinfo>
+						<gml:description>agencjaMieniaWojsk</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1.6">
+				<annotation>
+					<appinfo>
+						<gml:description>wojskAgencjaMieszk</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1.7">
+				<annotation>
+					<appinfo>
+						<gml:description>organGospodarujacyGruntamiSPPodWodami</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1.8">
+				<annotation>
+					<appinfo>
+						<gml:description>organJednOrganizZadaniaZarzadcyDrogKraj</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2.1">
+				<annotation>
+					<appinfo>
+						<gml:description>osobaFizUzytkownikWieczSP</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2.2">
+				<annotation>
+					<appinfo>
+						<gml:description>panstwowaOsobaPrawnaUzytkownikWieczSP</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2.3">
+				<annotation>
+					<appinfo>
+						<gml:description>spoldzMieszkanUzytkownikWieczSP</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2.4">
+				<annotation>
+					<appinfo>
+						<gml:description>innaOsobaUzytkownikWieczSP</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="4.1">
+				<annotation>
+					<appinfo>
+						<gml:description>organGminyGospodarujacyGminnymZasobem</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="4.2">
+				<annotation>
+					<appinfo>
+						<gml:description>jednOrganGminy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="4.3">
+				<annotation>
+					<appinfo>
+						<gml:description>organJednOrganizZadaniaZarzadcyDrogGminnych</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="5.1">
+				<annotation>
+					<appinfo>
+						<gml:description>osobaFizUzytkownikWieczGruntowGminy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="5.2">
+				<annotation>
+					<appinfo>
+						<gml:description>gminnaOsobaPrawnaUzytkownikWieczGruntowGminn</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="5.3">
+				<annotation>
+					<appinfo>
+						<gml:description>spoldzMieszkUzytkownikWieczGruntowGmin</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="5.4">
+				<annotation>
+					<appinfo>
+						<gml:description>innaOsobaUzytkownikWieczGruntowGmin</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="6.1">
+				<annotation>
+					<appinfo>
+						<gml:description>gminnaOsobaPrawna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="6.2">
+				<annotation>
+					<appinfo>
+						<gml:description>powiatowaOsobaPrawna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="6.3">
+				<annotation>
+					<appinfo>
+						<gml:description>wojewodzkaOsobaPrawna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="7.1">
+				<annotation>
+					<appinfo>
+						<gml:description>wlascicielWladajacyGruntemGospodarstwaRolnego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="7.2">
+				<annotation>
+					<appinfo>
+						<gml:description>wlascicielWladajacyGruntem</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="8.1">
+				<annotation>
+					<appinfo>
+						<gml:description>rolniczaSpoldzielniaProdukcyjna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="8.2">
+				<annotation>
+					<appinfo>
+						<gml:description>spoldzielniaMieszkaniowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="8.3">
+				<annotation>
+					<appinfo>
+						<gml:description>innaSpoldzielnia</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="11.1">
+				<annotation>
+					<appinfo>
+						<gml:description>organPowiatuGospodarujacyZasobemPowiatu</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="11.2">
+				<annotation>
+					<appinfo>
+						<gml:description>jednOrganizacyjnaPowiatu</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="11.3">
+				<annotation>
+					<appinfo>
+						<gml:description>organJednOrganizZadaniaZarzadcyDrogPowiatowych</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="12.1">
+				<annotation>
+					<appinfo>
+						<gml:description>osobaFizUzytkownikWieczGruntowPowiatow</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="12.2">
+				<annotation>
+					<appinfo>
+						<gml:description>powiatowaOsobaPrawnaUzytkownikWieczGruntowPowiatow</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="12.3">
+				<annotation>
+					<appinfo>
+						<gml:description>spoldzMieszkUzytkownikWieczGruntowPowiatow</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="12.4">
+				<annotation>
+					<appinfo>
+						<gml:description>innaOsobaUzytkownikWieczGruntowPowiatow</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="13.1">
+				<annotation>
+					<appinfo>
+						<gml:description>organGospodZasobemWojewodzkim</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="13.2">
+				<annotation>
+					<appinfo>
+						<gml:description>jednOrganizacyjnaWojew</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="13.3">
+				<annotation>
+					<appinfo>
+						<gml:description>organIJednOrganizZadaniaZarzadcyDrogWoj</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="14.1">
+				<annotation>
+					<appinfo>
+						<gml:description>osobaFizUzytkownikWieczGruntowWoj</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="14.2">
+				<annotation>
+					<appinfo>
+						<gml:description>wojewodzkaOsobaPrawnaUzytkownikWieczGruntowWoj</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="14.3">
+				<annotation>
+					<appinfo>
+						<gml:description>spoldzMieszkUzytkownikWieczGruntowWoj</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="14.4">
+				<annotation>
+					<appinfo>
+						<gml:description>innaOsobaUzytkownikWieczGruntowWoj</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="15.1">
+				<annotation>
+					<appinfo>
+						<gml:description>spolkaHandlowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="15.2">
+				<annotation>
+					<appinfo>
+						<gml:description>partiaPolityczna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="15.3">
+				<annotation>
+					<appinfo>
+						<gml:description>inneOsoby</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+</schema>

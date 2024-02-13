@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:egb="urn:gugik:specyfikacje:gmlas:ewidencjaGruntowBudynkow:1.0" targetNamespace="urn:gugik:specyfikacje:gmlas:ewidencjaGruntowBudynkow:1.0" elementFormDefault="qualified" version="2.0">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<include schemaLocation="EGB_OgolnyObiekt.xsd"/>
+	<!-- ============================================================= -->
+	<element name="EGB_Dzierzawa" type="egb:EGB_DzierzawaType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_DzierzawaType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="idDzierzawy" type="string"/>
+					<element name="opisPrzedmiotuDzierzawy" type="string" minOccurs="0"/>
+					<element name="powGruntowDzierzawy" type="gml:AreaType"/>
+					<element name="waznoscOd" type="date"/>
+					<element name="waznoscDo" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<!-- Roles -->
+					<element name="budynekObjetyDzierzawa" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="lokalObjetyDzierzawa" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="dzialkaObjetaDzierzawa" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="czescDzialkiObjetaDzierzawa" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_DzierzawaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_Dzierzawa"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_UdzialDzierzawy" type="egb:EGB_UdzialDzierzawyType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_UdzialDzierzawyType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="udzial" type="string"/>
+					<!-- Roles -->
+					<element name="przedmiotUdzialuDzierzawy" type="gml:ReferenceType"/>
+					<element name="podmiotUdzialuDzierzawy" type="egb:EGB_PodmiotPropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_UdzialDzierzawyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_UdzialDzierzawy"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+</schema>

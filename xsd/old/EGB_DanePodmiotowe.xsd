@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:egb="urn:gugik:specyfikacje:gmlas:ewidencjaGruntowBudynkow:1.0" targetNamespace="urn:gugik:specyfikacje:gmlas:ewidencjaGruntowBudynkow:1.0" elementFormDefault="qualified" version="2.0">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<include schemaLocation="EGB_OgolnyObiekt.xsd"/>
+	<!-- ============================================================= -->
+	<element name="EGB_OsobaFizyczna" type="egb:EGB_OsobaFizycznaType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_OsobaFizycznaType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="pierwszeImie" type="string"/>
+					<element name="pierwszyCzlonNazwiska" type="string"/>
+					<element name="plec" type="egb:EGB_PlecType"/>
+					<element name="status" type="egb:EGB_StatusPodmiotuEwidType"/>
+					<element name="informacjaOSmierci" type="string" minOccurs="0"/>
+					<element name="pesel" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="drugiCzlonNazwiska" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="drugieImie" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="imieMatki" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="imieOjca" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="oznDokumentuStwierdzajacegoTozsamosc" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<!--Roles-->
+					<element name="adresOsobyFizycznej" type="gml:ReferenceType" minOccurs="0"/>
+					<element name="adresDoKoresOsobyFiz" type="gml:ReferenceType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_OsobaFizycznaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_OsobaFizyczna"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_Instytucja" type="egb:EGB_InstytucjaType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_InstytucjaType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="status" type="egb:EGB_StatusPodmiotuEwidType"/>
+					<element name="nazwaPelna" type="string"/>
+					<element name="nazwaSkrocona" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="regon" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="nip" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="nazwaRejestruOsobPrawnych" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="nrRejestruOsobPrawnych" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<!-- Roles -->
+					<element name="adresInstytucji" type="gml:ReferenceType" minOccurs="0"/>
+					<element name="adresDoKoresInstytucji" type="gml:ReferenceType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_InstytucjaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_Instytucja"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_Malzenstwo" type="egb:EGB_MalzenstwoType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_MalzenstwoType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="status" type="egb:EGB_StatusPodmiotuEwidType"/>
+					<!-- Roles -->
+					<element name="osobaFizyczna2" type="gml:ReferenceType"/>
+					<element name="osobaFizyczna3" type="gml:ReferenceType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_MalzenstwoPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_Malzenstwo"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_PodmiotGrupowy" type="egb:EGB_PodmiotGrupowyType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_PodmiotGrupowyType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="status" type="egb:EGB_StatusPodmiotuEwidType"/>
+					<element name="nazwaPelna" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="nazwaSkrocona" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="regon" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="nip" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<!-- Roles -->
+					<element name="instytucja" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="osobaFizyczna4" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="malzenstwo3" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="adresPodmiotuGrupowego" type="gml:ReferenceType" minOccurs="0"/>
+					<element name="adresDoKoresGrupy" type="gml:ReferenceType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_PodmiotGrupowyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_PodmiotGrupowy"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_ZarzadSpolkiWspolnotyGruntowej" type="egb:EGB_ZarzadSpolkiWspolnotyGruntowejType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_ZarzadSpolkiWspolnotyGruntowejType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="nazwaSpolkiPowolanejDoZarzadzaniaWspolnotaGruntowa" type="string"/>
+					<!-- Roles -->
+					<element name="wspolnotaGruntowa" type="gml:ReferenceType"/>
+					<element name="osobaFizyczna1" type="gml:ReferenceType" maxOccurs="unbounded"/>
+					<element name="adresDoKoresZarzWspolGr" type="gml:ReferenceType" minOccurs="0"/>
+					<element name="adresZarzWspolGr" type="gml:ReferenceType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_ZarzadSpolkiWspolnotyGruntowejPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_ZarzadSpolkiWspolnotyGruntowej"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<simpleType name="EGB_PlecType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>meska</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>zenska</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_StatusPodmiotuEwidType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>osobaFizycznaLegitymujacaSieObywatelstwemPolskim</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>osobaFizycznaBezObywatelstwaPolskiego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="3">
+				<annotation>
+					<appinfo>
+						<gml:description>skarbPanstwa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="4">
+				<annotation>
+					<appinfo>
+						<gml:description>gminaLubZwiazekMiedzygminny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="5">
+				<annotation>
+					<appinfo>
+						<gml:description>solectwo</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="6">
+				<annotation>
+					<appinfo>
+						<gml:description>panstwowaOsobaPrawnaLubJednoosobowaSpolkaSkarbuPanstwa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="7">
+				<annotation>
+					<appinfo>
+						<gml:description>panstwoweGospodarstwoLesneLasyPanstwowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="8">
+				<annotation>
+					<appinfo>
+						<gml:description>agencjaNieruchomosciRolnych</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="9">
+				<annotation>
+					<appinfo>
+						<gml:description>agencjaMieniaWojskowego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="10">
+				<annotation>
+					<appinfo>
+						<gml:description>wojskowaAgencjaMieszkaniowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="11">
+				<annotation>
+					<appinfo>
+						<gml:description>panstwowaJednostkaOrganizacyjnaBezOsobowosciPrawnej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="12">
+				<annotation>
+					<appinfo>
+						<gml:description>gminnaJednostkaOrganizacyjnaBezOsobowosciPrawnej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="13">
+				<annotation>
+					<appinfo>
+						<gml:description>powiatowaJednostkaOrganizacyjnaBezOsobowosciPrawnej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="14">
+				<annotation>
+					<appinfo>
+						<gml:description>wojewodzkaJednostkaOrganizacyjnaBezOsobowosciPrawnej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="15">
+				<annotation>
+					<appinfo>
+						<gml:description>gminnaOsobaPrawnaLubJednoosobowaSpolkaGminy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="16">
+				<annotation>
+					<appinfo>
+						<gml:description>powiatowaOsobaPrawnaLubJednoosobowaSpolkaPowiatu</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="17">
+				<annotation>
+					<appinfo>
+						<gml:description>wojewodzkaOsobaPrawnaLubJednoosobowaSpolkaWojewodztwa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="18">
+				<annotation>
+					<appinfo>
+						<gml:description>ministerSkarbuPanstwa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="19">
+				<annotation>
+					<appinfo>
+						<gml:description>starosta</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="20">
+				<annotation>
+					<appinfo>
+						<gml:description>wojtBurmistrzPrezydentMiasta</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="21">
+				<annotation>
+					<appinfo>
+						<gml:description>zarzadPowiatu</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="22">
+				<annotation>
+					<appinfo>
+						<gml:description>zarzadWojewodztwa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="23">
+				<annotation>
+					<appinfo>
+						<gml:description>spoldzielniaMieszkaniowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="24">
+				<annotation>
+					<appinfo>
+						<gml:description>spoldzielniaLubZwiazekSpoldzielni</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="25">
+				<annotation>
+					<appinfo>
+						<gml:description>kosciolyLubZwiazkiWyznaniowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="26">
+				<annotation>
+					<appinfo>
+						<gml:description>spolkaHandlowaNieBedacaCudzoziemcem</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="27">
+				<annotation>
+					<appinfo>
+						<gml:description>spolkaHandlowaBedacaCudzoziemcem</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="28">
+				<annotation>
+					<appinfo>
+						<gml:description>osobaPrawnaInnaNizSpolkaHandlowaBedacaCudzoziemcem</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="29">
+				<annotation>
+					<appinfo>
+						<gml:description>partiaPolityczna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="30">
+				<annotation>
+					<appinfo>
+						<gml:description>stowarzyszenie</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="31">
+				<annotation>
+					<appinfo>
+						<gml:description>jednOrganizacyjnaNieBedacaOsobaPrawnaZeZdolnosciaPrawna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="32">
+				<annotation>
+					<appinfo>
+						<gml:description>podmiotyPozostajaceWeWspolwlasnosciLacznej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="33">
+				<annotation>
+					<appinfo>
+						<gml:description>spolkaCywilna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="34">
+				<annotation>
+					<appinfo>
+						<gml:description>malzenstwoObywateliPolskich</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="35">
+				<annotation>
+					<appinfo>
+						<gml:description>malzenstwoJedenCudzoziemiec</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="36">
+				<annotation>
+					<appinfo>
+						<gml:description>wojewodztwo</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="37">
+				<annotation>
+					<appinfo>
+						<gml:description>powiat</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="38">
+				<annotation>
+					<appinfo>
+						<gml:description>spoldzielniaRolnicza</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="40">
+				<annotation>
+					<appinfo>
+						<gml:description>wlascicielNieustalony</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="41">
+				<annotation>
+					<appinfo>
+						<gml:description>wspolnotaGruntowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="42">
+				<annotation>
+					<appinfo>
+						<gml:description>ministerGospodarkiMorskiej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="43">
+				<annotation>
+					<appinfo>
+						<gml:description>prezesKrajowegoZarzaduGospodarkiWodnej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="44">
+				<annotation>
+					<appinfo>
+						<gml:description>generalnyDyrektorDrogKrajowychIAutostrad</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="45">
+				<annotation>
+					<appinfo>
+						<gml:description>dyrektorParkuNarodowego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="46">
+				<annotation>
+					<appinfo>
+						<gml:description>marszalekWojewodztwa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="47">
+				<annotation>
+					<appinfo>
+						<gml:description>inne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+</schema>

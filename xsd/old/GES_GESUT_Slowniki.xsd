@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ns1="urn:gugik:specyfikacje:gmlas:geodezyjnaEwidencjaSieciUzbrojeniaTerenu:1.0" targetNamespace="urn:gugik:specyfikacje:gmlas:geodezyjnaEwidencjaSieciUzbrojeniaTerenu:1.0" elementFormDefault="qualified" version="2.0">
+<!-- ============================================================= -->
+	<simpleType name="GES_TypElektrType">
+		<restriction base="string">
+			<enumeration value="najwyzszegoNapiecia"/>
+			<enumeration value="wysokiegoNapiecia"/>
+			<enumeration value="sredniegoNapiecia"/>
+			<enumeration value="niskiegoNapiecia"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_TypGazType">
+		<restriction base="string">
+			<enumeration value="wysokiegoCisnienia"/>
+			<enumeration value="podwyzszonegoSredniegoCisnienia"/>
+			<enumeration value="sredniegoCisnienia"/>
+			<enumeration value="niskiegoCisnienia"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_TypKanalType">
+		<restriction base="string">
+			<enumeration value="deszczowy"/>
+			<enumeration value="lokalny"/>
+			<enumeration value="ogolnosplawny"/>
+			<enumeration value="przemyslowy"/>
+			<enumeration value="sanitarny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_UrzadzType">
+		<restriction base="string">
+			<enumeration value="dystrybutorPaliw"/>
+			<enumeration value="hydrant"/>
+			<enumeration value="hydrofornia"/>
+			<enumeration value="kontenerTelekomunikacyjny"/>
+			<enumeration value="kratkaSciekowa"/>
+			<enumeration value="odwodnienieLiniowe"/>
+			<enumeration value="osadnikKanalizacjiLokalnej"/>
+			<enumeration value="przepompownia"/>
+			<enumeration value="slupekTelekomunikacyjny"/>
+			<enumeration value="slupowaStacjaTransformatorowa"/>
+			<enumeration value="stacjaGazowa"/>
+			<enumeration value="stacjaTransformatorowa"/>
+			<enumeration value="studnia"/>
+			<enumeration value="studniaGlebinowa"/>
+			<enumeration value="studzienka"/>
+			<enumeration value="sygnalizatorSwietlny"/>
+			<enumeration value="szafaTelekomunikacyjna"/>
+			<enumeration value="szafaElektroenergetyczna"/>
+			<enumeration value="szafaGazowa"/>
+			<enumeration value="trojnik"/>
+			<enumeration value="wlaz"/>
+			<enumeration value="wylotKanalu"/>
+			<enumeration value="wywietrznik"/>
+			<enumeration value="zasuwaLubZawor"/>
+			<enumeration value="zbiornik"/>
+			<enumeration value="zdrojUliczny"/>
+			<enumeration value="zlaczeKablowe"/>
+			<enumeration value="niezidentyfikowane"/>
+			<enumeration value="inne"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_RodzBudType">
+		<restriction base="string">
+			<enumeration value="komoraPodziemna"/>
+			<enumeration value="osadnik"/>
+			<enumeration value="przejsciePodziemne"/>
+			<enumeration value="tunelDrogowy"/>
+			<enumeration value="tunelKolejowy"/>
+			<enumeration value="tunelMetra"/>
+			<enumeration value="tunelTramwajowy"/>
+			<enumeration value="inna"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_FunkcjaType">
+		<restriction base="string">
+			<enumeration value="przesylowy"/>
+			<enumeration value="rozdzielczy"/>
+			<enumeration value="przylacze"/>
+			<enumeration value="inny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_TypWodocType">
+		<restriction base="string">
+			<enumeration value="ogolny"/>
+			<enumeration value="lokalny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_ObudowaType">
+		<restriction base="string">
+			<enumeration value="kanalizacjaKablowa"/>
+			<enumeration value="kanalCieplowniczy"/>
+			<enumeration value="ruraOchronna"/>
+			<enumeration value="inna"/>
+			<enumeration value="kanalTechnologiczny"/>
+			<enumeration value="rurociagTelekomunikacyjny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_EksploatacjaType">
+		<restriction base="string">
+			<enumeration value="czynny"/>
+			<enumeration value="nieczynny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_PrzebiegType">
+		<restriction base="string">
+			<enumeration value="nadziemny"/>
+			<enumeration value="naziemny"/>
+			<enumeration value="podziemny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_RodzPrzewoduType">
+		<restriction base="string">
+			<enumeration value="rurowy"/>
+			<enumeration value="kabel"/>
+			<enumeration value="swiatlowod"/>
+			<enumeration value="inny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_ZrodloType">
+		<restriction base="string">
+			<enumeration value="pomiarNaOsnowe"/>
+			<enumeration value="pomiarWykrywaczemPrzewodow"/>
+			<enumeration value="digitalizacjaIWektoryzacja"/>
+			<enumeration value="fotogrametria"/>
+			<enumeration value="pomiarWOparciuOElementyMapy"/>
+			<enumeration value="daneBranzowe"/>			
+			<enumeration value="inne"/>
+			<enumeration value="nieokreslone"/>
+			<enumeration value="niepoprawne"/>
+			<enumeration value="dokumentacjaZNarady"/>
+			<enumeration value="pozwolenieNaBudowe"/>
+			<enumeration value="zgloszenieBudowy"/>
+			<enumeration value="dokumentacjaZWytyczenia"/>			
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_IstnienieType">
+		<restriction base="string">
+			<enumeration value="istniejacy"/>
+			<enumeration value="projektowany"/>
+			<enumeration value="wBudowie"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_RodzCiepType">
+		<restriction base="string">
+			<enumeration value="jednoprzewodowy"/>
+			<enumeration value="dwuprzewodowy"/>
+			<enumeration value="trojprzewodowy"/>
+			<enumeration value="czteroprzewodowy"/>
+			<enumeration value="wieloprzewodowy"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_RodzSieciType">
+		<restriction base="string">
+			<enumeration value="benzynowy"/>
+			<enumeration value="cieplowniczy"/>
+			<enumeration value="elektroenergetyczny"/>
+			<enumeration value="gazowy"/>
+			<enumeration value="kanalizacyjny"/>
+			<enumeration value="naftowy"/>
+			<enumeration value="telekomunikacyjny"/>
+			<enumeration value="wodociagowy"/>
+			<enumeration value="niezidentyfikowany"/>
+			<enumeration value="inny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_RodzSlupType">
+		<restriction base="string">
+			<enumeration value="latarnia"/>
+			<enumeration value="masztOswietleniowy"/>
+			<enumeration value="masztTelekomunikacyjny"/>
+			<enumeration value="slup"/>
+			<enumeration value="slupLaczony"/>
+			<enumeration value="slupKratowy"/>
+			<enumeration value="slupTrakcjiKolejowej"/>
+			<enumeration value="slupTrakcjiTramwajowej"/>
+			<enumeration value="slupTrakcjiTrolejbusowej"/>
+			<enumeration value="turbinaWiatrowa"/>
+			<enumeration value="wiezaTelekomunikacyjna"/>
+			<enumeration value="inny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_TypCiepType">
+		<restriction base="string">
+			<enumeration value="wysokiParametr"/>
+			<enumeration value="niskiParametr"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="GES_KsztaltUrzadzType">
+		<restriction base="string">
+			<enumeration value="kwadratowy"/>
+			<enumeration value="okragly"/>
+			<enumeration value="prostokatny"/>
+			<enumeration value="owalny"/>
+			<enumeration value="inny"/>
+		</restriction>
+	</simpleType>
+</schema>

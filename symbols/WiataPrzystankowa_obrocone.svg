@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmsvgsym="http://www.intergraph.com/GeoMedia/svgsym">
+<symbol id="WiataPrzystankowa_obrocone" viewBox="-0.00070710683939978480 -0.00070710683939978480 0.00141421367879956960 0.00141421367879956960" style="stroke-linejoin:round"><!-- Creator: SVG Document for Symbols-->
+<g id = "ComplexString2d_0" style = " fill-rule: evenodd; stroke-width: 0.0000000000;stroke: #ffffff; fill: #ffffff; " >
+<path d="M 0.0000000000 0.0007071068 L 0.0007071068 -0.0000000000 L 0.0000000000 -0.0007071068 L -0.0007071068 -0.0000000000 L 0.0000000000 0.0007071068 Z"/>
+</g>
+<polyline points= " -0.0007071068 -0.0000000000 0.0000000000 0.0007071068"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #000000; fill: none; " />
+<polyline points= " 0.0000000000 0.0007071068 0.0007071068 -0.0000000000"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #000000; fill: none; " />
+<polyline points= " 0.0007071068 -0.0000000000 0.0000000000 -0.0007071068"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #000000; fill: none; " />
+<polyline points= " 0.0000000000 -0.0007071068 -0.0007071068 -0.0000000000"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #000000; fill: none; " />
+</symbol>
+</svg>

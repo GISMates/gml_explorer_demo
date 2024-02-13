@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:bdz="urn:gugik:specyfikacje:gmlas:bazaDanychObiektowTopograficznych500:1.0" xmlns:bt="urn:gugik:specyfikacje:gmlas:modelPodstawowy:1.0" targetNamespace="urn:gugik:specyfikacje:gmlas:bazaDanychObiektowTopograficznych500:1.0" elementFormDefault="qualified" version="2.0">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<import namespace="urn:gugik:specyfikacje:gmlas:modelPodstawowy:1.0" schemaLocation="BT_ModelPodstawowy.xsd"/>
+	<include schemaLocation="BDZ_BDOT500_Slowniki.xsd"/>
+	<!-- ============================================================= -->
+	<element name="BDZ_ObiektBDOT500" type="bdz:BDZ_ObiektBDOT500Type" abstract="true" substitutionGroup="gml:AbstractFeature"/>
+	<complexType name="BDZ_ObiektBDOT500Type" abstract="true">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="idIIP" type="bt:BT_IdentyfikatorPropertyType"/>
+					<element name="startObiekt" type="date"/>
+					<element name="cyklZyciaObiektu" type="bt:BT_CyklZyciaInfoPropertyType"/>
+					<element name="koniecObiekt" type="date" minOccurs="0"/>
+					<element name="zrodlo" type="bdz:BDZ_ZrodloType"/>
+					<element name="idMaterialu" type="bt:BT_IdMaterialuPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="dataPomiaru" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="dokument" type="string" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="informacja" type="string" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="rodzajPunkt" type="bdz:BDZ_PunktOOkreslonejWysokosciPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<appinfo>
+								<gml:reversePropertyName>ges:obiekt</gml:reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_ObiektBDOT500PropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_ObiektBDOT500"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<!-- ========== Budowle i urzadzenia =================================-->
+	<element name="BDZ_BudowlaHydrotechniczna" type="bdz:BDZ_BudowlaHydrotechnicznaType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_BudowlaHydrotechnicznaType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:GeometricPrimitivePropertyType"/>
+					<element name="rodzajBudHydro" type="bdz:BDZ_RodzajBudHydroType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_BudowlaHydrotechnicznaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_BudowlaHydrotechniczna"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_BudowlaInzynierska" type="bdz:BDZ_BudowlaInzynierskaType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_BudowlaInzynierskaType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="rodzajBudInz" type="bdz:BDZ_RodzajBudInzType"/>
+					<element name="rodzajMatKonstr" type="bdz:BDZ_RodzajInzMatType" minOccurs="0"/>
+					<element name="rodzajKomun" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<simpleContent>
+								<extension base="bdz:BDZ_RodzKomunType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_BudowlaInzynierskaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_BudowlaInzynierska"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_BudowlaSportowa" type="bdz:BDZ_BudowlaSportowaType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_BudowlaSportowaType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="rodzajBudSport" type="bdz:BDZ_RodzajBudSportType"/>
+					<element name="rodzajZadaszenia" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="bdz:BDZ_RodzajZadaszType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_BudowlaSportowaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_BudowlaSportowa"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_WysokaBudowlaTechniczna" type="bdz:BDZ_WysokaBudowlaTechnicznaType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_WysokaBudowlaTechnicznaType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="rodzajBudTechn" type="bdz:BDZ_RodzajBudTechnType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_WysokaBudowlaTechnicznaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_WysokaBudowlaTechniczna"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_ZbiornikTechniczny" type="bdz:BDZ_ZbiornikTechnicznyType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_ZbiornikTechnicznyType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="rodzajZbiornika" type="bdz:BDZ_RodzajZbTechnType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_ZbiornikTechnicznyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_ZbiornikTechniczny"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_UmocnienieDrogoweKolejoweLubWodne" type="bdz:BDZ_UmocnienieDrogoweKolejoweLubWodneType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_UmocnienieDrogoweKolejoweLubWodneType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:GeometricPrimitivePropertyType"/>
+					<element name="rodzajUmocn" type="bdz:BDZ_RodzajUmocnType"/>
+					<element name="rodzajMatUmocn" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="bdz:BDZ_RodzajMatUmocnType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="poliliniaKierunkowa" type="gml:CurvePropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_UmocnienieDrogoweKolejoweLubWodnePropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_UmocnienieDrogoweKolejoweLubWodne"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_BudowlaZiemna" type="bdz:BDZ_BudowlaZiemnaType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_BudowlaZiemnaType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:GeometryPropertyType"/>
+					<element name="rodzajBudZiemn" type="bdz:BDZ_RodzajBudZiemnType"/>
+					<element name="rodzajMatBudZiemn" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="bdz:BDZ_RodzajMatBudZiemnType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="poczatekGorySkarpy" type="gml:DirectPositionType"/>
+					<element name="koniecGorySkarpy" type="gml:DirectPositionType"/>
+					<element name="poczatekGoryKolejnejSkarpy" type="gml:DirectPositionType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="koniecGoryKolejnejSkarpy" type="gml:DirectPositionType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_BudowlaZiemnaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_BudowlaZiemna"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_UrzadzenieTransportowe" type="bdz:BDZ_UrzadzenieTransportoweType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_UrzadzenieTransportoweType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:GeometricPrimitivePropertyType"/>
+					<element name="rodzajUrzTransp" type="bdz:BDZ_RodzajUrzTranspType"/>
+					<element name="poliliniaKierunkowa" type="gml:CurvePropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_UrzadzenieTransportowePropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_UrzadzenieTransportowe"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_InnaBudowla" type="bdz:BDZ_InnaBudowlaType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_InnaBudowlaType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:GeometricPrimitivePropertyType"/>
+					<element name="rodzajBudInn" type="bdz:BDZ_RodzajBudInnType"/>
+					<element name="rodzajPodp" type="bdz:BDZ_RodzajPodpType" minOccurs="0"/>
+					<element name="poliliniaKierunkowa" type="gml:CurvePropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_InnaBudowlaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_InnaBudowla"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<!-- ========== Komunikacja i transport ================================-->
+	<element name="BDZ_ObiektZwiazanyZKomunikacja" type="bdz:BDZ_ObiektZwiazanyZKomunikacjaType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_ObiektZwiazanyZKomunikacjaType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:GeometryPropertyType"/>
+					<element name="rodzajObKomun" type="bdz:BDZ_RodzajObKomunType"/>
+					<element name="poliliniaKierunkowa" type="gml:CurvePropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_ObiektZwiazanyZKomunikacjaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_ObiektZwiazanyZKomunikacja"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_Tor" type="bdz:BDZ_TorType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_TorType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="rodzajTor" type="bdz:BDZ_RodzajTorType"/>
+					<element name="poziom" type="bdz:BDZ_PoziomType"/>
+					<element name="geometria" type="gml:CurvePropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_TorPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_Tor"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_Przeprawa" type="bdz:BDZ_PrzeprawaType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_PrzeprawaType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="rodzajPrzepr" type="bdz:BDZ_RodzajPrzeprType"/>
+					<element name="geometria" type="gml:CurvePropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_PrzeprawaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_Przeprawa"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_Kraweznik" type="bdz:BDZ_KraweznikType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_KraweznikType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:CurvePropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_KraweznikPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_Kraweznik"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_Jezdnia" type="bdz:BDZ_JezdniaType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_JezdniaType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="materialNaw" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="bdz:BDZ_RodzNawType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="rodzajKomun" nillable="true" maxOccurs="unbounded">
+						<complexType>
+							<simpleContent>
+								<extension base="bdz:BDZ_RodzKomunType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="poziom" type="bdz:BDZ_PoziomType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_JezdniaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_Jezdnia"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_Plac" type="bdz:BDZ_PlacType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_PlacType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="materialNaw" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="bdz:BDZ_RodzNawType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="rodzajKomun" nillable="true" maxOccurs="unbounded">
+						<complexType>
+							<simpleContent>
+								<extension base="bdz:BDZ_RodzKomunType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_PlacPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_Plac"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_CiagRuchuPieszegoIRowerowego" type="bdz:BDZ_CiagRuchuPieszegoIRowerowegoType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_CiagRuchuPieszegoIRowerowegoType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="rodzajCiagu" type="bdz:BDZ_RodzajCRPIRType"/>
+					<element name="materialNaw" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="bdz:BDZ_RodzNawType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="rodzajKomun" nillable="true" maxOccurs="unbounded">
+						<complexType>
+							<simpleContent>
+								<extension base="bdz:BDZ_RodzKomunType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="poziom" type="bdz:BDZ_PoziomType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_CiagRuchuPieszegoIRowerowegoPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_CiagRuchuPieszegoIRowerowego"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_Ulica" type="bdz:BDZ_UlicaType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_UlicaType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="nazwa" type="string"/>
+					<element name="geometria" type="gml:GeometricPrimitivePropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_UlicaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_Ulica"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<!-- ========== Pokrycie terenu ======================================-->
+	<element name="BDZ_Row" type="bdz:BDZ_RowType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_RowType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:GeometricPrimitivePropertyType"/>
+					<element name="rodzajRowu" type="bdz:BDZ_RodzajRowuType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_RowPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_Row"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_TerenLesnyZadrzewionyLubZakrzewiony" type="bdz:BDZ_TerenLesnyZadrzewionyLubZakrzewionyType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_TerenLesnyZadrzewionyLubZakrzewionyType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="rodzajTerLesn" type="bdz:BDZ_RodzajTerenuLZZType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_TerenLesnyZadrzewionyLubZakrzewionyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_TerenLesnyZadrzewionyLubZakrzewiony"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_TerenUprawTrwalychITrawnik" type="bdz:BDZ_TerenUprawTrwalychITrawnikType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_TerenUprawTrwalychITrawnikType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="rodzajUpraw" type="bdz:BDZ_RodzajUprawType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_TerenUprawTrwalychITrawnikPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_TerenUprawTrwalychITrawnik"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_WodaPowierzchniowa" type="bdz:BDZ_WodaPowierzchniowaType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_WodaPowierzchniowaType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="rodzajWodyPow" type="bdz:BDZ_RodzajWodyPowType"/>
+					<element name="nazwa" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_WodaPowierzchniowaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_WodaPowierzchniowa"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_Cmentarz" type="bdz:BDZ_CmentarzType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_CmentarzType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="rodzajCment" type="bdz:BDZ_RodzajCmentType"/>
+					<element name="rodzajWyzn" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="bdz:BDZ_RodzajWyznType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_CmentarzPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_Cmentarz"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<!-- ========== Obiekty inne =========================================-->
+	<element name="BDZ_ObiektPrzyrodniczy" type="bdz:BDZ_ObiektPrzyrodniczyType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_ObiektPrzyrodniczyType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:GeometricPrimitivePropertyType"/>
+					<element name="rodzajObPrzyrodn" type="bdz:BDZ_RodzajObPrzyrodnType"/>
+					<element name="pomnikPrzyr" type="boolean" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_ObiektPrzyrodniczyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_ObiektPrzyrodniczy"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_Mokradlo" type="bdz:BDZ_MokradloType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_MokradloType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="rodzajMokradla" type="bdz:BDZ_RodzajMokradlaType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_MokradloPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_Mokradlo"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_Szuwary" type="bdz:BDZ_SzuwaryType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_SzuwaryType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_SzuwaryPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_Szuwary"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="BDZ_ObiektOZnaczeniuOrientacyjnymWTerenie" type="bdz:BDZ_ObiektOZnaczeniuOrientacyjnymWTerenieType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_ObiektOZnaczeniuOrientacyjnymWTerenieType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:GeometricPrimitivePropertyType"/>
+					<element name="rodzajObOrient" type="bdz:BDZ_RodzajObOrientType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_ObiektOZnaczeniuOrientacyjnymWTereniePropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_ObiektOZnaczeniuOrientacyjnymWTerenie"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<!-- ========== Rzezba terenu =======================================-->
+	<element name="BDZ_PunktOOkreslonejWysokosci" type="bdz:BDZ_PunktOOkreslonejWysokosciType" substitutionGroup="bdz:BDZ_ObiektBDOT500"/>
+	<complexType name="BDZ_PunktOOkreslonejWysokosciType">
+		<complexContent>
+			<extension base="bdz:BDZ_ObiektBDOT500Type">
+				<sequence>
+					<element name="geometria" type="gml:PointPropertyType"/>
+					<element name="rodzajPunktu" type="bdz:BDZ_RodzajPunktuType"/>
+					<element name="rzednaGory" type="double" minOccurs="0"/>
+					<element name="rzednaDolu" type="double" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BDZ_PunktOOkreslonejWysokosciPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bdz:BDZ_PunktOOkreslonejWysokosci"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+</schema>

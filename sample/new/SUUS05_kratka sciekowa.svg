@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmsvgsym="http://www.intergraph.com/GeoMedia/svgsym">
+<symbol id="SUUS05" viewBox="-0.00096851564012467861 -0.00050066359108313918 0.00200000021141022440 0.00100066367303952570" style="stroke-linejoin:round"><!-- Creator: SVG Document for Symbols-->
+<g id = "ComplexString2d_0" style = " fill-rule: evenodd; stroke-width: 0.0000000000;stroke: #ffffff; fill: #ffffff; " >
+<path d="M -0.0009685156 0.0004993365 L 0.0010314844 0.0004993365 L 0.0010314844 -0.0005006635 L -0.0009685156 -0.0005006635 L -0.0009685156 0.0004993365 Z"/>
+</g>
+<polyline points= " -0.0009685156 -0.0005006635 -0.0009685156 0.0004993365"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #0a0909; fill: none; " />
+<polyline points= " -0.0009685156 0.0004993365 0.0010314844 0.0004993365"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #0a0909; fill: none; " />
+<polyline points= " 0.0010314844 0.0004993365 0.0010314844 -0.0005006635"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #0a0909; fill: none; " />
+<polyline points= " 0.0010314844 -0.0005006635 -0.0009685156 -0.0005006635"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #0a0909; fill: none; " />
+<polyline points= " -0.0003229879 0.0005000000 -0.0003229879 -0.0005000000"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #0a0909; fill: none; " />
+<polyline points= " 0.0003770121 0.0005000000 0.0003770121 -0.0005000000"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #0a0909; fill: none; " />
+</symbol>
+</svg>

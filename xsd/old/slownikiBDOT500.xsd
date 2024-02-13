@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:bdz="urn:gugik:specyfikacje:gmlas:bazaDanychObiektowTopograficznych500:1.0" targetNamespace="urn:gugik:specyfikacje:gmlas:bazaDanychObiektowTopograficznych500:1.0" elementFormDefault="qualified" version="2.0">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+<!-- ============================================================= -->
+	<simpleType name="BDZ_ZrodloType">
+		<restriction base="string">
+			<enumeration value="pomiarNaOsnowe"/>
+			<enumeration value="digitalizacjaIWektoryzacja"/>
+			<enumeration value="fotogrametria"/>
+			<enumeration value="pomiarWOparciuOElementyMapy"/>
+			<enumeration value="inne"/>
+			<enumeration value="nieokreslone"/>
+			<enumeration value="niepoprawne"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajBudInzType">
+		<restriction base="string">
+			<enumeration value="estakada"/>
+			<enumeration value="kladka"/>
+			<enumeration value="most"/>
+			<enumeration value="wiadukt"/>
+			<enumeration value="inna"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajInzMatType">
+		<restriction base="string">
+			<enumeration value="beton"/>
+			<enumeration value="cegla"/>
+			<enumeration value="drewno"/>
+			<enumeration value="kamien"/>
+			<enumeration value="stal"/>
+			<enumeration value="inny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_PoziomType">
+		<restriction base="string">
+			<enumeration value="drugiPoziomPodPowierzchniaGruntu"/>
+			<enumeration value="pierwszyPoziomPodPowierzchniaGruntu"/>
+			<enumeration value="naPowierzchniGruntu"/>
+			<enumeration value="pierwszyPoziomPonadPowierzchniaGruntu"/>
+			<enumeration value="drugiPoziomPonadPowierzchniaGruntu"/>
+			<enumeration value="trzeciPoziomPonadPowierzchniaGruntu"/>
+			<enumeration value="czwartyPoziomPonadPowierzchniaGruntu"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzKomunType">
+		<restriction base="string">
+			<enumeration value="ruchLotniczy"/>
+			<enumeration value="ruchDrogowy"/>
+			<enumeration value="ruchPieszy"/>
+			<enumeration value="ruchRowerowy"/>
+			<enumeration value="ruchPieszyIRowerowy"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzNawType">
+		<restriction base="string">
+			<enumeration value="beton"/>
+			<enumeration value="bruk"/>
+			<enumeration value="gruntNaturalny"/>
+			<enumeration value="klinkier"/>
+			<enumeration value="kostkaKamienna"/>
+			<enumeration value="kostkaPrefabrykowana"/>
+			<enumeration value="masaBitumiczna"/>
+			<enumeration value="plytyBetonowe"/>
+			<enumeration value="stabilizowanaZwiremLubZuzlem"/>
+			<enumeration value="tluczen"/>
+			<enumeration value="zwir"/>
+			<enumeration value="inny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajBudHydroType">
+		<restriction base="string">
+			<enumeration value="jazRuchomyLubZastawkaPietrzaca"/>
+			<enumeration value="jazStaly"/>
+			<enumeration value="sluza"/>
+			<enumeration value="zapora"/>
+			<enumeration value="inna"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajBudSportType">
+		<restriction base="string">
+			<enumeration value="basen"/>
+			<enumeration value="bieznia"/>
+			<enumeration value="kortTenisowy"/>
+			<enumeration value="placGierZabaw"/>
+			<enumeration value="placSportowy"/>
+			<enumeration value="skoczniaNarciarska"/>
+			<enumeration value="sztucznyStok"/>
+			<enumeration value="torSaneczkowy"/>
+			<enumeration value="torZuzlowy"/>
+			<enumeration value="inna"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajZadaszType">
+		<restriction base="string">
+			<enumeration value="odkryty"/>
+			<enumeration value="podCzasza"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajBudTechnType">
+		<restriction base="string">
+			<enumeration value="chlodniaKominowa"/>
+			<enumeration value="kominPrzemyslowy"/>
+			<enumeration value="wiezaCisnien"/>
+			<enumeration value="wiezaPrzeciwpozarowa"/>
+			<enumeration value="wiezaSzybuKopalnianego"/>
+			<enumeration value="wiezaWidokowa"/>
+			<enumeration value="inna"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajZbTechnType">
+		<restriction base="string">
+			<enumeration value="zbiornikNaCiecz"/>
+			<enumeration value="zbiornikNaMaterialySypkie"/>
+			<enumeration value="inny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajUmocnType">
+		<restriction base="string">
+			<enumeration value="ostroga"/>
+			<enumeration value="scianaOporowa"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajMatUmocnType">
+		<restriction base="string">
+			<enumeration value="beton"/>
+			<enumeration value="kamien"/>
+			<enumeration value="paleBetonowe"/>
+			<enumeration value="paleDrewniane"/>
+			<enumeration value="paleStalowe"/>
+			<enumeration value="inny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajBudZiemnType">
+		<restriction base="string">
+			<enumeration value="nasyp"/>
+			<enumeration value="skarpaNieumocniona"/>
+			<enumeration value="skarpaUmocniona"/>
+<enumeration value="grobla"/>
+			<enumeration value="walPrzeciwpowodziowy"/>
+			<enumeration value="wykop"/>
+			<enumeration value="inna"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajMatBudZiemnType">
+		<restriction base="string">
+			<enumeration value="gruntNaturalny"/>
+			<enumeration value="zOkladzinaBetonowa"/>
+			<enumeration value="inny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajUrzTranspType">
+		<restriction base="string">
+			<enumeration value="kolejLinowa"/>
+			<enumeration value="odbojLubDalba"/>
+			<enumeration value="poler"/>
+			<enumeration value="suwnica"/>
+			<enumeration value="tasmociag"/>
+			<enumeration value="wyciagNarciarski"/>
+			<enumeration value="inne"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajBudInnType">
+		<restriction base="string">
+			<enumeration value="estrada"/>
+			<enumeration value="murekOporowy"/>
+			<enumeration value="peron"/>
+			<enumeration value="podpora"/>
+			<enumeration value="przepust"/>
+			<enumeration value="rampa"/>
+			<enumeration value="reklamaLubTablicaInformacyjna"/>
+			<enumeration value="smietnik"/>
+			<enumeration value="trybuna"/>
+			<enumeration value="wiataPrzystankowa"/>
+			<enumeration value="inna"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajPodpType">
+		<restriction base="string">
+			<enumeration value="okragla"/>
+			<enumeration value="kwadratowa"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajCRPIRType">
+		<restriction base="string">
+			<enumeration value="alejka"/>
+			<enumeration value="chodnik"/>
+			<enumeration value="pasaz"/>
+			<enumeration value="sciezka"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajTorType">
+		<restriction base="string">
+			<enumeration value="torKolejowy"/>
+			<enumeration value="torMetra"/>
+			<enumeration value="torTramwajowy"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajPrzeprType">
+		<restriction base="string">
+			<enumeration value="brod"/>
+			<enumeration value="przeprawaLodziami"/>
+			<enumeration value="przeprawaPromowa"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajObKomunType">
+		<restriction base="string">
+			<enumeration value="barieraDrogowaOchronna"/>
+			<enumeration value="brama"/>
+			<enumeration value="ekranAkustyczny"/>
+			<enumeration value="furtka"/>
+			<enumeration value="ogrodzenieTrwale"/>
+			<enumeration value="schodyWCiaguKomunikacyjnym"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajWodyPowType">
+		<restriction base="string">
+			<enumeration value="wodaMorska"/>
+			<enumeration value="wodaPlynaca"/>
+			<enumeration value="wodaStojaca"/>
+<enumeration value="wodaWUrzadzeniuWodnym"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajRowuType">
+		<restriction base="string">
+			<enumeration value="obszarObjetyDrenowaniem"/>
+			<enumeration value="rowMelioracyjny"/>
+			<enumeration value="rowPrzydrozny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajTerenuLZZType">
+		<restriction base="string">
+			<enumeration value="lasIglasty"/>
+			<enumeration value="lasLisciasty"/>
+			<enumeration value="lasMieszany"/>
+			<enumeration value="zadrzewienie"/>
+			<enumeration value="zakrzewienie"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajUprawType">
+		<restriction base="string">
+			<enumeration value="ogrodDzialkowy"/>
+			<enumeration value="uprawaSadownicza"/>
+			<enumeration value="trawnik"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajCmentType">
+		<restriction base="string">
+			<enumeration value="komunalny"/>
+			<enumeration value="wojenny"/>
+			<enumeration value="wyznaniowy"/>
+			<enumeration value="inny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajWyznType">
+		<restriction base="string">
+			<enumeration value="chrzescijanskie"/>
+			<enumeration value="niechrzescijanskie"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajObPrzyrodnType">
+		<restriction base="string">
+			<enumeration value="drzewoIglaste"/>
+			<enumeration value="drzewoLisciaste"/>
+			<enumeration value="wodospad"/>
+			<enumeration value="zrodlo"/>
+			<enumeration value="inny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajObOrientType">
+		<restriction base="string">
+			<enumeration value="figuraKapliczkaKrzyzPrzydrozny"/>
+			<enumeration value="fontanna"/>			
+			<enumeration value="murHistoryczny"/>
+			<enumeration value="pomnik"/>
+			<enumeration value="pomostLubMolo"/>
+			<enumeration value="ruinaZabytkowa"/>
+			<enumeration value="inny"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajMokradlaType">
+		<restriction base="string">
+			<enumeration value="bagno"/>
+			<enumeration value="terenPodmokly"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BDZ_RodzajPunktuType">
+		<restriction base="string">
+			<enumeration value="punktWysokosciowyNaturalny"/>
+			<enumeration value="punktWysokosciowySztuczny"/>
+		</restriction>
+	</simpleType>
+</schema>

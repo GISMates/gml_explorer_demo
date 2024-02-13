@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/plugins/gml_explorer" >
+		<file>active_wms.png</file>
+		<file>add.png</file>
+        <file>c-geoportal.png</file>
+        <file>compass.png</file>
+        <file>icon.png</file>
+        <file>expose_attributes.png</file>
+        <file>hide_attributes.png</file>
+        <file>layers_extent.png</file>
+        <file>lock.png</file>
+        <file>map_extent.png</file>
+        <file>minimize.png</file>
+        <file>minimize_hover.png</file>
+        <file>minimize_pressed.png</file>
+        <file>projects_dir.png</file>
+        <file>remove.png</file>
+        <file>settings.png</file>
+        <file>to_jpg.png</file>
+        <file>to_pdf.png</file>
+        <file>to_tiff.png</file>
+        <file>x.png</file>
+        <file>x_hover.png</file>
+        <file>x_pressed.png</file>
+    </qresource>
+</RCC>

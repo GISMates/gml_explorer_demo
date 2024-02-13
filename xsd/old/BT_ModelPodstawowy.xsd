@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:bt="urn:gugik:specyfikacje:gmlas:modelPodstawowy:1.0" targetNamespace="urn:gugik:specyfikacje:gmlas:modelPodstawowy:1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.6">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"/>
+	<!--===========Typy podstawowe============-->
+	<!--======================================-->
+	<element name="BT_Identyfikator" type="bt:BT_IdentyfikatorType" substitutionGroup="gml:AbstractObject"/>
+	<complexType name="BT_IdentyfikatorType">
+		<sequence>
+			<element name="lokalnyId">
+				<simpleType>
+					<restriction base="string">
+						<pattern value="[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="przestrzenNazw">
+				<simpleType>
+					<restriction base="string">
+						<pattern value="PL\.[A-Za-z]{1,6}\.\d{1,6}\.[A-Za-z0-9]{1,8}"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="wersjaId" type="dateTime" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	<complexType name="BT_IdentyfikatorPropertyType">
+		<sequence>
+			<element ref="bt:BT_Identyfikator"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<!--======================================-->
+	<element name="BT_CyklZyciaInfo" type="bt:BT_CyklZyciaInfoType" substitutionGroup="gml:AbstractObject"/>
+	<complexType name="BT_CyklZyciaInfoType">
+		<sequence>
+			<element name="poczatekWersjiObiektu" type="dateTime"/>
+			<element name="koniecWersjiObiektu" type="dateTime" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	<complexType name="BT_CyklZyciaInfoPropertyType">
+		<sequence>
+			<element ref="bt:BT_CyklZyciaInfo"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<!--======================================-->
+	<element name="BT_ZbiorDanychPrzestrzennych" type="bt:BT_ZbiorDanychPrzestrzennychType" substitutionGroup="gml:AbstractFeature"/>
+	<complexType name="BT_ZbiorDanychPrzestrzennychType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="idIIP" type="bt:BT_IdentyfikatorPropertyType"/>
+					<element name="metadane" type="gmd:MD_Metadata_PropertyType">
+						<annotation>
+							<appinfo>
+								<gml:targetElement>gmd:MD_Metadata</gml:targetElement>
+							</appinfo>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BT_ZbiorDanychPrzestrzennychPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bt:BT_ZbiorDanychPrzestrzennych"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<!--======================================-->
+	<element name="BT_IdMaterialu" type="bt:BT_IdMaterialuType" substitutionGroup="gml:AbstractObject"/>
+	<complexType name="BT_IdMaterialuType">
+		<sequence>
+			<element name="pierwszyCzlon" type="bt:BT_OznaczenieZasobuType"/>
+			<element name="drugiCzlon" type="string"/>
+			<element name="trzeciCzlon" type="positiveInteger"/>
+			<element name="czwartyCzlon" type="nonNegativeInteger"/>
+		</sequence>
+	</complexType>
+	<complexType name="BT_IdMaterialuPropertyType">
+		<sequence>
+			<element ref="bt:BT_IdMaterialu"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<!--======================================-->
+	<simpleType name="BT_OznaczenieZasobuType">
+		<restriction base="string">
+			<enumeration value="C">
+				<annotation>
+					<appinfo>
+						<gml:description>centralny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="W">
+				<annotation>
+					<appinfo>
+						<gml:description>wojewodzki</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="P">
+				<annotation>
+					<appinfo>
+						<gml:description>powiatowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<!--===Referencja pomiędzy obiektami IIP==-->
+	<!--======================================-->
+	<element name="BT_ReferencjaDoObiektu" type="bt:BT_ReferencjaDoObiektuType" substitutionGroup="gml:AbstractObject"/>
+	<complexType name="BT_ReferencjaDoObiektuType">
+		<choice>
+			<element name="idIIP" type="bt:BT_IdentyfikatorPropertyType"/>
+		</choice>
+	</complexType>
+	<complexType name="BT_ReferencjaDoObiektuPropertyType">
+		<sequence>
+			<element ref="bt:BT_ReferencjaDoObiektu"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<!--===============Dokument===============-->
+	<!--======================================-->
+	<element name="BT_Dokument" type="bt:BT_DokumentType" substitutionGroup="gml:AbstractFeature"/>
+	<complexType name="BT_DokumentType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="idIIP" type="bt:BT_IdentyfikatorPropertyType"/>
+					<element name="startObiekt" type="dateTime"/>
+					<element name="cyklZycia" type="bt:BT_CyklZyciaInfoPropertyType"/>
+					<element name="koniecObiekt" type="dateTime" minOccurs="0"/>
+					<element name="tytul" type="string" minOccurs="0"/>
+					<element name="nazwaTworcyDokumentu" type="string" minOccurs="0"/>
+					<element name="opisDokumentu" type="string" minOccurs="0"/>
+					<element name="rodzajDokumentu" type="bt:DC_RodzajDokumentuType"/>
+					<element name="sygnaturaDokumentu" type="string" minOccurs="0"/>
+					<element name="zasobSieciowy" type="gmd:CI_OnlineResource_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="dataDokumentu" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="oznKancelaryjneDokumentu" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="zalacznikDokumentu" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BT_DokumentPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bt:BT_Dokument"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<!--======================================-->
+	<simpleType name="DC_RodzajDokumentuType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>umowaAktNotarialny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>aktWlasnosciZiemi</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="3">
+				<annotation>
+					<appinfo>
+						<gml:description>decyzjaAdminInnaNizAWZ</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="4">
+				<annotation>
+					<appinfo>
+						<gml:description>orzeczenieSaduPostanowienieWyrok</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="5">
+				<annotation>
+					<appinfo>
+						<gml:description>wyciagOdpisZKsiegiWieczystej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="6">
+				<annotation>
+					<appinfo>
+						<gml:description>wyciagOdpisZKsiegiHipotecznej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="7">
+				<annotation>
+					<appinfo>
+						<gml:description>odpisAktKWLubZbioruDokumentu</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="8">
+				<annotation>
+					<appinfo>
+						<gml:description>zawiadomienieZWydzialuKW</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="9">
+				<annotation>
+					<appinfo>
+						<gml:description>wniosekWSprawieZmiany</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="10">
+				<annotation>
+					<appinfo>
+						<gml:description>wyciagZDokumentacjiBudowyBudynku</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="11">
+				<annotation>
+					<appinfo>
+						<gml:description>protokol</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="12">
+				<annotation>
+					<appinfo>
+						<gml:description>ustawa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="13">
+				<annotation>
+					<appinfo>
+						<gml:description>rozporzadzenie</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="14">
+				<annotation>
+					<appinfo>
+						<gml:description>uchwala</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="15">
+				<annotation>
+					<appinfo>
+						<gml:description>zarzadzenie</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="16">
+				<annotation>
+					<appinfo>
+						<gml:description>odpisWyciagZInnegoRejestruPublicznego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="17">
+				<annotation>
+					<appinfo>
+						<gml:description>pelnomocnictwo</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="18">
+				<annotation>
+					<appinfo>
+						<gml:description>wyciagZOperatuSzacunkowego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="19">
+				<annotation>
+					<appinfo>
+						<gml:description>innyDokument</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="20">
+				<annotation>
+					<appinfo>
+						<gml:description>dokArchitektoniczoBud</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="21">
+				<annotation>
+					<appinfo>
+						<gml:description>dokPlanistyczny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="22">
+				<annotation>
+					<appinfo>
+						<gml:description>protokolNaradyKoordynacyjnej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="23">
+				<annotation>
+					<appinfo>
+						<gml:description>umowaDzierzawy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<!--=================Karto================-->
+	<!--======================================-->
+	<element name="KR_ObiektKarto" type="bt:KR_ObiektKartoType" substitutionGroup="gml:AbstractFeature"/>
+	<complexType name="KR_ObiektKartoType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="mianownikSkali" type="integer" minOccurs="0"/>
+					<element name="kodKarto" type="string" minOccurs="0"/>
+					<element name="geometriaKarto" type="gml:GeometryPropertyType" minOccurs="0"/>
+					<element name="uwagi" type="string" minOccurs="0"/>
+					<element name="etykieta" type="bt:KR_EtykietaPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="parametr" type="double" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="warstwa" type="string" minOccurs="0"/>
+					<element name="katObrotu" type="double" minOccurs="0"/>
+					<element name="obiektPrzedstawiany" type="bt:BT_ReferencjaDoObiektuPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="KR_ObiektKartoPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bt:KR_ObiektKarto"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<!--======================================-->
+	<element name="KR_Etykieta" type="bt:KR_EtykietaType" substitutionGroup="gml:AbstractObject"/>
+	<complexType name="KR_EtykietaType">
+		<sequence>
+			<element name="tekst" type="string" minOccurs="0"/>
+			<element name="czcionka" type="bt:KR_KrojPismaPropertyType" minOccurs="0"/>
+			<element name="geometriaKarto" type="gml:GeometricPrimitivePropertyType"/>
+			<element name="odnosnik" type="gml:CurvePropertyType" minOccurs="0"/>
+			<element name="katObrotu" type="double" minOccurs="0"/>
+			<element name="justyfikacja" type="positiveInteger" minOccurs="0"/>
+			<element name="kodKarto" type="string" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	<complexType name="KR_EtykietaPropertyType">
+		<sequence>
+			<element ref="bt:KR_Etykieta"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<!--======================================-->
+	<element name="KR_KrojPisma" type="bt:KR_KrojPismaType" substitutionGroup="gml:AbstractObject"/>
+	<complexType name="KR_KrojPismaType">
+		<sequence>
+			<element name="nazwaCzcionki" type="string"/>
+			<element name="wysCzcionki" type="integer"/>
+			<element name="pogrubienie" type="boolean"/>
+			<element name="kursywa" type="boolean"/>
+			<element name="podkreslenie" type="boolean"/>
+			<element name="kolor" type="integer" minOccurs="3" maxOccurs="4"/>
+		</sequence>
+	</complexType>
+	<complexType name="KR_KrojPismaPropertyType">
+		<sequence>
+			<element ref="bt:KR_KrojPisma"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<!--======================================-->
+	<element name="KR_Opis" type="bt:KR_OpisType" substitutionGroup="gml:AbstractFeature"/>
+	<complexType name="KR_OpisType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="idOpisu" type="string"/>
+					<element name="opis" type="string" minOccurs="0"/>
+					<element name="czcionka" type="bt:KR_KrojPismaPropertyType" minOccurs="0"/>
+					<element name="geometriaKarto" type="gml:GeometricPrimitivePropertyType" maxOccurs="unbounded"/>
+					<element name="kodKarto" type="string" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="KR_OpisPropertyType">
+		<sequence minOccurs="0">
+			<element ref="bt:KR_Opis"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+</schema>

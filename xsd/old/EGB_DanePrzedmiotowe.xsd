@@ -1,0 +1,3180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:egb="urn:gugik:specyfikacje:gmlas:ewidencjaGruntowBudynkow:1.0" xmlns:bt="urn:gugik:specyfikacje:gmlas:modelPodstawowy:1.0" targetNamespace="urn:gugik:specyfikacje:gmlas:ewidencjaGruntowBudynkow:1.0" elementFormDefault="qualified" version="2.0">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<import namespace="urn:gugik:specyfikacje:gmlas:modelPodstawowy:1.0" schemaLocation="BT_ModelPodstawowy.xsd"/>
+	<include schemaLocation="EGB_OgolnyObiekt.xsd"/>
+	<!-- ============================================================= -->
+	<element name="EGB_JednostkaEwidencyjna" type="egb:EGB_JednostkaEwidencyjnaType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_JednostkaEwidencyjnaType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="geometria" type="gml:MultiSurfacePropertyType"/>
+					<element name="idJednostkiEwid" type="string"/>
+					<element name="nazwaWlasna" type="string"/>
+					<!-- Roles -->
+					<element name="punktGranicyJednostkiEwidencyjnej" type="gml:ReferenceType" minOccurs="3" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_JednostkaEwidencyjnaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_JednostkaEwidencyjna"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_ObrebEwidencyjny" type="egb:EGB_ObrebEwidencyjnyType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_ObrebEwidencyjnyType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="geometria" type="gml:MultiSurfacePropertyType"/>
+					<element name="idObrebu" type="string"/>
+					<element name="nazwaWlasna" type="string" minOccurs="0"/>
+					<!-- Roles -->
+					<element name="lokalizacjaObrebu" type="gml:ReferenceType"/>
+					<element name="punktGranicyObrebu" type="gml:ReferenceType" minOccurs="3" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_ObrebEwidencyjnyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_ObrebEwidencyjny"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_DzialkaEwidencyjna" type="egb:EGB_DzialkaEwidencyjnaType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_DzialkaEwidencyjnaType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="georeferencja" type="gml:PointPropertyType" minOccurs="0"/>
+					<element name="idDzialki" type="string"/>
+					<element name="powierzchniaEwidencyjna" type="gml:AreaType"/>
+					<element name="numerKW" type="string" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="numerElektronicznejKW" minOccurs="0" maxOccurs="unbounded">
+						<simpleType>
+							<restriction base="string">
+								<pattern value="[A-Z]{2}[1-9]{1}[A-Z]{1}/[0-9]{8}/[0-9]{1}"/>
+							</restriction>
+						</simpleType>
+					</element>
+					<element name="dodatkoweInformacje" type="string" minOccurs="0"/>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="waznoscOd" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="waznoscDo" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="wartoscGruntu" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="decimal">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="dataWyceny" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="informacjaODokladnReprezentacjiPola" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="egb:EGB_ReprezentacjaPowDzialkiType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="nrRejestruZabytkow" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="idRejonuStatystycznego" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="dzialkaObjetaFormaOchronyPrzyrody" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="boolean">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<!-- Roles -->
+					<choice>
+						<element name="lokalizacjaDzialki1" type="gml:ReferenceType"/>
+						<element name="lokalizacjaDzialki2" type="gml:ReferenceType"/>
+					</choice>
+					<element name="JRG2" type="gml:ReferenceType"/>
+					<element name="klasouzytekWGranicachDzialki" type="gml:ReferenceType" maxOccurs="unbounded"/>
+					<element name="punktGranicyDzialki" type="gml:ReferenceType" minOccurs="3" maxOccurs="unbounded"/>
+					<element name="adresDzialki" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_DzialkaEwidencyjnaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_DzialkaEwidencyjna"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_Klasouzytek" type="egb:EGB_KlasouzytekType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_KlasouzytekType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="oznaczenieKlasouzytku" type="egb:EGB_OznaczenieKlasouzytkuPropertyType"/>
+					<element name="powierzchniaEwidencyjnaKlasouzytku" type="gml:AreaType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_KlasouzytekPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_Klasouzytek"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_Budynek" type="egb:EGB_BudynekType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_BudynekType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="idBudynku" type="string"/>
+					<element name="statusBudynku" type="egb:EGB_StatusBudynkuType"/>
+					<element name="numerKW" type="string" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="numerElektronicznejKW" minOccurs="0" maxOccurs="unbounded">
+						<simpleType>
+							<restriction base="string">
+								<pattern value="[A-Z]{2}[1-9]{1}[A-Z]{1}/[0-9]{8}/[0-9]{1}"/>
+							</restriction>
+						</simpleType>
+					</element>
+					<element name="rodzajWgKST" type="egb:EGB_RodzajWgKSTType"/>
+					<element name="lacznaPowUzytkLokaliNiewyodrebnionych" type="gml:AreaType" minOccurs="0"/>
+					<element name="lacznaPowUzytkowaLokaliWyodrebnionych" type="gml:AreaType" minOccurs="0"/>
+					<element name="powierzchniaUzytkowaBudynkuZObmiarow" type="gml:AreaType" minOccurs="0"/>
+					<element name="powierzchniaUzytkowaBudynkuWgProjektuBudowlanego" type="gml:AreaType" minOccurs="0"/>
+					<element name="powierzchniaUzytkowaPomieszczenPrzynaleznychDoLokali" type="gml:AreaType" minOccurs="0"/>
+					<element name="dodatkoweInformacje" type="string" minOccurs="0"/>
+					<element name="rokZakonczeniaPrzebudowy" type="positiveInteger" minOccurs="0"/>
+					<element name="wiekZakonczeniaBudowy" type="integer" minOccurs="0"/>
+					<element name="wiekZakonczeniaPrzebudowy" type="integer" minOccurs="0"/>
+					<element name="zakresPrzebudowy" type="egb:EGB_ZakresPrzebudowyBudynkuType" minOccurs="0"/>
+					<element name="stopienPewnosciUstaleniaDatyPrzebudowy" type="egb:EGB_ZrodloDatyBudowyType" minOccurs="0"/>
+					<element name="georeferencja" type="gml:PointPropertyType" minOccurs="0"/>
+					<element name="innaFunkcjaBudynku" type="egb:EGB_FunkcjaBudynkuType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="budynekGotowyNaSzybkiInternet" type="boolean" minOccurs="0"/>
+					<element name="geometria" type="gml:MultiSurfacePropertyType" nillable="true"/>
+					<element name="klasaWgPKOB" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="egb:EGB_KlasaWgPKOBType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="glownaFunkcjaBudynku" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="egb:EGB_FunkcjaBudynkuType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="dataWyceny" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="liczbaKondygnacjiNadziemnych" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="nonNegativeInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="liczbaKondygnacjiPodziemnych" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="nonNegativeInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="liczbaUjawnionychSamodzielnychLokali" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="nonNegativeInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="materialScianZewn" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="egb:EGB_MaterialScianZewnBudynkuType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="numerRejestruZabytkow" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="powZabudowy" nillable="true">
+						<complexType>
+							<complexContent>
+								<extension base="gml:AreaType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+					<element name="rokZakonczeniaBudowy" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="wartoscBudynku" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="decimal">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="stopienPewnosciUstaleniaDatyBudowy" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="egb:EGB_ZrodloDatyBudowyType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="stanUzytkowaniaBudynku" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="egb:EGB_StanUzytkowaniaBudynkuType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="dataOddaniaDoUzytkowaniaBudynku" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="dataRozbiorkiBudynku" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="przyczynaRozbiorkiBudynku" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="egb:EGB_PrzyczynaRozbiorkiType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="informacjaDotyczacaCzesciBudynku" nillable="true" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<complexContent>
+								<extension base="egb:EGB_InfOCzesciBudynkuPropertyType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+					<element name="liczbaLokaliOOkreslonejLiczbieIzb" nillable="true" minOccurs="0">
+						<complexType>
+							<complexContent>
+								<extension base="egb:EGB_LiczbaLokaliPropertyType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+					<element name="lacznaLiczbaIzbWBudynku" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="nonNegativeInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="czyWiata" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="boolean">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<!-- Roles -->
+					<element name="adresBudynku" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="dzialkaZabudowanaBudynkiem" type="gml:ReferenceType" maxOccurs="unbounded"/>
+					<element name="JRdlaBudynku" type="gml:ReferenceType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_BudynekPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_Budynek"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_BlokBudynku" type="egb:EGB_BlokBudynkuType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_BlokBudynkuType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="rodzajBloku" type="egb:EGB_RodzajBlokuType"/>
+					<element name="oznaczenieBloku" type="string"/>
+					<element name="numerNajnizszejKondygnacji" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="integer">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="numerNajwyzszejKondygnacji" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="integer">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<!-- Roles -->
+					<element name="budynekZWyodrebnionymBlokiemBudynku" type="gml:ReferenceType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_BlokBudynkuPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_BlokBudynku"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_ObiektTrwaleZwiazanyZBudynkiem" type="egb:EGB_ObiektTrwaleZwiazanyZBudynkiemType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_ObiektTrwaleZwiazanyZBudynkiemType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="geometria" type="gml:GeometricPrimitivePropertyType"/>
+					<element name="rodzajObiektuZwiazanegoZBudynkiem" type="egb:EGB_RodzajObiektuZwiazanegoZBudynkiemType"/>
+					<element name="poliliniaKierunkowa" type="gml:CurvePropertyType" minOccurs="0"/>
+					<!-- Roles -->
+					<element name="budynekZElementamiTrwaleZwiazanymi" type="gml:ReferenceType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_ObiektTrwaleZwiazanyZBudynkiemPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_ObiektTrwaleZwiazanyZBudynkiem"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_LokalSamodzielny" type="egb:EGB_LokalSamodzielnyType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_LokalSamodzielnyType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="idLokalu" type="string"/>
+					<element name="numerKW" type="string" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="numerElektronicznejKW" minOccurs="0" maxOccurs="unbounded">
+						<simpleType>
+							<restriction base="string">
+								<pattern value="[A-Z]{2}[1-9]{1}[A-Z]{1}/[0-9]{8}/[0-9]{1}"/>
+							</restriction>
+						</simpleType>
+					</element>
+					<element name="rodzajLokalu" type="egb:EGB_RodzajLokaluType"/>
+					<element name="powUzytkowaLokalu" type="gml:AreaType"/>
+					<element name="dodatkoweInformacje" type="string" minOccurs="0"/>
+					<element name="liczbaIzb" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="nonNegativeInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="liczbaPomieszczenPrzynaleznych" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="nonNegativeInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="powPomieszczenPrzynaleznychDoLokalu" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="gml:AreaType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="nrKondygnacji" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="integer">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="wartoscLokalu" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="decimal">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="dataWyceny" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<!-- Roles -->
+					<element name="adresLokalu" type="gml:ReferenceType"/>
+					<element name="JRdlaLokalu" type="gml:ReferenceType" minOccurs="0"/>
+					<element name="budynekZWyodrebnionymLokalem" type="gml:ReferenceType"/>
+					<element name="pomieszczeniePrzynalezne2" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_LokalSamodzielnyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_LokalSamodzielny"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_PomieszczeniePrzynalezneDoLokalu" type="egb:EGB_PomieszczeniePrzynalezneDoLokaluType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_PomieszczeniePrzynalezneDoLokaluType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="rodzajPomieszczeniaPrzynaleznego" type="egb:EGB_RodzajPomieszczeniaPrzynaleznegoDoLokaluType"/>
+					<element name="powierzchniaPomieszczeniaPrzynaleznego" type="gml:AreaType"/>
+					<element name="dodatkoweInformacje" type="string" minOccurs="0"/>
+					<!-- Roles -->
+					<element name="lokalizacjaPomieszczeniaPrzynaleznego" type="gml:ReferenceType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_PomieszczeniePrzynalezneDoLokaluPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_PomieszczeniePrzynalezneDoLokalu"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_KonturUzytkuGruntowego" type="egb:EGB_KonturUzytkuGruntowegoType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_KonturUzytkuGruntowegoType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="idUzytku" type="string"/>
+					<element name="OFU" type="egb:EGB_OFUType"/>
+					<!-- Roles -->
+					<element name="lokalizacjaUzytku" type="gml:ReferenceType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_KonturUzytkuGruntowegoPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_KonturUzytkuGruntowego"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_KonturKlasyfikacyjny" type="egb:EGB_KonturKlasyfikacyjnyType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_KonturKlasyfikacyjnyType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="idKonturu" type="string"/>
+					<element name="OZU" type="egb:EGB_OZUType"/>
+					<element name="OZK" type="egb:EGB_OZKType"/>
+					<element name="oznaczenieTypuGleby" nillable="true">
+						<complexType>
+							<complexContent>
+								<extension base="egb:EGB_OznaczenieTypuGlebyPropertyType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+					<!-- Roles -->
+					<element name="lokalizacjaKonturu" type="gml:ReferenceType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_KonturKlasyfikacyjnyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_KonturKlasyfikacyjny"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_ArkuszEwidencyjny" type="egb:EGB_ArkuszEwidencyjnyType" substitutionGroup="egb:EGB_OgolnyObiekt"/>
+	<complexType name="EGB_ArkuszEwidencyjnyType">
+		<complexContent>
+			<extension base="egb:EGB_OgolnyObiektType">
+				<sequence>
+					<element name="idArkusza" type="string"/>
+					<element name="geometria" type="gml:MultiSurfacePropertyType"/>
+					<!-- Roles -->
+					<element name="lokalizacjaArkusza" type="gml:ReferenceType"/>
+					<element name="punktGranicyArkusza" type="gml:ReferenceType" minOccurs="3" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="EGB_ArkuszEwidencyjnyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="egb:EGB_ArkuszEwidencyjny"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_InfOCzesciBudynku" type="egb:EGB_InfOCzesciBudynkuType" substitutionGroup="gml:AbstractObject"/>
+	<complexType name="EGB_InfOCzesciBudynkuType">
+		<sequence>
+			<element name="oznaczenieCzesciBudynku" type="string"/>
+			<element name="dataOddaniaDoUzytkowania" type="date"/>
+			<element name="dataRozbiorki" nillable="true">
+				<complexType>
+					<simpleContent>
+						<extension base="date">
+							<attribute name="nilReason" type="gml:NilReasonType"/>
+						</extension>
+					</simpleContent>
+				</complexType>
+			</element>
+			<element name="przyczynaRozbiorki" nillable="true">
+				<complexType>
+					<simpleContent>
+						<extension base="egb:EGB_PrzyczynaRozbiorkiType">
+							<attribute name="nilReason" type="gml:NilReasonType"/>
+						</extension>
+					</simpleContent>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="EGB_InfOCzesciBudynkuPropertyType">
+		<sequence>
+			<element ref="egb:EGB_InfOCzesciBudynku"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_LiczbaLokali" type="egb:EGB_LiczbaLokaliType" substitutionGroup="gml:AbstractObject"/>
+	<complexType name="EGB_LiczbaLokaliType">
+		<sequence>
+			<element name="liczbaMieszkan1izbowych" type="nonNegativeInteger" minOccurs="0"/>
+			<element name="liczbaMieszkan2izbowych" type="nonNegativeInteger" minOccurs="0"/>
+			<element name="liczbaMieszkan3izbowych" type="nonNegativeInteger" minOccurs="0"/>
+			<element name="liczbaMieszkan4izbowych" type="nonNegativeInteger" minOccurs="0"/>
+			<element name="liczbaMieszkan5izbowych" type="nonNegativeInteger" minOccurs="0"/>
+			<element name="liczbaMieszkan6izbowych" type="nonNegativeInteger" minOccurs="0"/>
+			<element name="liczbaMieszkan7izbowych" type="nonNegativeInteger" minOccurs="0"/>
+			<element name="liczbaMieszkan8izbowych" type="nonNegativeInteger" minOccurs="0"/>
+			<element name="liczbaMieszkan9izbowych" type="nonNegativeInteger" minOccurs="0"/>
+			<element name="liczbaMieszkan10izbowych" type="nonNegativeInteger" minOccurs="0"/>
+			<element name="liczbaMieszkanZPonad10izbami" type="nonNegativeInteger" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	<complexType name="EGB_LiczbaLokaliPropertyType">
+		<sequence>
+			<element ref="egb:EGB_LiczbaLokali"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<simpleType name="EGB_FunkcjaBudynkuType">
+		<restriction base="string">
+			<enumeration value="1110.Dj">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekJednorodzinny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1110.Dl">
+				<annotation>
+					<appinfo>
+						<gml:description>domLetniskowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1110.Ls">
+				<annotation>
+					<appinfo>
+						<gml:description>lesniczowka</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1110.In">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekMieszkalnyJednorodzinny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1121.Db">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekODwochMieszkaniach</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1122.Dw">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekWielorodzinny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Bs">
+				<annotation>
+					<appinfo>
+						<gml:description>bursaSzkolna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Db">
+				<annotation>
+					<appinfo>
+						<gml:description>domDlaBezdomnych</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Dd">
+				<annotation>
+					<appinfo>
+						<gml:description>domDziecka</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Os">
+				<annotation>
+					<appinfo>
+						<gml:description>domOpiekiSpolecznej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Dp">
+				<annotation>
+					<appinfo>
+						<gml:description>domParafialny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Ds">
+				<annotation>
+					<appinfo>
+						<gml:description>domStudencki</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Dz">
+				<annotation>
+					<appinfo>
+						<gml:description>domZakonny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Hr">
+				<annotation>
+					<appinfo>
+						<gml:description>hotelRobotniczy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.It">
+				<annotation>
+					<appinfo>
+						<gml:description>internat</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Kl">
+				<annotation>
+					<appinfo>
+						<gml:description>klasztor</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Km">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekMieszkalnyNaTerenieKoszar</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Po">
+				<annotation>
+					<appinfo>
+						<gml:description>placowkaOpiekunczoWychowawcza</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Ra">
+				<annotation>
+					<appinfo>
+						<gml:description>rezydencjaAmbasadora</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Rb">
+				<annotation>
+					<appinfo>
+						<gml:description>rezydencjaBiskupia</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Rp">
+				<annotation>
+					<appinfo>
+						<gml:description>rezydencjaPrezydencka</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Zk">
+				<annotation>
+					<appinfo>
+						<gml:description>zakladKarnyAreszt</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.Zp">
+				<annotation>
+					<appinfo>
+						<gml:description>zakladPoprawczy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130.In">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekZbiorowegoZamieszkania</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1211.Dw">
+				<annotation>
+					<appinfo>
+						<gml:description>domWeselny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1211.Ht">
+				<annotation>
+					<appinfo>
+						<gml:description>hotel</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1211.Mt">
+				<annotation>
+					<appinfo>
+						<gml:description>motel</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1211.Pj">
+				<annotation>
+					<appinfo>
+						<gml:description>pensjonat</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1211.Rj">
+				<annotation>
+					<appinfo>
+						<gml:description>restauracja</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1211.Zj">
+				<annotation>
+					<appinfo>
+						<gml:description>zajazd</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1211.In">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekPelniacyFunkcjeHotelu</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1212.Dk">
+				<annotation>
+					<appinfo>
+						<gml:description>domekKempingowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1212.Dr">
+				<annotation>
+					<appinfo>
+						<gml:description>domRekolekcyjnyZZakwaterowaniemTurystycznym</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1212.Dw">
+				<annotation>
+					<appinfo>
+						<gml:description>domWypoczynkowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1212.Os">
+				<annotation>
+					<appinfo>
+						<gml:description>osrodekSzkoleniowoWypoczynkowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1212.St">
+				<annotation>
+					<appinfo>
+						<gml:description>schroniskoTurystyczne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1212.In">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekZakwaterowaniaTurystycznego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Bk">
+				<annotation>
+					<appinfo>
+						<gml:description>bank</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Ck">
+				<annotation>
+					<appinfo>
+						<gml:description>centrumKonferencyjne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Km">
+				<annotation>
+					<appinfo>
+						<gml:description>kuriaMetropolitarna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Mn">
+				<annotation>
+					<appinfo>
+						<gml:description>ministerstwo</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Pd">
+				<annotation>
+					<appinfo>
+						<gml:description>placowkaDyplomatycznaLubKonsularna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Pc">
+				<annotation>
+					<appinfo>
+						<gml:description>policja</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Pk">
+				<annotation>
+					<appinfo>
+						<gml:description>prokuratura</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Pg">
+				<annotation>
+					<appinfo>
+						<gml:description>przejscieGraniczne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Sd">
+				<annotation>
+					<appinfo>
+						<gml:description>sad</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Sf">
+				<annotation>
+					<appinfo>
+						<gml:description>siedzibaFirmyLubFirm</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Pw">
+				<annotation>
+					<appinfo>
+						<gml:description>starostwoPowiatowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Sg">
+				<annotation>
+					<appinfo>
+						<gml:description>strazGraniczna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Sp">
+				<annotation>
+					<appinfo>
+						<gml:description>strazPozarna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Uc">
+				<annotation>
+					<appinfo>
+						<gml:description>urzadCelny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Ug">
+				<annotation>
+					<appinfo>
+						<gml:description>urzadGminy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Um">
+				<annotation>
+					<appinfo>
+						<gml:description>urzadMiasta</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Umg">
+				<annotation>
+					<appinfo>
+						<gml:description>urzadMiastaIGminy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Mr">
+				<annotation>
+					<appinfo>
+						<gml:description>urzadMarszalkowski</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Up">
+				<annotation>
+					<appinfo>
+						<gml:description>placowkaPocztowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Uw">
+				<annotation>
+					<appinfo>
+						<gml:description>urzadWojewodzki</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220.Ap">
+				<annotation>
+					<appinfo>
+						<gml:description>innyUrzadAdministracjiPublicznej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1230.Ap">
+				<annotation>
+					<appinfo>
+						<gml:description>apteka</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1230.Ch">
+				<annotation>
+					<appinfo>
+						<gml:description>centrumHandlowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1230.Dh">
+				<annotation>
+					<appinfo>
+						<gml:description>domTowarowyLubHandlowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1230.Ht">
+				<annotation>
+					<appinfo>
+						<gml:description>halaTargowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1230.Hw">
+				<annotation>
+					<appinfo>
+						<gml:description>halaWystawowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1230.Hm">
+				<annotation>
+					<appinfo>
+						<gml:description>hipermarketLubSupermarket</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1230.Ph">
+				<annotation>
+					<appinfo>
+						<gml:description>pawilonHandlowoUslugowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1230.So">
+				<annotation>
+					<appinfo>
+						<gml:description>stacjaObslugiPojazdow</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1230.Sp">
+				<annotation>
+					<appinfo>
+						<gml:description>stacjaPaliw</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1230.In">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekHandlowoUslugowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Kk">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekKontroliRuchuKolejowego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Kp">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekKontroliRuchuPowietrznego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Ct">
+				<annotation>
+					<appinfo>
+						<gml:description>centrumTelekomunikacyjne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Da">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekDworcaAutobusowego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Dk">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekDworcaKolejowego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Dl">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekDworcaLotniczego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Hg">
+				<annotation>
+					<appinfo>
+						<gml:description>hangar</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Lm">
+				<annotation>
+					<appinfo>
+						<gml:description>latarniaMorska</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Lk">
+				<annotation>
+					<appinfo>
+						<gml:description>lokomotywowniaLubWagonownia</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Kg">
+				<annotation>
+					<appinfo>
+						<gml:description>stacjaKolejkiGorskiejLubWyciaguKrzeselkowego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Rt">
+				<annotation>
+					<appinfo>
+						<gml:description>stacjaNadawczaRadiaITelewizji</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Tp">
+				<annotation>
+					<appinfo>
+						<gml:description>terminalPortowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Ab">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekZajezdniAutobusowej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Tr">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekZajezdniTramwajowej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.Tb">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekZajezdniTrolejbusowej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241.In">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekTransportuLubLacznosci</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1242.Gr">
+				<annotation>
+					<appinfo>
+						<gml:description>garazJednopoziomowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1242.Pw">
+				<annotation>
+					<appinfo>
+						<gml:description>garazWielopoziomowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1251.El">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekElektrocieplowni</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1251.Ek">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekElektrowni</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1251.Kt">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekKotlowni</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1251.Mn">
+				<annotation>
+					<appinfo>
+						<gml:description>mlyn</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1251.Pr">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekPrzeznaczonyNaProdukcje</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1251.Rf">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekRafinerii</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1251.Ss">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekSpalarniSmieci</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1251.Wr">
+				<annotation>
+					<appinfo>
+						<gml:description>warsztatRemontowoNaprawczy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1251.Wt">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekWiatraka</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1251.In">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekPrzemyslowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1252.Sp">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekSpedycji</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1252.Ch">
+				<annotation>
+					<appinfo>
+						<gml:description>chlodnia</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1252.El">
+				<annotation>
+					<appinfo>
+						<gml:description>elewator</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1252.Mg">
+				<annotation>
+					<appinfo>
+						<gml:description>magazyn</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1252.Sl">
+				<annotation>
+					<appinfo>
+						<gml:description>silos</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1252.Gz">
+				<annotation>
+					<appinfo>
+						<gml:description>zbiornikNaGaz</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1252.Ci">
+				<annotation>
+					<appinfo>
+						<gml:description>zbiornikNaCiecz</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1252.In">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekMagazynowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1261.Oz">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekOgroduZooLubBotanicznego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1261.Dk">
+				<annotation>
+					<appinfo>
+						<gml:description>domKultury</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1261.Fh">
+				<annotation>
+					<appinfo>
+						<gml:description>filharmonia</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1261.Hw">
+				<annotation>
+					<appinfo>
+						<gml:description>halaWidowiskowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1261.Ks">
+				<annotation>
+					<appinfo>
+						<gml:description>kasyno</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1261.Kn">
+				<annotation>
+					<appinfo>
+						<gml:description>kino</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1261.Kl">
+				<annotation>
+					<appinfo>
+						<gml:description>klubDyskoteka</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1261.Sz">
+				<annotation>
+					<appinfo>
+						<gml:description>schroniskoDlaZwierzat</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1261.Op">
+				<annotation>
+					<appinfo>
+						<gml:description>opera</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1261.Tt">
+				<annotation>
+					<appinfo>
+						<gml:description>teatr</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1261.In">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekWykorzystywanyNaCeleKultury</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1262.Ar">
+				<annotation>
+					<appinfo>
+						<gml:description>archiwum</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1262.Bl">
+				<annotation>
+					<appinfo>
+						<gml:description>biblioteka</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1262.Ci">
+				<annotation>
+					<appinfo>
+						<gml:description>centrumInformacyjne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1262.Gs">
+				<annotation>
+					<appinfo>
+						<gml:description>galeriaSztuki</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1262.Mz">
+				<annotation>
+					<appinfo>
+						<gml:description>muzeum</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1262.In">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekMuzealnyLubBiblioteczny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1263.Ob">
+				<annotation>
+					<appinfo>
+						<gml:description>obserwatoriumLubPlanetarium</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1263.Pb">
+				<annotation>
+					<appinfo>
+						<gml:description>placowkaBadawcza</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1263.Ps">
+				<annotation>
+					<appinfo>
+						<gml:description>przedszkole</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1263.Sh">
+				<annotation>
+					<appinfo>
+						<gml:description>stacjaHydrologiczna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1263.Sm">
+				<annotation>
+					<appinfo>
+						<gml:description>stacjaMeteorologiczna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1263.Sp">
+				<annotation>
+					<appinfo>
+						<gml:description>szkolaPodstawowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1263.Sd">
+				<annotation>
+					<appinfo>
+						<gml:description>szkolaPonadpodstawowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1263.Sw">
+				<annotation>
+					<appinfo>
+						<gml:description>szkolaWyzsza</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1263.In">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekOCharakterzeEdukacyjnym</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1264.Hs">
+				<annotation>
+					<appinfo>
+						<gml:description>hospicjum</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1264.Iw">
+				<annotation>
+					<appinfo>
+						<gml:description>izbaWytrzezwien</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1264.Jr">
+				<annotation>
+					<appinfo>
+						<gml:description>jednostkaRatownictwaMedycznego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1264.Kw">
+				<annotation>
+					<appinfo>
+						<gml:description>klinikaWeterynaryjna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1264.Oo">
+				<annotation>
+					<appinfo>
+						<gml:description>osrodekOpiekiSpolecznej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1264.Po">
+				<annotation>
+					<appinfo>
+						<gml:description>placowkaOchronyZdrowia</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1264.St">
+				<annotation>
+					<appinfo>
+						<gml:description>sanatorium</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1264.Sk">
+				<annotation>
+					<appinfo>
+						<gml:description>stacjaKrwiodawstwa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1264.Ss">
+				<annotation>
+					<appinfo>
+						<gml:description>stacjaSanitarnoEpidemiologiczna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1264.Sz">
+				<annotation>
+					<appinfo>
+						<gml:description>szpital</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1264.Zb">
+				<annotation>
+					<appinfo>
+						<gml:description>zlobek</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1264.In">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekOpiekiMedycznej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1265.Hs">
+				<annotation>
+					<appinfo>
+						<gml:description>halaSportowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1265.Ht">
+				<annotation>
+					<appinfo>
+						<gml:description>halowyTorGokartowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1265.Ks">
+				<annotation>
+					<appinfo>
+						<gml:description>klubSportowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1265.Kt">
+				<annotation>
+					<appinfo>
+						<gml:description>kortyTenisowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1265.Kr">
+				<annotation>
+					<appinfo>
+						<gml:description>kregielnia</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1265.Pl">
+				<annotation>
+					<appinfo>
+						<gml:description>plywalnia</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1265.Sg">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekSaliGimnastycznej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1265.St">
+				<annotation>
+					<appinfo>
+						<gml:description>strzelnica</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1265.Sl">
+				<annotation>
+					<appinfo>
+						<gml:description>sztuczneLodowisko</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1265.Uj">
+				<annotation>
+					<appinfo>
+						<gml:description>ujezdzalnia</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1265.In">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekKulturyFizycznej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1271.Bg">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekSkladowyWGospodarstwieRolnym</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1271.Bp">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekInwentarskiWGospodarstwieRolnym</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1271.St">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekStadninyKoni</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1271.Sz">
+				<annotation>
+					<appinfo>
+						<gml:description>szklarniaLubCieplarnia</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1271.In">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekWGospodarstwieRolnym</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1272.Bc">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekCmentarny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1272.Ck">
+				<annotation>
+					<appinfo>
+						<gml:description>cerkiew</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1272.Dp">
+				<annotation>
+					<appinfo>
+						<gml:description>domPogrzebowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1272.Dz">
+				<annotation>
+					<appinfo>
+						<gml:description>dzwonnica</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1272.Kp">
+				<annotation>
+					<appinfo>
+						<gml:description>kaplica</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1272.Ks">
+				<annotation>
+					<appinfo>
+						<gml:description>kosciol</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1272.Kr">
+				<annotation>
+					<appinfo>
+						<gml:description>krematorium</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1272.Mc">
+				<annotation>
+					<appinfo>
+						<gml:description>meczet</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1272.Sn">
+				<annotation>
+					<appinfo>
+						<gml:description>synagoga</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1272.Ir">
+				<annotation>
+					<appinfo>
+						<gml:description>innyBudynekKultuReligijnego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1273.Zb">
+				<annotation>
+					<appinfo>
+						<gml:description>zabytekBezFunkcjiUzytkowej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1274.As">
+				<annotation>
+					<appinfo>
+						<gml:description>aresztSledczy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1274.Bc">
+				<annotation>
+					<appinfo>
+						<gml:description>bacowka</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1274.Sc">
+				<annotation>
+					<appinfo>
+						<gml:description>schroniskoDlaNieletnich</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1274.Sg">
+				<annotation>
+					<appinfo>
+						<gml:description>stacjaGazowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1274.Sp">
+				<annotation>
+					<appinfo>
+						<gml:description>stacjaPomp</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1274.St">
+				<annotation>
+					<appinfo>
+						<gml:description>stacjaTransformatorowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1274.Tp">
+				<annotation>
+					<appinfo>
+						<gml:description>toaletaPubliczna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1274.Zk">
+				<annotation>
+					<appinfo>
+						<gml:description>niemieszkalneZabudowaniaKoszarowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1274.Zp">
+				<annotation>
+					<appinfo>
+						<gml:description>zakladKarnyLubPoprawczy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1274.In">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekNieOkreslonyInnymAtrybutemFSB</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_OFUType">
+		<restriction base="string">
+			<enumeration value="R">
+				<annotation>
+					<appinfo>
+						<gml:description>gruntOrny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="S">
+				<annotation>
+					<appinfo>
+						<gml:description>sad</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Ł">
+				<annotation>
+					<appinfo>
+						<gml:description>lakaTrwala</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Ps">
+				<annotation>
+					<appinfo>
+						<gml:description>pastwiskoTrwale</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Br">
+				<annotation>
+					<appinfo>
+						<gml:description>gruntRolnyZabudowany</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Wsr">
+				<annotation>
+					<appinfo>
+						<gml:description>gruntPodStawem</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="W">
+				<annotation>
+					<appinfo>
+						<gml:description>gruntPodRowem</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Lzr">
+				<annotation>
+					<appinfo>
+						<gml:description>rolnyGruntZadrzewionyIZakrzewiony</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Ls">
+				<annotation>
+					<appinfo>
+						<gml:description>las</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Lz">
+				<annotation>
+					<appinfo>
+						<gml:description>gruntZadrzewionyIZakrzewiony</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="B">
+				<annotation>
+					<appinfo>
+						<gml:description>terenMieszkaniowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Ba">
+				<annotation>
+					<appinfo>
+						<gml:description>terenPrzemyslowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Bi">
+				<annotation>
+					<appinfo>
+						<gml:description>innyTerenZabudowany</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Bp">
+				<annotation>
+					<appinfo>
+						<gml:description>zurbanizowanyTerenNiezabudowanyLubWTrakcieZabudowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Bz">
+				<annotation>
+					<appinfo>
+						<gml:description>terenRekreacyjnoWypoczynkowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="K">
+				<annotation>
+					<appinfo>
+						<gml:description>uzytekKopalny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="dr">
+				<annotation>
+					<appinfo>
+						<gml:description>droga</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Tk">
+				<annotation>
+					<appinfo>
+						<gml:description>terenKolejowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Ti">
+				<annotation>
+					<appinfo>
+						<gml:description>innyTerenKomunikacyjny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Tp">
+				<annotation>
+					<appinfo>
+						<gml:description>gruntPrzeznaczonyPodBudoweDrogPublLubLiniiKolej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="E-R">
+				<annotation>
+					<appinfo>
+						<gml:description>uzytekEkologicznyNaGruncieOrnym</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="E-Ps">
+				<annotation>
+					<appinfo>
+						<gml:description>uzytekEkologicznyNaPastwiskuTrwalym</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="E-Ł">
+				<annotation>
+					<appinfo>
+						<gml:description>uzytekEkologicznyNaLaceTrwalej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="E-Lz">
+				<annotation>
+					<appinfo>
+						<gml:description>uzytekEkologicznyNaGruncieZadrzewionymIZakrzewionym</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="E-Lzr">
+				<annotation>
+					<appinfo>
+						<gml:description>uzytekEkologicznyNaRolnymGruncieZadrzewionymIZakrzewionym</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="E-Ls">
+				<annotation>
+					<appinfo>
+						<gml:description>uzytekEkologicznyNaLesie</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="E-Wp">
+				<annotation>
+					<appinfo>
+						<gml:description>uzytekEkologicznyNaGrunciePodWodaPowierzchniowaPlynaca</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="E-Ws">
+				<annotation>
+					<appinfo>
+						<gml:description>uzytekEkologicznyNaGrunciePodWodaPowierzchniowaStojaca</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="E-W">
+				<annotation>
+					<appinfo>
+						<gml:description>uzytekEkologicznyNaGrunciePodRowem</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="E-N">
+				<annotation>
+					<appinfo>
+						<gml:description>uzytekEkologicznyNaNieuzytku</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="N">
+				<annotation>
+					<appinfo>
+						<gml:description>nieuzytek</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Wm">
+				<annotation>
+					<appinfo>
+						<gml:description>gruntPodMorskimiWodamiWewnetrznymi</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Wp">
+				<annotation>
+					<appinfo>
+						<gml:description>gruntPodWodamiPowierzchniowymiPlynacymi</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Ws">
+				<annotation>
+					<appinfo>
+						<gml:description>gruntPodWodamiPowierzchniowymiStojacymi</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Tr">
+				<annotation>
+					<appinfo>
+						<gml:description>terenRozny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_OZKType">
+		<restriction base="string">
+			<enumeration value="I"/>
+			<enumeration value="II"/>
+			<enumeration value="III"/>
+			<enumeration value="IIIa"/>
+			<enumeration value="IIIb"/>
+			<enumeration value="IV"/>
+			<enumeration value="IVa"/>
+			<enumeration value="IVb"/>
+			<enumeration value="V"/>
+			<enumeration value="VI"/>
+			<enumeration value="VIz"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_OZUType">
+		<restriction base="string">
+			<enumeration value="R">
+				<annotation>
+					<appinfo>
+						<gml:description>gruntOrny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Ł">
+				<annotation>
+					<appinfo>
+						<gml:description>lakaTrwala</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Ps">
+				<annotation>
+					<appinfo>
+						<gml:description>pastwiskoTrwale</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Ls">
+				<annotation>
+					<appinfo>
+						<gml:description>las</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="Lz">
+				<annotation>
+					<appinfo>
+						<gml:description>gruntZadrzewionyIZakrzewiony</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_ZrodloDatyBudowyType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>dokument</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>zrodloNiepotwierdzone</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="3">
+				<annotation>
+					<appinfo>
+						<gml:description>szacowana</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_RodzajLokaluType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>mieszkalny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>niemieszkalny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_ReprezentacjaPowDzialkiType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>doklDoM</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>doklDoAra</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_ZakresPrzebudowyBudynkuType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>przebudowa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>nadbudowaBezZmian</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="3">
+				<annotation>
+					<appinfo>
+						<gml:description>czesciowaRozbiorkaBezZmian</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="4">
+				<annotation>
+					<appinfo>
+						<gml:description>nadbudowaZmiana</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="5">
+				<annotation>
+					<appinfo>
+						<gml:description>czesciowaRozbiorkaZmiana</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="6">
+				<annotation>
+					<appinfo>
+						<gml:description>inny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_RodzajPomieszczeniaPrzynaleznegoDoLokaluType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>piwnica</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>garaz</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="3">
+				<annotation>
+					<appinfo>
+						<gml:description>miejscePostojoweWGarazuWielostanowiskowym</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="4">
+				<annotation>
+					<appinfo>
+						<gml:description>strych</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="5">
+				<annotation>
+					<appinfo>
+						<gml:description>komorka</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="6">
+				<annotation>
+					<appinfo>
+						<gml:description>inne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_StatusBudynkuType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>wybudowany</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>wBudowie</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="3">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekDoRozbiorki</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="4">
+				<annotation>
+					<appinfo>
+						<gml:description>projektowany</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_RodzajObiektuZwiazanegoZBudynkiemType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>taras</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>werandaGanek</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="3">
+				<annotation>
+					<appinfo>
+						<gml:description>wiatrolap</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="4">
+				<annotation>
+					<appinfo>
+						<gml:description>schody</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="5">
+				<annotation>
+					<appinfo>
+						<gml:description>podpora</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="6">
+				<annotation>
+					<appinfo>
+						<gml:description>rampa</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="7">
+				<annotation>
+					<appinfo>
+						<gml:description>wjazdDoPodziemia</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="8">
+				<annotation>
+					<appinfo>
+						<gml:description>podjazdDlaOsobNiepelnosprawnych</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="9">
+				<annotation>
+					<appinfo>
+						<gml:description>inny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_RodzajWgKSTType">
+		<restriction base="string">
+			<enumeration value="101">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekPrzemyslowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="102">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekTransportuILacznosci</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="103">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekHandlowoUslugowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="104">
+				<annotation>
+					<appinfo>
+						<gml:description>zbiornikSilosIBudynkMagazynowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="105">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekBiurowy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="106">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekSzpitalaIInneBudynkiOpiekiZdrowotnej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="107">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekOswiatyNaukiIKulturyOrazSportu</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="108">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekProdukcyjnyUslugowyIGospodarczy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="109">
+				<annotation>
+					<appinfo>
+						<gml:description>pozostalyBudynekNiemieszkalny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="110">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekMieszkalny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_RodzajBlokuType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>kondygnacjeNadziemne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>kondygnacjePodziemne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="3">
+				<annotation>
+					<appinfo>
+						<gml:description>lacznik</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="4">
+				<annotation>
+					<appinfo>
+						<gml:description>nawis</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="5">
+				<annotation>
+					<appinfo>
+						<gml:description>przejazdPrzezBudynek</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="6">
+				<annotation>
+					<appinfo>
+						<gml:description>inny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_KlasaWgPKOBType">
+		<restriction base="string">
+			<enumeration value="1110">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiMieszkalneJednorodzinne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1121">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiODwochMieszkaniach</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1122">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiOTrzechIWiecejMieszkaniach</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1130">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiZbiorowegoZamieszkania</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1211">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiHoteli</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1212">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiZakwaterowaniaTurystycznegoPozostale</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1220">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiBiurowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1230">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiHandlowoUslugowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1241">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiLacznosciDworcowITerminali</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1242">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiGarazy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1251">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiPrzemyslowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1252">
+				<annotation>
+					<appinfo>
+						<gml:description>zbiornikiSilosyIBudynkiMagazynowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1261">
+				<annotation>
+					<appinfo>
+						<gml:description>ogolnodostepneObiektyKulturalne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1262">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiMuzeowIBibliotek</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1263">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiSzkolIInstytucjiBadawczych</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1264">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiSzpitaliIZakladowOpiekiMedycznej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1265">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiKulturyFizycznej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1271">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiGospodarstwRolnych</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1272">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiKultuReligijnego</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1273">
+				<annotation>
+					<appinfo>
+						<gml:description>budynkiZabytkowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="1274">
+				<annotation>
+					<appinfo>
+						<gml:description>pozostaleBudynkiNiemieszkalne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_MaterialScianZewnBudynkuType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>mur</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>drewno</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="3">
+				<annotation>
+					<appinfo>
+						<gml:description>inny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_PrzyczynaRozbiorkiType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>zlyStanBudynku</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>kolizjaZNowaInwestycja</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="3">
+				<annotation>
+					<appinfo>
+						<gml:description>inna</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_StanUzytkowaniaBudynkuType">
+		<restriction base="string">
+			<enumeration value="1">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekOddanyDoUzytkowaniaWCalosci</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<appinfo>
+						<gml:description>budynekOddanyDoUzytkowaniaWCzesci</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_GlebyGruntowOrnychNaTerNizIWyzType">
+		<restriction base="string">
+			<enumeration value="AB.">
+				<annotation>
+					<appinfo>
+						<gml:description>brunatnePloweBielicoweRdzawe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="A.">
+				<annotation>
+					<appinfo>
+						<gml:description>plowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="B.">
+				<annotation>
+					<appinfo>
+						<gml:description>brunatne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="C.">
+				<annotation>
+					<appinfo>
+						<gml:description>czarnoziemy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="D.">
+				<annotation>
+					<appinfo>
+						<gml:description>czarneZiemie</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="E.">
+				<annotation>
+					<appinfo>
+						<gml:description>bagienneIPobagienne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="F.">
+				<annotation>
+					<appinfo>
+						<gml:description>mady</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="G.">
+				<annotation>
+					<appinfo>
+						<gml:description>redziny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_GlebyLakIPsNaTerGorType">
+		<restriction base="string">
+			<enumeration value="HZ.">
+				<annotation>
+					<appinfo>
+						<gml:description>inicjalne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="IZ.">
+				<annotation>
+					<appinfo>
+						<gml:description>brunatnePloweIBielicowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="IZ(G).">
+				<annotation>
+					<appinfo>
+						<gml:description>brunatneGlejPloweGlejIBielicoweGlej</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="JZ.">
+				<annotation>
+					<appinfo>
+						<gml:description>mady</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="JZ(G).">
+				<annotation>
+					<appinfo>
+						<gml:description>madyGlejowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="KZ.">
+				<annotation>
+					<appinfo>
+						<gml:description>redziny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="LZ.">
+				<annotation>
+					<appinfo>
+						<gml:description>czarneZiemie</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="MZ.">
+				<annotation>
+					<appinfo>
+						<gml:description>bagienneIPobagienne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_GlebyLakIPsNaTerNizIWyzType">
+		<restriction base="string">
+			<enumeration value="BZ.">
+				<annotation>
+					<appinfo>
+						<gml:description>brunatneIRdzawe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="BZ(G).">
+				<annotation>
+					<appinfo>
+						<gml:description>brunatneGlejowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="CZ.">
+				<annotation>
+					<appinfo>
+						<gml:description>czarnoziemy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="CZ(G).">
+				<annotation>
+					<appinfo>
+						<gml:description>czarnoziemyGlejowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="DZ.">
+				<annotation>
+					<appinfo>
+						<gml:description>czarneZiemie</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="DZ(G).">
+				<annotation>
+					<appinfo>
+						<gml:description>czarneZiemieGlejowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="EZ.">
+				<annotation>
+					<appinfo>
+						<gml:description>bagienneIPobagienne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="FZ.">
+				<annotation>
+					<appinfo>
+						<gml:description>mady</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="FZ(G).">
+				<annotation>
+					<appinfo>
+						<gml:description>madyGlejowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="GZ.">
+				<annotation>
+					<appinfo>
+						<gml:description>redziny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="GZ(G).">
+				<annotation>
+					<appinfo>
+						<gml:description>redzinyGlejowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_GlebyGruntowOrnychILesnychNaTerGorType">
+		<restriction base="string">
+			<enumeration value="H.">
+				<annotation>
+					<appinfo>
+						<gml:description>inicjalne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="I.">
+				<annotation>
+					<appinfo>
+						<gml:description>brunatnePloweIBielicowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="J.">
+				<annotation>
+					<appinfo>
+						<gml:description>mady</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="K.">
+				<annotation>
+					<appinfo>
+						<gml:description>redziny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="L.">
+				<annotation>
+					<appinfo>
+						<gml:description>czarneZiemie</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="M.">
+				<annotation>
+					<appinfo>
+						<gml:description>bagienneIPobagienne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="EGB_GlebyGruntowLesnychNaTerNizIWyzType">
+		<restriction base="string">
+			<enumeration value="A.">
+				<annotation>
+					<appinfo>
+						<gml:description>ploweIBielicowe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="B.">
+				<annotation>
+					<appinfo>
+						<gml:description>brunatneIRdzawe</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="C.">
+				<annotation>
+					<appinfo>
+						<gml:description>czarnoziemy</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="D.">
+				<annotation>
+					<appinfo>
+						<gml:description>czarneZiemie</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="E.">
+				<annotation>
+					<appinfo>
+						<gml:description>bagienneIPobagienne</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="F.">
+				<annotation>
+					<appinfo>
+						<gml:description>mady</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+			<enumeration value="G.">
+				<annotation>
+					<appinfo>
+						<gml:description>redziny</gml:description>
+					</appinfo>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<element name="EGB_OznaczenieKlasouzytku" type="egb:EGB_OznaczenieKlasouzytkuType" substitutionGroup="gml:AbstractObject"/>
+	<complexType name="EGB_OznaczenieKlasouzytkuType">
+		<sequence>
+			<element name="OFU" type="egb:EGB_OFUType"/>
+			<element name="OZU" type="egb:EGB_OZUType" minOccurs="0"/>
+			<element name="OZK" type="egb:EGB_OZKType" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	<complexType name="EGB_OznaczenieKlasouzytkuPropertyType">
+		<sequence>
+			<element ref="egb:EGB_OznaczenieKlasouzytku"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="EGB_OznaczenieTypuGleby" type="egb:EGB_OznaczenieTypuGlebyType" substitutionGroup="gml:AbstractObject"/>
+	<complexType name="EGB_OznaczenieTypuGlebyType">
+		<choice>
+			<element name="gruntyOrneNaTerNizIWyz" type="egb:EGB_GlebyGruntowOrnychNaTerNizIWyzType"/>
+			<element name="gruntyOrneNaTerGor" type="egb:EGB_GlebyGruntowOrnychILesnychNaTerGorType"/>
+			<element name="lakiIPsNaTerNizIWyz" type="egb:EGB_GlebyLakIPsNaTerNizIWyzType"/>
+			<element name="lakiIPsNaTerGor" type="egb:EGB_GlebyLakIPsNaTerGorType"/>
+			<element name="gruntyLesneNaTerNizIWyz" type="egb:EGB_GlebyGruntowLesnychNaTerNizIWyzType"/>
+			<element name="gruntyLesneNaTerGor" type="egb:EGB_GlebyGruntowOrnychILesnychNaTerGorType"/>
+		</choice>
+	</complexType>
+	<complexType name="EGB_OznaczenieTypuGlebyPropertyType">
+		<sequence>
+			<element ref="egb:EGB_OznaczenieTypuGleby"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+</schema>

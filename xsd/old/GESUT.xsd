@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ges="urn:gugik:specyfikacje:gmlas:geodezyjnaEwidencjaSieciUzbrojeniaTerenu:1.0" xmlns:bt="urn:gugik:specyfikacje:gmlas:modelPodstawowy:1.0" targetNamespace="urn:gugik:specyfikacje:gmlas:geodezyjnaEwidencjaSieciUzbrojeniaTerenu:1.0" elementFormDefault="qualified" version="2.0">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<import namespace="urn:gugik:specyfikacje:gmlas:modelPodstawowy:1.0" schemaLocation="BT_ModelPodstawowy.xsd"/>
+	<include schemaLocation="GES_GESUT_Slowniki.xsd"/>
+<!-- ============================================================= -->
+	<element name="GES_ObiektGESUT" type="ges:GES_ObiektGESUTType" abstract="true" substitutionGroup="gml:AbstractFeature"/>
+	<complexType name="GES_ObiektGESUTType" abstract="true">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="idIIP" type="bt:BT_IdentyfikatorPropertyType"/>
+					<element name="startObiekt" type="date"/>
+					<element name="cyklZyciaObiektu" type="bt:BT_CyklZyciaInfoPropertyType"/>
+					<element name="koniecObiekt" type="date" minOccurs="0"/>
+					<element name="zrodlo" type="ges:GES_ZrodloType" minOccurs="0"/>
+					<element name="istnienie" type="ges:GES_IstnienieType"/>
+					<element name="eksploatacja" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="ges:GES_EksploatacjaType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="idMaterialu" type="bt:BT_IdMaterialuPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="dataPomiaru" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="date">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="przedstawiciel" nillable="true">
+						<complexType>
+							<complexContent>
+								<extension base="ges:GES_DaneOsobyPropertyType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+					<element name="wladajacy" nillable="true">
+						<complexType>
+							<complexContent>
+								<extension base="ges:GES_DaneOsobyPropertyType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+					<element name="idBranzowy" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="idUzgodnienia" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="dokument" type="string" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="informacja" type="string" minOccurs="0" maxOccurs="unbounded"/>
+					<!-- Roles -->
+					<element name="korytarzPrzesylowy" type="gml:ReferenceType" minOccurs="0"/>
+					<element name="rodzajPunkt" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_ObiektGESUTPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_ObiektGESUT"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_PunktOOkreslonejWysokosci" type="ges:GES_PunktOOkreslonejWysokosciType" substitutionGroup="ges:GES_ObiektGESUT"/>
+	<complexType name="GES_PunktOOkreslonejWysokosciType">
+		<complexContent>
+			<extension base="ges:GES_ObiektGESUTType">
+				<sequence>
+					<element name="rzednaGory" type="double" minOccurs="0"/>
+					<element name="rzednaDolu" type="double" minOccurs="0"/>
+					<element name="geometria" type="gml:PointPropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_PunktOOkreslonejWysokosciPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_PunktOOkreslonejWysokosci"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_KorytarzPrzesylowy" type="ges:GES_KorytarzPrzesylowyType" substitutionGroup="ges:GES_ObiektGESUT"/>
+	<complexType name="GES_KorytarzPrzesylowyType">
+		<complexContent>
+			<extension base="ges:GES_ObiektGESUTType">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="rodzajSieci" type="ges:GES_RodzSieciType" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_KorytarzPrzesylowyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_KorytarzPrzesylowy"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+<!-- ============================================================= -->
+	<element name="GES_Przewod" type="ges:GES_PrzewodType" abstract="true" substitutionGroup="ges:GES_ObiektGESUT"/>
+	<complexType name="GES_PrzewodType" abstract="true">
+		<complexContent>
+			<extension base="ges:GES_ObiektGESUTType">
+				<sequence>
+					<element name="geometria" type="gml:CurvePropertyType"/>
+					<element name="funkcja" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="ges:GES_FunkcjaType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="przebieg" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="ges:GES_PrzebiegType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="rodzajPrzewodu" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="ges:GES_RodzPrzewoduType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_PrzewodPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_Przewod"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_ObudowaPrzewodu" type="ges:GES_ObudowaPrzewoduType" substitutionGroup="ges:GES_ObiektGESUT"/>
+	<complexType name="GES_ObudowaPrzewoduType">
+		<complexContent>
+			<extension base="ges:GES_ObiektGESUTType">
+				<sequence>
+					<element name="geometria" type="gml:CurvePropertyType"/>
+					<element name="srednica" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="wymiarPionowy" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="wymiarPoziomy" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="obudowa" type="ges:GES_ObudowaType"/>
+					<element name="rodzajSieci" type="ges:GES_RodzSieciType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="liczbaRur" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_ObudowaPrzewoduPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_ObudowaPrzewodu"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_BudowlaPodziemna" type="ges:GES_BudowlaPodziemnaType" substitutionGroup="ges:GES_ObiektGESUT"/>
+	<complexType name="GES_BudowlaPodziemnaType">
+		<complexContent>
+			<extension base="ges:GES_ObiektGESUTType">
+				<sequence>
+					<element name="geometria" type="gml:SurfacePropertyType"/>
+					<element name="rodzajBudowli" type="ges:GES_RodzBudType"/>
+					<element name="rodzajSieci" type="ges:GES_RodzSieciType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_BudowlaPodziemnaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_BudowlaPodziemna"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_UrzadzenieTechniczneZwiazaneZSiecia" type="ges:GES_UrzadzenieTechniczneZwiazaneZSieciaType" substitutionGroup="ges:GES_ObiektGESUT"/>
+	<complexType name="GES_UrzadzenieTechniczneZwiazaneZSieciaType">
+		<complexContent>
+			<extension base="ges:GES_ObiektGESUTType">
+				<sequence>
+					<element name="geometria" type="gml:GeometricPrimitivePropertyType"/>
+					<element name="rodzajSieci" type="ges:GES_RodzSieciType" minOccurs="0"/>
+					<element name="rodzajUrzadz" type="ges:GES_UrzadzType"/>
+					<element name="ksztaltUrzadz" type="ges:GES_KsztaltUrzadzType" minOccurs="0"/>
+					<element name="przebieg" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="ges:GES_PrzebiegType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="zasobnik" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="boolean">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="srednica" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<!-- Roles -->
+					<element name="wlazKomora" type="gml:ReferenceType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_UrzadzenieTechniczneZwiazaneZSieciaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_UrzadzenieTechniczneZwiazaneZSiecia"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_SlupIMaszt" type="ges:GES_SlupIMasztType" substitutionGroup="ges:GES_ObiektGESUT"/>
+	<complexType name="GES_SlupIMasztType">
+		<complexContent>
+			<extension base="ges:GES_ObiektGESUTType">
+				<sequence>
+					<element name="geometria" type="gml:GeometricPrimitivePropertyType"/>
+					<element name="rodzajSieci" type="ges:GES_RodzSieciType" maxOccurs="unbounded"/>
+					<element name="rodzajSlup" type="ges:GES_RodzSlupType"/>
+					<element name="zLatarnia" type="boolean" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_SlupIMasztPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_SlupIMaszt"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+<!-- ============================================================= -->
+	<element name="GES_PrzewodBenzynowy" type="ges:GES_PrzewodBenzynowyType" substitutionGroup="ges:GES_Przewod"/>
+	<complexType name="GES_PrzewodBenzynowyType">
+		<complexContent>
+			<extension base="ges:GES_PrzewodType">
+				<sequence>
+					<element name="srednica" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_PrzewodBenzynowyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_PrzewodBenzynowy"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_PrzewodCieplowniczy" type="ges:GES_PrzewodCieplowniczyType" substitutionGroup="ges:GES_Przewod"/>
+	<complexType name="GES_PrzewodCieplowniczyType">
+		<complexContent>
+			<extension base="ges:GES_PrzewodType">
+				<sequence>
+					<element name="srednica" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="typCiep" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="ges:GES_TypCiepType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="rodzCiep" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="ges:GES_RodzCiepType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_PrzewodCieplowniczyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_PrzewodCieplowniczy"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_PrzewodElektroenergetyczny" type="ges:GES_PrzewodElektroenergetycznyType" substitutionGroup="ges:GES_Przewod"/>
+	<complexType name="GES_PrzewodElektroenergetycznyType">
+		<complexContent>
+			<extension base="ges:GES_PrzewodType">
+				<sequence>
+					<element name="typElektr" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="ges:GES_TypElektrType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="oswietleniowy" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="boolean">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="wiazka" type="boolean"/>
+					<element name="liczbaPrzewodow" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_PrzewodElektroenergetycznyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_PrzewodElektroenergetyczny"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_PrzewodGazowy" type="ges:GES_PrzewodGazowyType" substitutionGroup="ges:GES_Przewod"/>
+	<complexType name="GES_PrzewodGazowyType">
+		<complexContent>
+			<extension base="ges:GES_PrzewodType">
+				<sequence>
+					<element name="srednica" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="typGaz" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="ges:GES_TypGazType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_PrzewodGazowyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_PrzewodGazowy"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_PrzewodKanalizacyjny" type="ges:GES_PrzewodKanalizacyjnyType" substitutionGroup="ges:GES_Przewod"/>
+	<complexType name="GES_PrzewodKanalizacyjnyType">
+		<complexContent>
+			<extension base="ges:GES_PrzewodType">
+				<sequence>
+					<element name="srednica" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="typKanal" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="ges:GES_TypKanalType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="wymiarPionowy" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="wymiarPoziomy" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="tloczny" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="boolean">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_PrzewodKanalizacyjnyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_PrzewodKanalizacyjny"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_PrzewodNaftowy" type="ges:GES_PrzewodNaftowyType" substitutionGroup="ges:GES_Przewod"/>
+	<complexType name="GES_PrzewodNaftowyType">
+		<complexContent>
+			<extension base="ges:GES_PrzewodType">
+				<sequence>
+					<element name="srednica" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_PrzewodNaftowyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_PrzewodNaftowy"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_PrzewodTelekomunikacyjny" type="ges:GES_PrzewodTelekomunikacyjnyType" substitutionGroup="ges:GES_Przewod"/>
+	<complexType name="GES_PrzewodTelekomunikacyjnyType">
+		<complexContent>
+			<extension base="ges:GES_PrzewodType">
+				<sequence>
+					<element name="wiazka" type="boolean"/>
+					<element name="liczbaPrzewodow" nillable="true" minOccurs="0">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_PrzewodTelekomunikacyjnyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_PrzewodTelekomunikacyjny"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_PrzewodWodociagowy" type="ges:GES_PrzewodWodociagowyType" substitutionGroup="ges:GES_Przewod"/>
+	<complexType name="GES_PrzewodWodociagowyType">
+		<complexContent>
+			<extension base="ges:GES_PrzewodType">
+				<sequence>
+					<element name="srednica" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="typWodoc" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="ges:GES_TypWodocType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_PrzewodWodociagowyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_PrzewodWodociagowy"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_PrzewodNiezidentyfikowany" type="ges:GES_PrzewodNiezidentyfikowanyType" substitutionGroup="ges:GES_Przewod"/>
+	<complexType name="GES_PrzewodNiezidentyfikowanyType">
+		<complexContent>
+			<extension base="ges:GES_PrzewodType">
+				<sequence>
+					<element name="srednica" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_PrzewodNiezidentyfikowanyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_PrzewodNiezidentyfikowany"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GES_PrzewodInny" type="ges:GES_PrzewodInnyType" substitutionGroup="ges:GES_Przewod"/>
+	<complexType name="GES_PrzewodInnyType">
+		<complexContent>
+			<extension base="ges:GES_PrzewodType">
+				<sequence>
+					<element name="srednica" nillable="true">
+						<complexType>
+							<simpleContent>
+								<extension base="positiveInteger">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GES_PrzewodInnyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="ges:GES_PrzewodInny"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+<!-- ============================================================= -->
+	<element name="GES_DaneOsoby" type="ges:GES_DaneOsobyType" substitutionGroup="gml:AbstractObject"/>
+	<complexType name="GES_DaneOsobyType">
+		<sequence>
+			<element name="nazwaPelna" type="string" minOccurs="0"/>
+			<element name="nazwaSkrocona" type="string" minOccurs="0"/>
+			<element name="imieNazwisko" type="string" minOccurs="0"/>
+			<element name="e-mail" type="string" minOccurs="0"/>
+			<element name="telefon" type="string" minOccurs="0"/>
+			<element name="adres" type="string" minOccurs="0"/>
+			<element name="adresPRG" type="gml:ReferenceType" minOccurs="0"/>
+			<element name="informacja" type="string" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	<complexType name="GES_DaneOsobyPropertyType">
+		<sequence>
+			<element ref="ges:GES_DaneOsoby"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+</schema>

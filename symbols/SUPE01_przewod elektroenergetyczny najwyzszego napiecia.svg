@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmsvgsym="http://www.intergraph.com/GeoMedia/svgsym">
+<symbol id="SUPE01" viewBox="-0.00100003893021494150 -0.00000000000000000000 0.00200003909412771460 0.02070000208914279900" style="stroke-linejoin:round"><!-- Creator: SVG Document for Symbols-->
+<polyline points= " 0.0000000000 0.0207000000 0.0000000000 0.0027000000"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #ff0000; fill: none; " />
+<polyline points= " 0.0000000000 0.0027000000 0.0000000000 -0.0000000000"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #ff0000; fill: none; " />
+<polyline points= " 0.0000000000 0.0027000000 -0.0000000389 0.0047000152"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #ff0000; fill: none; " />
+<polyline points= " -0.0000000389 0.0047000152 0.0009999611 0.0047000152"  style = "  stroke-width: 0.0002500000; stroke-linecap: round;stroke: #ff0000; fill: none; " />
+<polyline points= " -0.0000000389 0.0047000152 -0.0010000389 0.0047000152"  style = "  stroke-width: 0.0002500000; stroke-linecap: round;stroke: #ff0000; fill: none; " />
+<polyline points= " 0.0010000000 0.0027000000 -0.0000000389 0.0009679152"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #ff0000; fill: none; " />
+<polyline points= " -0.0000000389 0.0009679152 -0.0010000000 0.0027000000"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #ff0000; fill: none; " />
+<polyline points= " -0.0000000389 0.0047000152 -0.0000000389 0.0067000152"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #ff0000; fill: none; " />
+<polyline points= " -0.0000000389 0.0067000152 0.0009999611 0.0067000152"  style = "  stroke-width: 0.0002500000; stroke-linecap: round;stroke: #ff0000; fill: none; " />
+<polyline points= " -0.0000000389 0.0067000152 -0.0010000389 0.0067000152"  style = "  stroke-width: 0.0002500000; stroke-linecap: round;stroke: #ff0000; fill: none; " />
+</symbol>
+</svg>
