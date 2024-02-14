@@ -1,3 +1,7 @@
+import subprocess
+from qgis.core import Qgis
+
+
 def classFactory(iface):  # pylint: disable=invalid-name
     """Load GMLExplorer class from file GMLExplorer.
 
