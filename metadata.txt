@@ -3,14 +3,14 @@
 # This file should be included when you package your plugin.# Mandatory items:
 
 [general]
-name=Wizualizacja GML demo
+name=C-GEO Wizualizacja GML demo
 qgisMinimumVersion=3.22
 description=Wtyczka wczytuje oraz wizualizuje dane EGiB, GESUT, BDOT500 zapisane w plikach GML.
 version=1.3.0
 author=Softline Plus Jerzy Biegalski
 email=softline@geo.pl
 
-about=Wersja demo umożliwia testowanie wszystkich funkcjonalności wtyczki poza wczytywaniem surowych danych GML oraz eksportem do CAD.
+about=Wersja demo umożliwia testowanie wszystkich funkcjonalności wtyczki poza wczytywaniem surowych danych GML oraz eksportem do CAD. Podczas instalacji wtyczki automatycznie pobierane oraz instalowane są dodatkowe zależności python: ezdxf, openpyxl, pandas oraz pyperclip. W przypadku błędu instalacji należy zainstalować wskazane zależności manualnie.
 
 tracker=https://github.com/GISMates/gml_explorer_demo/issues
 repository=https://github.com/GISMates/gml_explorer_demo
@@ -23,7 +23,7 @@ hasProcessingProvider=no
 # changelog=
 
 # Tags are comma separated with spaces allowed
-tags=gml, mapa zasadnicza, bdot, gesut, egib, dxf, cad
+tags=gml, mapa zasadnicza, bdot, gesut, egib, dxf, cad, c-geo, softline
 
 homepage=https://softline.geo.pl/index.php?view=article&id=48:wtyczka-wizualizacja-gml-dla-qgis&catid=8
 category=Plugins
