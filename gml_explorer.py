@@ -4,7 +4,7 @@ import shutil
 import os.path
 import subprocess
 
-from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication, Qt
+from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication, Qt, QSize
 from qgis.PyQt.QtGui import QIcon
 from qgis.PyQt.QtWidgets import QAction, QFileDialog
 from qgis.core import *
@@ -43,6 +43,10 @@ class GMLExplorer:
 
         self.pluginIsActive = False
         self.dockwidget = None
+        self.iface.initializationCompleted.connect(self.changeToolBarIconSize)
+
+    def changeToolBarIconSize(self):
+        self.iface.pluginToolBar().setIconSize(QSize(40, 40))
 
     def tr(self, message):
         return QCoreApplication.translate('GMLExplorer', message)
@@ -79,12 +83,13 @@ class GMLExplorer:
         return action
 
     def initGui(self):
-        icon_path = os.path.join(os.path.dirname(__file__), 'resources', 'icon.png')
+        icon_path = os.path.join(os.path.dirname(__file__), 'resources', 'cgeo_gml_qgis.png')
         self.add_action(
             icon_path,
             text=self.tr(u'Wizualizuj dane GML'),
             callback=self.run,
             parent=self.iface.mainWindow())
+        self.iface.pluginToolBar().setIconSize(QSize(40, 40))
 
     def onClosePlugin(self):
         self.dockwidget.closingPlugin.disconnect(self.onClosePlugin)

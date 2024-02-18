@@ -6,7 +6,7 @@
 name=C-GEO Wizualizacja GML demo
 qgisMinimumVersion=3.22
 description=Wtyczka wczytuje oraz wizualizuje dane EGiB, GESUT, BDOT500 zapisane w plikach GML.
-version=1.3.1
+version=1.3.2
 author=Softline Plus Jerzy Biegalski
 email=softline@geo.pl
 
@@ -27,7 +27,7 @@ tags=gml, mapa zasadnicza, bdot, gesut, egib, dxf, cad, c-geo, softline
 
 homepage=https://softline.geo.pl/index.php?view=article&id=48:wtyczka-wizualizacja-gml-dla-qgis&catid=8
 category=Plugins
-icon=./resources/icon.png
+icon=./resources/cgeo_gml_qgis.png
 # experimental flag
 experimental=False
 
