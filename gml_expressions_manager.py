@@ -198,14 +198,22 @@ def generateSlopeFillGeometryOld(feature, parent):
     """
     Function generates fill symbol for slopes
     """
-    geometry = feature.geometry().forceRHR()
+    geometry = feature.geometry()
     geometry_rings = geometry.asPolygon()
-    top_end = feature.attribute('poczatekGorySkarpy')
-    top_start = feature.attribute('koniecGorySkarpy')
+    top_end = feature.attribute('koniecGorySkarpy')
+    top_start = feature.attribute('poczatekGorySkarpy')
     top_startpoint = QgsPoint()
     top_endpoint = QgsPoint()
     top_startpoint.fromWkt(top_start)
     top_endpoint.fromWkt(top_end)
+    iterator = geometry.vertices()
+    iterator.next()
+    first_vertex = iterator.next()
+    geometry_rhr = geometry.forceRHR()
+    iterator = geometry_rhr.vertices()
+    iterator.next()
+    first_vertex_rhr = iterator.next()
+    angle_factor = -90 if first_vertex.distance(first_vertex_rhr) > 0 else 90
     slope_nodes = []
     slope_top_nodes = []
     found_start = False
@@ -261,7 +269,7 @@ def generateSlopeFillGeometryOld(feature, parent):
             azimuth = prev_v.azimuth(v)
             if azimuth < 0:
                 azimuth = azimuth + 360
-            symbol_azimuth = azimuth + 90
+            symbol_azimuth = azimuth + angle_factor
             symbol_node = QgsGeometry(prev_v)
             if not even:
                 dist_to_bottom = symbol_node.distance(bottom_line)
@@ -303,7 +311,7 @@ def generateSlopeFillGeometry(feature, parent):
     """
     Function generates fill symbol for slopes
     """
-    geometry = feature.geometry().forceRHR()
+    geometry = feature.geometry()
     geometry_rings = geometry.asPolygon()
     top_start = feature.attribute('poczatekGorySkarpy')
     top_end = feature.attribute('koniecGorySkarpy')
@@ -311,6 +319,14 @@ def generateSlopeFillGeometry(feature, parent):
     top_endpoint = QgsPoint()
     top_startpoint.fromWkt(top_start)
     top_endpoint.fromWkt(top_end)
+    iterator = geometry.vertices()
+    iterator.next()
+    first_vertex = iterator.next()
+    geometry_rhr = geometry.forceRHR()
+    iterator = geometry_rhr.vertices()
+    iterator.next()
+    first_vertex_rhr = iterator.next()
+    angle_factor = -90 if first_vertex.distance(first_vertex_rhr) > 0 else 90
     slope_nodes = []
     slope_top_nodes = []
     found_start = False
@@ -366,7 +382,7 @@ def generateSlopeFillGeometry(feature, parent):
             azimuth = prev_v.azimuth(v)
             if azimuth < 0:
                 azimuth = azimuth + 360
-            symbol_azimuth = azimuth + 90
+            symbol_azimuth = azimuth + angle_factor
             symbol_node = QgsGeometry(prev_v)
             if not even:
                 dist_to_bottom = symbol_node.distance(bottom_line)

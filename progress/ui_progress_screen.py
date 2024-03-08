@@ -13,7 +13,7 @@ class UiProgressScreen(object):
             ProgressScreen.setObjectName(u"ProgressScreen")
         ProgressScreen.resize(340, 340)
         ProgressScreen.setWindowTitle("Wizualizacja GML")
-        ProgressScreen.setWindowIcon(QIcon(os.path.join(Path(__file__).parents[1], "resources/icon.png")))
+        ProgressScreen.setWindowIcon(QIcon(os.path.join(Path(__file__).parents[1], "resources/cgeo_gml_qgis.png")))
         self.centralwidget = QWidget(ProgressScreen)
         self.centralwidget.setObjectName(u"centralwidget")
 
@@ -70,7 +70,7 @@ class UiProgressScreen(object):
         self.labelTitle = QLabel(self.widget)
         self.labelTitle.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
         self.labelTitle.setObjectName(u"labelTitle")
-        pixmap = QPixmap(os.path.join(Path(__file__).parents[1], "resources/wizualizacja_gml.png"))
+        pixmap = QPixmap(os.path.join(Path(__file__).parents[1], "resources/cgeo_gml_qgis.png"))
         self.labelTitle.setPixmap(pixmap.scaledToWidth(180, Qt.SmoothTransformation))
         self.labelTitle.setFont(QFont('Calibri', 20))
         self.gridLayout.addWidget(self.labelTitle, 1, 0, 1, 1)

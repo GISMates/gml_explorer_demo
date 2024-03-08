@@ -12399,7 +12399,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -12619,7 +12619,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -12839,7 +12839,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -13059,7 +13059,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -13279,7 +13279,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -13499,7 +13499,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -13719,7 +13719,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -13939,7 +13939,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -14159,7 +14159,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -14379,7 +14379,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -14599,7 +14599,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -14819,7 +14819,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -15039,7 +15039,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -15259,7 +15259,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -15479,7 +15479,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -15699,7 +15699,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -15919,7 +15919,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -16139,7 +16139,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -16359,7 +16359,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
@@ -16579,7 +16579,7 @@
                 </Option>
                 <Option type="Map" name="Color">
                   <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '#24bc24', IF(&quot;kodObiektu&quot; = 'EGUG', '#008000', IF(&quot;kodObiektu&quot; = 'SUCU', '#d200d2', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '#ff0000', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '#bfbf00', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '#803300', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '#ff9100', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '#0000ff', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '#59d9ff', '#000000')))))))))" name="expression"/>
+                  <Option type="QString" value="IF(&quot;kodObiektu&quot; = 'EGKK', '36,188,36', IF(&quot;kodObiektu&quot; = 'EGUG', '0,128,0', IF(&quot;kodObiektu&quot; = 'SUCU', '210,0,210', IF(&quot;kodObiektu&quot; IN('SUEU', 'SUES'), '255,0,0', IF(&quot;kodObiektu&quot; IN('SUGU', 'SUGS', 'SUGN', 'SUGV'), '191,191,0', IF(&quot;kodObiektu&quot; IN('SUKU', 'SUKS', 'SUKK', 'SUKM', 'SUKD', 'SUKN'), '128,51,0', IF(&quot;kodObiektu&quot; IN('SUTU', 'SUTS'), '255,145,0', IF(&quot;kodObiektu&quot; IN('SUWU', 'SUWR'), '0,0,255', IF(&quot;kodObiektu&quot; IN('OTWP', 'OTWS'), '89,217,255', '0,0,0')))))))))" name="expression"/>
                   <Option type="int" value="3" name="type"/>
                 </Option>
                 <Option type="Map" name="Family">
