@@ -25,9 +25,10 @@ class GMLValidationDialog(QDialog, FORM_CLASS):
         if csv_file[0] != "":
             with open(csv_file[0], 'w', newline='', encoding='utf-8') as f:
                 write = csv.writer(f, delimiter=";")
-                write.writerow(['Nr linii', 'Opis błędu'])
-                for i in range(1, self.report_table.rowCount()):
-                    write.writerow([self.report_table.item(i, 0).text(), self.report_table.item(i, 1).text()])
+                write.writerow(['Klasa', 'Id', 'Nr linii w pliku', 'Opis błędu'])
+                for i in range(0, self.report_table.rowCount()):
+                    write.writerow([self.report_table.item(i, 0).text(), self.report_table.item(i, 1).text(),
+                                    self.report_table.item(i, 2).text(), self.report_table.item(i, 3).text()])
         mbox = QMessageBox(self)
         mbox.setWindowTitle('Raport walidacji GML')
         mbox.setText('Raport został zapisany we wskazanej lokalizacji')

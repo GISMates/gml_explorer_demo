@@ -729,11 +729,12 @@ def generateWireLabelNew(layer_name, feature, parent):
         try:
             type = '' if feature.attribute("typPrzewodu") == NULL else feature.attribute("typPrzewodu")
             type = '' if network == 't' and type == 'i' else type
+            type = type.upper() if layer_name in('GES_PrzewodElektroenergetyczny_linia', 'GES_PrzewodElektroenergetyczny_powierzchnia') else type
         except:
             type = ''
         # Source
         try:
-            source = '' if feature.attribute("zrodlo") == NUL or feature.attribute("zrodlo") == 'O' else feature.attribute("zrodlo")
+            source = '' if feature.attribute("zrodlo") == NULL or feature.attribute("zrodlo") == 'O' else feature.attribute("zrodlo")
         except:
             source = ''
         # Diameter

@@ -107,4 +107,10 @@ class ProgressScreen(QDialog):
 
     def killProgressTask(self):
         self.task.terminated = True
+        try:
+            for t in self.task.thread_pool:
+                t.terminate()
+            self.task.thread_pool.clear()
+        except:
+            pass
         self.task.terminate()

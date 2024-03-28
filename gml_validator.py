@@ -54,11 +54,11 @@ class GMLValidator:
     def fillValidationReport(self, errors):
         report_dialog = GMLValidationDialog()
         report_table = report_dialog.report_table
-        for error in errors:
-            error_line = re.sub('(.*)\\|(.*)', r'\1', error)
-            error_message = re.sub('(.*)\\|(.*)', r'\2', error)
+        for gml_class, gml_id, line, msg in errors:
             rownum = report_table.rowCount()
             report_table.insertRow(rownum)
-            report_table.setItem(rownum, 0, QTableWidgetItem(error_line))
-            report_table.setItem(rownum, 1, QTableWidgetItem(error_message))
+            report_table.setItem(rownum, 0, QTableWidgetItem(gml_class))
+            report_table.setItem(rownum, 1, QTableWidgetItem(gml_id))
+            report_table.setItem(rownum, 2, QTableWidgetItem(str(line)))
+            report_table.setItem(rownum, 3, QTableWidgetItem(msg))
         report_dialog.exec_()
