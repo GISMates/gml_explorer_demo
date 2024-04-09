@@ -1,40 +1,40 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis styleCategories="Symbology|Labeling|Actions" version="3.22.12-Białowieża" labelsEnabled="1">
-  <renderer-v2 enableorderby="0" referencescale="-1" forceraster="0" type="RuleRenderer" symbollevels="0">
+<qgis labelsEnabled="1" version="3.22.12-Białowieża" styleCategories="Symbology|Labeling|Actions">
+  <renderer-v2 enableorderby="0" forceraster="0" symbollevels="0" type="RuleRenderer" referencescale="-1">
     <rules key="{42085a9a-a016-41ac-ba52-cb6612b26008}">
-      <rule symbol="0" label="stabilizowany trwale EGPG_A" scalemaxdenom="1001" scalemindenom="1" filter=" &quot;rodzajStabilizacji&quot; IN(3, 4, 5)" key="{a4b5d650-3c6b-40d1-a6d8-b5ea6cfc8077}"/>
-      <rule symbol="1" label="niestabilizowany EGPG_B" scalemaxdenom="1001" scalemindenom="1" filter=" &quot;rodzajStabilizacji&quot; IN(1, 2)" key="{ad57b04b-2646-4bab-a613-caafd7078730}"/>
+      <rule scalemaxdenom="1001" scalemindenom="1" label="stabilizowany trwale EGPG_A" key="{a4b5d650-3c6b-40d1-a6d8-b5ea6cfc8077}" filter=" &quot;rodzajStabilizacji&quot; IN(3, 4, 5)" symbol="0"/>
+      <rule scalemaxdenom="1001" scalemindenom="1" label="niestabilizowany EGPG_B" key="{ad57b04b-2646-4bab-a613-caafd7078730}" filter=" &quot;rodzajStabilizacji&quot; IN(1, 2)" symbol="1"/>
     </rules>
     <symbols>
-      <symbol clip_to_extent="1" alpha="1" type="marker" force_rhr="0" name="0">
+      <symbol force_rhr="0" clip_to_extent="1" alpha="1" name="0" type="marker">
         <data_defined_properties>
           <Option type="Map">
-            <Option value="" type="QString" name="name"/>
+            <Option value="" name="name" type="QString"/>
             <Option name="properties"/>
-            <Option value="collection" type="QString" name="type"/>
+            <Option value="collection" name="type" type="QString"/>
           </Option>
         </data_defined_properties>
-        <layer enabled="1" locked="0" class="SimpleMarker" pass="0">
+        <layer enabled="1" pass="0" class="SimpleMarker" locked="0">
           <Option type="Map">
-            <Option value="0" type="QString" name="angle"/>
-            <Option value="square" type="QString" name="cap_style"/>
-            <Option value="255,255,255,255" type="QString" name="color"/>
-            <Option value="1" type="QString" name="horizontal_anchor_point"/>
-            <Option value="miter" type="QString" name="joinstyle"/>
-            <Option value="circle" type="QString" name="name"/>
-            <Option value="0,0" type="QString" name="offset"/>
-            <Option value="3x:0,0,0,0,0,0" type="QString" name="offset_map_unit_scale"/>
-            <Option value="MM" type="QString" name="offset_unit"/>
-            <Option value="0,0,0,255" type="QString" name="outline_color"/>
-            <Option value="solid" type="QString" name="outline_style"/>
-            <Option value="0.09" type="QString" name="outline_width"/>
-            <Option value="3x:0,0,0,0,0,0" type="QString" name="outline_width_map_unit_scale"/>
-            <Option value="RenderMetersInMapUnits" type="QString" name="outline_width_unit"/>
-            <Option value="diameter" type="QString" name="scale_method"/>
-            <Option value="0.5" type="QString" name="size"/>
-            <Option value="3x:0,0,0,0,0,0" type="QString" name="size_map_unit_scale"/>
-            <Option value="RenderMetersInMapUnits" type="QString" name="size_unit"/>
-            <Option value="1" type="QString" name="vertical_anchor_point"/>
+            <Option value="0" name="angle" type="QString"/>
+            <Option value="square" name="cap_style" type="QString"/>
+            <Option value="255,255,255,255" name="color" type="QString"/>
+            <Option value="1" name="horizontal_anchor_point" type="QString"/>
+            <Option value="miter" name="joinstyle" type="QString"/>
+            <Option value="circle" name="name" type="QString"/>
+            <Option value="0,0" name="offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="offset_unit" type="QString"/>
+            <Option value="0,0,0,255" name="outline_color" type="QString"/>
+            <Option value="solid" name="outline_style" type="QString"/>
+            <Option value="0.09" name="outline_width" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale" type="QString"/>
+            <Option value="RenderMetersInMapUnits" name="outline_width_unit" type="QString"/>
+            <Option value="diameter" name="scale_method" type="QString"/>
+            <Option value="0.5" name="size" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="size_map_unit_scale" type="QString"/>
+            <Option value="RenderMetersInMapUnits" name="size_unit" type="QString"/>
+            <Option value="1" name="vertical_anchor_point" type="QString"/>
           </Option>
           <prop k="angle" v="0"/>
           <prop k="cap_style" v="square"/>
@@ -57,53 +57,53 @@
           <prop k="vertical_anchor_point" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" type="QString" name="name"/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="outlineWidth">
-                  <Option value="true" type="bool" name="active"/>
-                  <Option value="IF(@map_scale &lt;= 500, 0.09, 0.18)" type="QString" name="expression"/>
-                  <Option value="3" type="int" name="type"/>
+              <Option value="" name="name" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="outlineWidth" type="Map">
+                  <Option value="true" name="active" type="bool"/>
+                  <Option value="IF(@map_scale &lt;= 500, 0.09, 0.18)" name="expression" type="QString"/>
+                  <Option value="3" name="type" type="int"/>
                 </Option>
-                <Option type="Map" name="size">
-                  <Option value="true" type="bool" name="active"/>
-                  <Option value="IF(@map_scale &lt;= 500, 0.5, 1)" type="QString" name="expression"/>
-                  <Option value="3" type="int" name="type"/>
+                <Option name="size" type="Map">
+                  <Option value="true" name="active" type="bool"/>
+                  <Option value="IF(@map_scale &lt;= 500, 0.5, 1)" name="expression" type="QString"/>
+                  <Option value="3" name="type" type="int"/>
                 </Option>
               </Option>
-              <Option value="collection" type="QString" name="type"/>
+              <Option value="collection" name="type" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol clip_to_extent="1" alpha="1" type="marker" force_rhr="0" name="1">
+      <symbol force_rhr="0" clip_to_extent="1" alpha="1" name="1" type="marker">
         <data_defined_properties>
           <Option type="Map">
-            <Option value="" type="QString" name="name"/>
+            <Option value="" name="name" type="QString"/>
             <Option name="properties"/>
-            <Option value="collection" type="QString" name="type"/>
+            <Option value="collection" name="type" type="QString"/>
           </Option>
         </data_defined_properties>
-        <layer enabled="1" locked="0" class="SimpleMarker" pass="0">
+        <layer enabled="1" pass="0" class="SimpleMarker" locked="0">
           <Option type="Map">
-            <Option value="0" type="QString" name="angle"/>
-            <Option value="square" type="QString" name="cap_style"/>
-            <Option value="0,0,0,255" type="QString" name="color"/>
-            <Option value="1" type="QString" name="horizontal_anchor_point"/>
-            <Option value="bevel" type="QString" name="joinstyle"/>
-            <Option value="circle" type="QString" name="name"/>
-            <Option value="0,0" type="QString" name="offset"/>
-            <Option value="3x:0,0,0,0,0,0" type="QString" name="offset_map_unit_scale"/>
-            <Option value="MM" type="QString" name="offset_unit"/>
-            <Option value="0,0,0,255" type="QString" name="outline_color"/>
-            <Option value="no" type="QString" name="outline_style"/>
-            <Option value="0" type="QString" name="outline_width"/>
-            <Option value="3x:0,0,0,0,0,0" type="QString" name="outline_width_map_unit_scale"/>
-            <Option value="MM" type="QString" name="outline_width_unit"/>
-            <Option value="diameter" type="QString" name="scale_method"/>
-            <Option value="0.09" type="QString" name="size"/>
-            <Option value="3x:0,0,0,0,0,0" type="QString" name="size_map_unit_scale"/>
-            <Option value="RenderMetersInMapUnits" type="QString" name="size_unit"/>
-            <Option value="1" type="QString" name="vertical_anchor_point"/>
+            <Option value="0" name="angle" type="QString"/>
+            <Option value="square" name="cap_style" type="QString"/>
+            <Option value="0,0,0,255" name="color" type="QString"/>
+            <Option value="1" name="horizontal_anchor_point" type="QString"/>
+            <Option value="bevel" name="joinstyle" type="QString"/>
+            <Option value="circle" name="name" type="QString"/>
+            <Option value="0,0" name="offset" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
+            <Option value="MM" name="offset_unit" type="QString"/>
+            <Option value="0,0,0,255" name="outline_color" type="QString"/>
+            <Option value="no" name="outline_style" type="QString"/>
+            <Option value="0" name="outline_width" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale" type="QString"/>
+            <Option value="MM" name="outline_width_unit" type="QString"/>
+            <Option value="diameter" name="scale_method" type="QString"/>
+            <Option value="0.09" name="size" type="QString"/>
+            <Option value="3x:0,0,0,0,0,0" name="size_map_unit_scale" type="QString"/>
+            <Option value="RenderMetersInMapUnits" name="size_unit" type="QString"/>
+            <Option value="1" name="vertical_anchor_point" type="QString"/>
           </Option>
           <prop k="angle" v="0"/>
           <prop k="cap_style" v="square"/>
@@ -124,21 +124,21 @@
           <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <prop k="size_unit" v="RenderMetersInMapUnits"/>
           <prop k="vertical_anchor_point" v="1"/>
-          <effect type="effectStack" enabled="0">
+          <effect enabled="0" type="effectStack">
             <effect type="dropShadow">
               <Option type="Map">
-                <Option value="13" type="QString" name="blend_mode"/>
-                <Option value="2.645" type="QString" name="blur_level"/>
-                <Option value="MM" type="QString" name="blur_unit"/>
-                <Option value="3x:0,0,0,0,0,0" type="QString" name="blur_unit_scale"/>
-                <Option value="0,0,0,255" type="QString" name="color"/>
-                <Option value="2" type="QString" name="draw_mode"/>
-                <Option value="0" type="QString" name="enabled"/>
-                <Option value="135" type="QString" name="offset_angle"/>
-                <Option value="2" type="QString" name="offset_distance"/>
-                <Option value="MM" type="QString" name="offset_unit"/>
-                <Option value="3x:0,0,0,0,0,0" type="QString" name="offset_unit_scale"/>
-                <Option value="1" type="QString" name="opacity"/>
+                <Option value="13" name="blend_mode" type="QString"/>
+                <Option value="2.645" name="blur_level" type="QString"/>
+                <Option value="MM" name="blur_unit" type="QString"/>
+                <Option value="3x:0,0,0,0,0,0" name="blur_unit_scale" type="QString"/>
+                <Option value="0,0,0,255" name="color" type="QString"/>
+                <Option value="2" name="draw_mode" type="QString"/>
+                <Option value="0" name="enabled" type="QString"/>
+                <Option value="135" name="offset_angle" type="QString"/>
+                <Option value="2" name="offset_distance" type="QString"/>
+                <Option value="MM" name="offset_unit" type="QString"/>
+                <Option value="3x:0,0,0,0,0,0" name="offset_unit_scale" type="QString"/>
+                <Option value="1" name="opacity" type="QString"/>
               </Option>
               <prop k="blend_mode" v="13"/>
               <prop k="blur_level" v="2.645"/>
@@ -155,17 +155,17 @@
             </effect>
             <effect type="color">
               <Option type="Map">
-                <Option value="22" type="QString" name="blend_mode"/>
-                <Option value="255" type="QString" name="brightness"/>
-                <Option value="0" type="QString" name="colorize"/>
-                <Option value="255,128,128,255" type="QString" name="colorize_color"/>
-                <Option value="100" type="QString" name="colorize_strength"/>
-                <Option value="0" type="QString" name="contrast"/>
-                <Option value="2" type="QString" name="draw_mode"/>
-                <Option value="1" type="QString" name="enabled"/>
-                <Option value="0" type="QString" name="grayscale_mode"/>
-                <Option value="1" type="QString" name="opacity"/>
-                <Option value="1" type="QString" name="saturation"/>
+                <Option value="22" name="blend_mode" type="QString"/>
+                <Option value="255" name="brightness" type="QString"/>
+                <Option value="0" name="colorize" type="QString"/>
+                <Option value="255,128,128,255" name="colorize_color" type="QString"/>
+                <Option value="100" name="colorize_strength" type="QString"/>
+                <Option value="0" name="contrast" type="QString"/>
+                <Option value="2" name="draw_mode" type="QString"/>
+                <Option value="1" name="enabled" type="QString"/>
+                <Option value="0" name="grayscale_mode" type="QString"/>
+                <Option value="1" name="opacity" type="QString"/>
+                <Option value="1" name="saturation" type="QString"/>
               </Option>
               <prop k="blend_mode" v="22"/>
               <prop k="brightness" v="255"/>
@@ -181,10 +181,10 @@
             </effect>
             <effect type="drawSource">
               <Option type="Map">
-                <Option value="0" type="QString" name="blend_mode"/>
-                <Option value="2" type="QString" name="draw_mode"/>
-                <Option value="1" type="QString" name="enabled"/>
-                <Option value="1" type="QString" name="opacity"/>
+                <Option value="0" name="blend_mode" type="QString"/>
+                <Option value="2" name="draw_mode" type="QString"/>
+                <Option value="1" name="enabled" type="QString"/>
+                <Option value="1" name="opacity" type="QString"/>
               </Option>
               <prop k="blend_mode" v="0"/>
               <prop k="draw_mode" v="2"/>
@@ -193,18 +193,18 @@
             </effect>
             <effect type="innerShadow">
               <Option type="Map">
-                <Option value="13" type="QString" name="blend_mode"/>
-                <Option value="2.645" type="QString" name="blur_level"/>
-                <Option value="MM" type="QString" name="blur_unit"/>
-                <Option value="3x:0,0,0,0,0,0" type="QString" name="blur_unit_scale"/>
-                <Option value="0,0,0,255" type="QString" name="color"/>
-                <Option value="2" type="QString" name="draw_mode"/>
-                <Option value="0" type="QString" name="enabled"/>
-                <Option value="135" type="QString" name="offset_angle"/>
-                <Option value="2" type="QString" name="offset_distance"/>
-                <Option value="MM" type="QString" name="offset_unit"/>
-                <Option value="3x:0,0,0,0,0,0" type="QString" name="offset_unit_scale"/>
-                <Option value="1" type="QString" name="opacity"/>
+                <Option value="13" name="blend_mode" type="QString"/>
+                <Option value="2.645" name="blur_level" type="QString"/>
+                <Option value="MM" name="blur_unit" type="QString"/>
+                <Option value="3x:0,0,0,0,0,0" name="blur_unit_scale" type="QString"/>
+                <Option value="0,0,0,255" name="color" type="QString"/>
+                <Option value="2" name="draw_mode" type="QString"/>
+                <Option value="0" name="enabled" type="QString"/>
+                <Option value="135" name="offset_angle" type="QString"/>
+                <Option value="2" name="offset_distance" type="QString"/>
+                <Option value="MM" name="offset_unit" type="QString"/>
+                <Option value="3x:0,0,0,0,0,0" name="offset_unit_scale" type="QString"/>
+                <Option value="1" name="opacity" type="QString"/>
               </Option>
               <prop k="blend_mode" v="13"/>
               <prop k="blur_level" v="2.645"/>
@@ -221,22 +221,22 @@
             </effect>
             <effect type="innerGlow">
               <Option type="Map">
-                <Option value="0" type="QString" name="blend_mode"/>
-                <Option value="2.645" type="QString" name="blur_level"/>
-                <Option value="MM" type="QString" name="blur_unit"/>
-                <Option value="3x:0,0,0,0,0,0" type="QString" name="blur_unit_scale"/>
-                <Option value="69,116,40,255" type="QString" name="color1"/>
-                <Option value="188,220,60,255" type="QString" name="color2"/>
-                <Option value="0" type="QString" name="color_type"/>
-                <Option value="0" type="QString" name="discrete"/>
-                <Option value="2" type="QString" name="draw_mode"/>
-                <Option value="0" type="QString" name="enabled"/>
-                <Option value="0.5" type="QString" name="opacity"/>
-                <Option value="gradient" type="QString" name="rampType"/>
-                <Option value="255,255,255,255" type="QString" name="single_color"/>
-                <Option value="2" type="QString" name="spread"/>
-                <Option value="MM" type="QString" name="spread_unit"/>
-                <Option value="3x:0,0,0,0,0,0" type="QString" name="spread_unit_scale"/>
+                <Option value="0" name="blend_mode" type="QString"/>
+                <Option value="2.645" name="blur_level" type="QString"/>
+                <Option value="MM" name="blur_unit" type="QString"/>
+                <Option value="3x:0,0,0,0,0,0" name="blur_unit_scale" type="QString"/>
+                <Option value="69,116,40,255" name="color1" type="QString"/>
+                <Option value="188,220,60,255" name="color2" type="QString"/>
+                <Option value="0" name="color_type" type="QString"/>
+                <Option value="0" name="discrete" type="QString"/>
+                <Option value="2" name="draw_mode" type="QString"/>
+                <Option value="0" name="enabled" type="QString"/>
+                <Option value="0.5" name="opacity" type="QString"/>
+                <Option value="gradient" name="rampType" type="QString"/>
+                <Option value="255,255,255,255" name="single_color" type="QString"/>
+                <Option value="2" name="spread" type="QString"/>
+                <Option value="MM" name="spread_unit" type="QString"/>
+                <Option value="3x:0,0,0,0,0,0" name="spread_unit_scale" type="QString"/>
               </Option>
               <prop k="blend_mode" v="0"/>
               <prop k="blur_level" v="2.645"/>
@@ -258,15 +258,15 @@
           </effect>
           <data_defined_properties>
             <Option type="Map">
-              <Option value="" type="QString" name="name"/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="size">
-                  <Option value="true" type="bool" name="active"/>
-                  <Option value="IF(@map_scale &lt;= 500, 0.09, 0.18)" type="QString" name="expression"/>
-                  <Option value="3" type="int" name="type"/>
+              <Option value="" name="name" type="QString"/>
+              <Option name="properties" type="Map">
+                <Option name="size" type="Map">
+                  <Option value="true" name="active" type="bool"/>
+                  <Option value="IF(@map_scale &lt;= 500, 0.09, 0.18)" name="expression" type="QString"/>
+                  <Option value="3" name="type" type="int"/>
                 </Option>
               </Option>
-              <Option value="collection" type="QString" name="type"/>
+              <Option value="collection" name="type" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
@@ -274,233 +274,22 @@
     </symbols>
   </renderer-v2>
   <labeling type="rule-based">
-    <rules key="{3e504e20-4c45-4382-a72d-519469f32363}">
-      <rule scalemaxdenom="1001" description="Prezentacja graficzna" scalemindenom="1" filter=" IF(&quot;PrezentacjaGraficzna_geometria&quot;, &quot;PrezentacjaGraficzna_geometria&quot; IS NOT NULL, True)" key="{e169e8a2-97e3-4376-9bd6-d552e6f22ab9}">
-        <settings calloutType="simple">
-          <text-style fontItalic="0" capitalization="0" previewBkgrdColor="255,255,255,255" textColor="0,0,0,255" fontLetterSpacing="0" fontSizeUnit="RenderMetersInMapUnits" fontKerning="1" textOrientation="horizontal" textOpacity="1" legendString="Aa" fontFamily="Arial" fontUnderline="0" fontSizeMapUnitScale="3x:0,0,0,0,0,0" fontWeight="50" isExpression="1" blendMode="0" fontStrikeout="0" namedStyle="Normal" allowHtml="0" multilineHeight="1" useSubstitutions="0" fontWordSpacing="0" fieldName="regexp_replace( &quot;idPunktu&quot; , '(.*)\\.(.*)$', '\\2')" fontSize="0.75">
-            <families/>
-            <text-buffer bufferColor="255,255,255,255" bufferNoFill="1" bufferJoinStyle="128" bufferSizeUnits="RenderMetersInMapUnits" bufferDraw="1" bufferOpacity="1" bufferSize="0" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferBlendMode="0"/>
-            <text-mask maskSizeMapUnitScale="3x:0,0,0,0,0,0" maskType="0" maskSize="1.5" maskSizeUnits="MM" maskOpacity="1" maskedSymbolLayers="" maskEnabled="0" maskJoinStyle="128"/>
-            <background shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeRotation="0" shapeRadiiX="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeSVGFile="" shapeSizeUnit="MM" shapeBorderWidth="0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeOffsetUnit="MM" shapeRadiiY="0" shapeOffsetX="0" shapeFillColor="255,255,255,255" shapeOffsetY="0" shapeRadiiUnit="MM" shapeType="0" shapeBorderWidthUnit="MM" shapeDraw="0" shapeSizeType="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeOpacity="1" shapeSizeY="0" shapeBlendMode="0" shapeBorderColor="128,128,128,255" shapeRotationType="0" shapeSizeX="0" shapeJoinStyle="64">
-              <symbol clip_to_extent="1" alpha="1" type="marker" force_rhr="0" name="markerSymbol">
-                <data_defined_properties>
-                  <Option type="Map">
-                    <Option value="" type="QString" name="name"/>
-                    <Option name="properties"/>
-                    <Option value="collection" type="QString" name="type"/>
-                  </Option>
-                </data_defined_properties>
-                <layer enabled="1" locked="0" class="SimpleMarker" pass="0">
-                  <Option type="Map">
-                    <Option value="0" type="QString" name="angle"/>
-                    <Option value="square" type="QString" name="cap_style"/>
-                    <Option value="213,180,60,255" type="QString" name="color"/>
-                    <Option value="1" type="QString" name="horizontal_anchor_point"/>
-                    <Option value="bevel" type="QString" name="joinstyle"/>
-                    <Option value="circle" type="QString" name="name"/>
-                    <Option value="0,0" type="QString" name="offset"/>
-                    <Option value="3x:0,0,0,0,0,0" type="QString" name="offset_map_unit_scale"/>
-                    <Option value="MM" type="QString" name="offset_unit"/>
-                    <Option value="35,35,35,255" type="QString" name="outline_color"/>
-                    <Option value="solid" type="QString" name="outline_style"/>
-                    <Option value="0" type="QString" name="outline_width"/>
-                    <Option value="3x:0,0,0,0,0,0" type="QString" name="outline_width_map_unit_scale"/>
-                    <Option value="MM" type="QString" name="outline_width_unit"/>
-                    <Option value="diameter" type="QString" name="scale_method"/>
-                    <Option value="2" type="QString" name="size"/>
-                    <Option value="3x:0,0,0,0,0,0" type="QString" name="size_map_unit_scale"/>
-                    <Option value="MM" type="QString" name="size_unit"/>
-                    <Option value="1" type="QString" name="vertical_anchor_point"/>
-                  </Option>
-                  <prop k="angle" v="0"/>
-                  <prop k="cap_style" v="square"/>
-                  <prop k="color" v="213,180,60,255"/>
-                  <prop k="horizontal_anchor_point" v="1"/>
-                  <prop k="joinstyle" v="bevel"/>
-                  <prop k="name" v="circle"/>
-                  <prop k="offset" v="0,0"/>
-                  <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-                  <prop k="offset_unit" v="MM"/>
-                  <prop k="outline_color" v="35,35,35,255"/>
-                  <prop k="outline_style" v="solid"/>
-                  <prop k="outline_width" v="0"/>
-                  <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-                  <prop k="outline_width_unit" v="MM"/>
-                  <prop k="scale_method" v="diameter"/>
-                  <prop k="size" v="2"/>
-                  <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-                  <prop k="size_unit" v="MM"/>
-                  <prop k="vertical_anchor_point" v="1"/>
-                  <data_defined_properties>
-                    <Option type="Map">
-                      <Option value="" type="QString" name="name"/>
-                      <Option name="properties"/>
-                      <Option value="collection" type="QString" name="type"/>
-                    </Option>
-                  </data_defined_properties>
-                </layer>
-              </symbol>
-              <symbol clip_to_extent="1" alpha="1" type="fill" force_rhr="0" name="fillSymbol">
-                <data_defined_properties>
-                  <Option type="Map">
-                    <Option value="" type="QString" name="name"/>
-                    <Option name="properties"/>
-                    <Option value="collection" type="QString" name="type"/>
-                  </Option>
-                </data_defined_properties>
-                <layer enabled="1" locked="0" class="SimpleFill" pass="0">
-                  <Option type="Map">
-                    <Option value="3x:0,0,0,0,0,0" type="QString" name="border_width_map_unit_scale"/>
-                    <Option value="255,255,255,255" type="QString" name="color"/>
-                    <Option value="bevel" type="QString" name="joinstyle"/>
-                    <Option value="0,0" type="QString" name="offset"/>
-                    <Option value="3x:0,0,0,0,0,0" type="QString" name="offset_map_unit_scale"/>
-                    <Option value="MM" type="QString" name="offset_unit"/>
-                    <Option value="128,128,128,255" type="QString" name="outline_color"/>
-                    <Option value="no" type="QString" name="outline_style"/>
-                    <Option value="0" type="QString" name="outline_width"/>
-                    <Option value="MM" type="QString" name="outline_width_unit"/>
-                    <Option value="solid" type="QString" name="style"/>
-                  </Option>
-                  <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-                  <prop k="color" v="255,255,255,255"/>
-                  <prop k="joinstyle" v="bevel"/>
-                  <prop k="offset" v="0,0"/>
-                  <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-                  <prop k="offset_unit" v="MM"/>
-                  <prop k="outline_color" v="128,128,128,255"/>
-                  <prop k="outline_style" v="no"/>
-                  <prop k="outline_width" v="0"/>
-                  <prop k="outline_width_unit" v="MM"/>
-                  <prop k="style" v="solid"/>
-                  <data_defined_properties>
-                    <Option type="Map">
-                      <Option value="" type="QString" name="name"/>
-                      <Option name="properties"/>
-                      <Option value="collection" type="QString" name="type"/>
-                    </Option>
-                  </data_defined_properties>
-                </layer>
-              </symbol>
-            </background>
-            <shadow shadowRadiusUnit="MM" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowOffsetDist="1" shadowOffsetUnit="MM" shadowBlendMode="6" shadowUnder="0" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowColor="0,0,0,255" shadowScale="100" shadowOpacity="0.69999999999999996" shadowOffsetAngle="135" shadowOffsetGlobal="1" shadowRadius="1.5" shadowRadiusAlphaOnly="0" shadowDraw="0"/>
-            <dd_properties>
-              <Option type="Map">
-                <Option value="" type="QString" name="name"/>
-                <Option name="properties"/>
-                <Option value="collection" type="QString" name="type"/>
-              </Option>
-            </dd_properties>
-            <substitutions/>
-          </text-style>
-          <text-format multilineAlign="0" autoWrapLength="0" rightDirectionSymbol=">" placeDirectionSymbol="0" decimals="3" reverseDirectionSymbol="0" formatNumbers="0" addDirectionSymbol="0" plussign="0" useMaxLineLengthForAutoWrap="1" leftDirectionSymbol="&lt;" wrapChar=""/>
-          <placement labelOffsetMapUnitScale="3x:0,0,0,0,0,0" centroidInside="0" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" dist="0.25" geometryGenerator=" IF(&quot;PrezentacjaGraficzna_geometria&quot;, geom_from_wkt(string_to_array( &quot;PrezentacjaGraficzna_geometria&quot; , ', ')[0]), translate($geometry, 0.5, 0.5))" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" polygonPlacementFlags="2" rotationUnit="AngleRadians" maxCurvedCharAngleIn="25" overrunDistanceUnit="MM" fitInPolygonOnly="0" repeatDistance="0" geometryGeneratorType="PointGeometry" layerType="PointGeometry" rotationAngle="0" distUnits="RenderMetersInMapUnits" yOffset="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" quadOffset="2" offsetType="0" lineAnchorPercent="0.5" repeatDistanceUnits="MM" xOffset="0" lineAnchorClipping="0" distMapUnitScale="3x:0,0,0,0,0,0" preserveRotation="1" centroidWhole="0" geometryGeneratorEnabled="1" placementFlags="10" overrunDistance="0" lineAnchorType="0" placement="1" offsetUnits="MM" maxCurvedCharAngleOut="-25" priority="5"/>
-          <rendering limitNumLabels="0" unplacedVisibility="0" obstacleType="1" scaleVisibility="1" fontMinPixelSize="3" scaleMin="0" upsidedownLabels="0" fontMaxPixelSize="10000" maxNumLabels="2000" mergeLines="0" scaleMax="0" obstacleFactor="1" obstacle="1" zIndex="0" minFeatureSize="0" drawLabels="1" fontLimitPixelSize="0" displayAll="1" labelPerPart="0"/>
-          <dd_properties>
-            <Option type="Map">
-              <Option value="" type="QString" name="name"/>
-              <Option type="Map" name="properties">
-                <Option type="Map" name="Bold">
-                  <Option value="false" type="bool" name="active"/>
-                  <Option value="1" type="int" name="type"/>
-                  <Option value="" type="QString" name="val"/>
-                </Option>
-                <Option type="Map" name="BufferSize">
-                  <Option value="false" type="bool" name="active"/>
-                  <Option value="1" type="int" name="type"/>
-                  <Option value="" type="QString" name="val"/>
-                </Option>
-                <Option type="Map" name="BufferUnit">
-                  <Option value="false" type="bool" name="active"/>
-                  <Option value="1" type="int" name="type"/>
-                  <Option value="" type="QString" name="val"/>
-                </Option>
-                <Option type="Map" name="Color">
-                  <Option value="false" type="bool" name="active"/>
-                  <Option value="1" type="int" name="type"/>
-                  <Option value="" type="QString" name="val"/>
-                </Option>
-                <Option type="Map" name="Family">
-                  <Option value="false" type="bool" name="active"/>
-                  <Option value="1" type="int" name="type"/>
-                  <Option value="" type="QString" name="val"/>
-                </Option>
-                <Option type="Map" name="FontSizeUnit">
-                  <Option value="false" type="bool" name="active"/>
-                  <Option value="1" type="int" name="type"/>
-                  <Option value="" type="QString" name="val"/>
-                </Option>
-                <Option type="Map" name="FontStyle">
-                  <Option value="false" type="bool" name="active"/>
-                  <Option value="1" type="int" name="type"/>
-                  <Option value="" type="QString" name="val"/>
-                </Option>
-                <Option type="Map" name="Italic">
-                  <Option value="false" type="bool" name="active"/>
-                  <Option value="1" type="int" name="type"/>
-                  <Option value="" type="QString" name="val"/>
-                </Option>
-                <Option type="Map" name="LabelRotation">
-                  <Option value="true" type="bool" name="active"/>
-                  <Option value="-to_real(string_to_array( &quot;PrezentacjaGraficzna_etykieta_Etykieta_katObrotu&quot; , ', ')[0])" type="QString" name="expression"/>
-                  <Option value="3" type="int" name="type"/>
-                </Option>
-                <Option type="Map" name="MultiLineAlignment">
-                  <Option value="true" type="bool" name="active"/>
-                  <Option value="if(string_to_array( &quot;PrezentacjaGraficzna_etykieta_Etykieta_justyfikacja&quot;, ', ')[0] = '1', 'Follow', 'Left')" type="QString" name="expression"/>
-                  <Option value="3" type="int" name="type"/>
-                </Option>
-                <Option type="Map" name="OffsetQuad">
-                  <Option value="true" type="bool" name="active"/>
-                  <Option value="string_to_array( &quot;PrezentacjaGraficzna_etykieta_Etykieta_justyfikacja&quot;  , ', ')[0] - 1" type="QString" name="expression"/>
-                  <Option value="3" type="int" name="type"/>
-                </Option>
-                <Option type="Map" name="Size">
-                  <Option value="true" type="bool" name="active"/>
-                  <Option value="IF(@map_scale &lt;= 500, 0.75, 1.5)" type="QString" name="expression"/>
-                  <Option value="3" type="int" name="type"/>
-                </Option>
-                <Option type="Map" name="Underline">
-                  <Option value="false" type="bool" name="active"/>
-                  <Option value="1" type="int" name="type"/>
-                  <Option value="" type="QString" name="val"/>
-                </Option>
-              </Option>
-              <Option value="collection" type="QString" name="type"/>
-            </Option>
-          </dd_properties>
-          <callout type="simple">
-            <Option type="Map">
-              <Option value="pole_of_inaccessibility" type="QString" name="anchorPoint"/>
-              <Option value="0" type="int" name="blendMode"/>
-              <Option type="Map" name="ddProperties">
-                <Option value="" type="QString" name="name"/>
-                <Option name="properties"/>
-                <Option value="collection" type="QString" name="type"/>
-              </Option>
-              <Option value="false" type="bool" name="drawToAllParts"/>
-              <Option value="0" type="QString" name="enabled"/>
-              <Option value="point_on_exterior" type="QString" name="labelAnchorPoint"/>
-              <Option value="&lt;symbol clip_to_extent=&quot;1&quot; alpha=&quot;1&quot; type=&quot;line&quot; force_rhr=&quot;0&quot; name=&quot;symbol&quot;>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option value=&quot;&quot; type=&quot;QString&quot; name=&quot;name&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option value=&quot;collection&quot; type=&quot;QString&quot; name=&quot;type&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;layer enabled=&quot;1&quot; locked=&quot;0&quot; class=&quot;SimpleLine&quot; pass=&quot;0&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option value=&quot;0&quot; type=&quot;QString&quot; name=&quot;align_dash_pattern&quot;/>&lt;Option value=&quot;square&quot; type=&quot;QString&quot; name=&quot;capstyle&quot;/>&lt;Option value=&quot;5;2&quot; type=&quot;QString&quot; name=&quot;customdash&quot;/>&lt;Option value=&quot;3x:0,0,0,0,0,0&quot; type=&quot;QString&quot; name=&quot;customdash_map_unit_scale&quot;/>&lt;Option value=&quot;MM&quot; type=&quot;QString&quot; name=&quot;customdash_unit&quot;/>&lt;Option value=&quot;0&quot; type=&quot;QString&quot; name=&quot;dash_pattern_offset&quot;/>&lt;Option value=&quot;3x:0,0,0,0,0,0&quot; type=&quot;QString&quot; name=&quot;dash_pattern_offset_map_unit_scale&quot;/>&lt;Option value=&quot;MM&quot; type=&quot;QString&quot; name=&quot;dash_pattern_offset_unit&quot;/>&lt;Option value=&quot;0&quot; type=&quot;QString&quot; name=&quot;draw_inside_polygon&quot;/>&lt;Option value=&quot;bevel&quot; type=&quot;QString&quot; name=&quot;joinstyle&quot;/>&lt;Option value=&quot;60,60,60,255&quot; type=&quot;QString&quot; name=&quot;line_color&quot;/>&lt;Option value=&quot;solid&quot; type=&quot;QString&quot; name=&quot;line_style&quot;/>&lt;Option value=&quot;0.3&quot; type=&quot;QString&quot; name=&quot;line_width&quot;/>&lt;Option value=&quot;MM&quot; type=&quot;QString&quot; name=&quot;line_width_unit&quot;/>&lt;Option value=&quot;0&quot; type=&quot;QString&quot; name=&quot;offset&quot;/>&lt;Option value=&quot;3x:0,0,0,0,0,0&quot; type=&quot;QString&quot; name=&quot;offset_map_unit_scale&quot;/>&lt;Option value=&quot;MM&quot; type=&quot;QString&quot; name=&quot;offset_unit&quot;/>&lt;Option value=&quot;0&quot; type=&quot;QString&quot; name=&quot;ring_filter&quot;/>&lt;Option value=&quot;0&quot; type=&quot;QString&quot; name=&quot;trim_distance_end&quot;/>&lt;Option value=&quot;3x:0,0,0,0,0,0&quot; type=&quot;QString&quot; name=&quot;trim_distance_end_map_unit_scale&quot;/>&lt;Option value=&quot;MM&quot; type=&quot;QString&quot; name=&quot;trim_distance_end_unit&quot;/>&lt;Option value=&quot;0&quot; type=&quot;QString&quot; name=&quot;trim_distance_start&quot;/>&lt;Option value=&quot;3x:0,0,0,0,0,0&quot; type=&quot;QString&quot; name=&quot;trim_distance_start_map_unit_scale&quot;/>&lt;Option value=&quot;MM&quot; type=&quot;QString&quot; name=&quot;trim_distance_start_unit&quot;/>&lt;Option value=&quot;0&quot; type=&quot;QString&quot; name=&quot;tweak_dash_pattern_on_corners&quot;/>&lt;Option value=&quot;0&quot; type=&quot;QString&quot; name=&quot;use_custom_dash&quot;/>&lt;Option value=&quot;3x:0,0,0,0,0,0&quot; type=&quot;QString&quot; name=&quot;width_map_unit_scale&quot;/>&lt;/Option>&lt;prop k=&quot;align_dash_pattern&quot; v=&quot;0&quot;/>&lt;prop k=&quot;capstyle&quot; v=&quot;square&quot;/>&lt;prop k=&quot;customdash&quot; v=&quot;5;2&quot;/>&lt;prop k=&quot;customdash_map_unit_scale&quot; v=&quot;3x:0,0,0,0,0,0&quot;/>&lt;prop k=&quot;customdash_unit&quot; v=&quot;MM&quot;/>&lt;prop k=&quot;dash_pattern_offset&quot; v=&quot;0&quot;/>&lt;prop k=&quot;dash_pattern_offset_map_unit_scale&quot; v=&quot;3x:0,0,0,0,0,0&quot;/>&lt;prop k=&quot;dash_pattern_offset_unit&quot; v=&quot;MM&quot;/>&lt;prop k=&quot;draw_inside_polygon&quot; v=&quot;0&quot;/>&lt;prop k=&quot;joinstyle&quot; v=&quot;bevel&quot;/>&lt;prop k=&quot;line_color&quot; v=&quot;60,60,60,255&quot;/>&lt;prop k=&quot;line_style&quot; v=&quot;solid&quot;/>&lt;prop k=&quot;line_width&quot; v=&quot;0.3&quot;/>&lt;prop k=&quot;line_width_unit&quot; v=&quot;MM&quot;/>&lt;prop k=&quot;offset&quot; v=&quot;0&quot;/>&lt;prop k=&quot;offset_map_unit_scale&quot; v=&quot;3x:0,0,0,0,0,0&quot;/>&lt;prop k=&quot;offset_unit&quot; v=&quot;MM&quot;/>&lt;prop k=&quot;ring_filter&quot; v=&quot;0&quot;/>&lt;prop k=&quot;trim_distance_end&quot; v=&quot;0&quot;/>&lt;prop k=&quot;trim_distance_end_map_unit_scale&quot; v=&quot;3x:0,0,0,0,0,0&quot;/>&lt;prop k=&quot;trim_distance_end_unit&quot; v=&quot;MM&quot;/>&lt;prop k=&quot;trim_distance_start&quot; v=&quot;0&quot;/>&lt;prop k=&quot;trim_distance_start_map_unit_scale&quot; v=&quot;3x:0,0,0,0,0,0&quot;/>&lt;prop k=&quot;trim_distance_start_unit&quot; v=&quot;MM&quot;/>&lt;prop k=&quot;tweak_dash_pattern_on_corners&quot; v=&quot;0&quot;/>&lt;prop k=&quot;use_custom_dash&quot; v=&quot;0&quot;/>&lt;prop k=&quot;width_map_unit_scale&quot; v=&quot;3x:0,0,0,0,0,0&quot;/>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option value=&quot;&quot; type=&quot;QString&quot; name=&quot;name&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option value=&quot;collection&quot; type=&quot;QString&quot; name=&quot;type&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;/layer>&lt;/symbol>" type="QString" name="lineSymbol"/>
-              <Option value="0" type="double" name="minLength"/>
-              <Option value="3x:0,0,0,0,0,0" type="QString" name="minLengthMapUnitScale"/>
-              <Option value="MM" type="QString" name="minLengthUnit"/>
-              <Option value="0" type="double" name="offsetFromAnchor"/>
-              <Option value="3x:0,0,0,0,0,0" type="QString" name="offsetFromAnchorMapUnitScale"/>
-              <Option value="MM" type="QString" name="offsetFromAnchorUnit"/>
-              <Option value="0" type="double" name="offsetFromLabel"/>
-              <Option value="3x:0,0,0,0,0,0" type="QString" name="offsetFromLabelMapUnitScale"/>
-              <Option value="MM" type="QString" name="offsetFromLabelUnit"/>
-            </Option>
-          </callout>
-        </settings>
-      </rule>
-    </rules>
+    <rules key="{86166a1e-f21f-42a9-8dff-12a70a64350e}"/>
   </labeling>
   <blendMode>0</blendMode>
   <featureBlendMode>0</featureBlendMode>
   <attributeactions>
-    <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+    <defaultAction value="{caba6be7-8d22-465e-a8c7-d55b41726a9b}" key="Canvas"/>
+    <actionsetting isEnabledOnlyWhenEditable="0" action="from qgis.PyQt.QtCore import Qt&#xa;from qgis.PyQt.QtGui import QCursor&#xa;from qgis.PyQt.QtWidgets import QApplication, QDialog, QTreeWidget, QTreeWidgetItem, QHeaderView, QMenu, QMessageBox&#xa;&#xa;&#xa;iface = qgis.utils.iface&#xa;relations = {}&#xa;project = QgsProject.instance()&#xa;relations_layers = project.mapLayersByName('relacje')&#xa;if len(relations_layers) == 1:&#xa;    for feature in relations_layers[0].getFeatures():&#xa;        relation = relations.get(feature.attribute('Warstwa'), {})&#xa;        relation[feature.attribute('Atrybut')] = feature.attribute('Relacja')&#xa;        relations[feature.attribute('Warstwa')] = relation&#xa;&#xa;def configureDialog(layer_name, feature):&#xa;    dialog = QDialog()&#xa;    dialog.setWindowFlags(Qt.WindowStaysOnTopHint)&#xa;    dialog.setWindowTitle('Relacje obiektu klasy %s' % layer_name)&#xa;    dialog.setMinimumWidth(600)&#xa;    dialog.setMinimumHeight(400)&#xa;    dialog.resizeEvent = adjustSize&#xa;    try:&#xa;        dialog_id = feature.attribute('gml_id')&#xa;    except:&#xa;        dialog_id = ''&#xa;    dialog.setToolTip(dialog_id)&#xa;    tree = QTreeWidget(dialog)&#xa;    tree.move(5, 5)&#xa;    tree.setColumnCount(1)&#xa;    tree.setHeaderHidden(True)&#xa;    tree.setAutoScroll(True)&#xa;    tree.itemDoubleClicked.connect(zoomToReference)&#xa;    tree.setContextMenuPolicy(Qt.CustomContextMenu)&#xa;    tree.customContextMenuRequested.connect(showMenu)&#xa;    return dialog, tree&#xa;&#xa;def adjustSize(event):&#xa;    width = event.size().width()&#xa;    height = event.size().height()&#xa;    tree.resize(width - 10, height - 10)&#xa;&#xa;def zoomToReference():&#xa;    current_item = tree.currentItem()&#xa;    if current_item.parent() is not None:&#xa;        layer_name = current_item.parent().text(0)&#xa;        identifier = current_item.text(0)&#xa;        ref_layers = QgsProject.instance().mapLayersByName(layer_name)&#xa;        if len(ref_layers) == 1:&#xa;            ref_layer = ref_layers[0]&#xa;            ref_layer.selectByExpression(&quot;gml_id = '&quot; + identifier + &quot;'&quot;)&#xa;            iface.mapCanvas().zoomToSelected(ref_layer)&#xa;&#xa;def showMenu():&#xa;    current_item = tree.currentItem()&#xa;    menu = QMenu('Menu', dialog)&#xa;    if current_item.data(1, 1) == 'href' and current_item is not None:&#xa;        menu.addAction('Identyfikuj')&#xa;        menu.addAction('Wyświetl relacje')&#xa;        menu.addAction('Kopiuj identyfikator')&#xa;    action = menu.exec(QCursor.pos())&#xa;    if action is not None:&#xa;        executeMenuAction(dialog, action, current_item)&#xa;&#xa;def executeMenuAction(dialog, action, current_item):&#xa;    layer_name = current_item.parent().text(0)&#xa;    identifier = current_item.text(0)&#xa;    if action.text() == 'Identyfikuj':&#xa;        ref_layers = QgsProject.instance().mapLayersByName(layer_name)&#xa;        if len(ref_layers) == 1:&#xa;            ref_layer = ref_layers[0]&#xa;            ref_layer.selectByExpression(&quot;gml_id = '&quot; + identifier + &quot;'&quot;)&#xa;            for feature in ref_layer.selectedFeatures():&#xa;                iface.mapCanvas().zoomToSelected(ref_layer)&#xa;                iface.mapCanvas().waitWhileRendering()&#xa;                iface.openFeatureForm(ref_layer, feature)&#xa;    if action.text() == 'Wyświetl relacje':&#xa;        ref_layer, field_names = getRefLayerAndFields(current_item.parent().text(0))&#xa;        if ref_layer is not None:&#xa;            getReferences(dialog, current_item, ref_layer, field_names)&#xa;            tree.expandItem(current_item)&#xa;    if action.text() == 'Kopiuj identyfikator':&#xa;        cb = QApplication.clipboard()&#xa;        cb.clear(mode=cb.Clipboard)&#xa;        cb.setText(identifier, mode=cb.Clipboard)&#xa;&#xa;def getRefLayerAndFields(layer_name):&#xa;    ref_layer = None&#xa;    field_names = {}&#xa;    layers = project.mapLayersByName(layer_name)&#xa;    if len(layers) == 1:&#xa;        ref_layer = layers[0]&#xa;        field_names = relations.get(ref_layer.name(), {})&#xa;    return ref_layer, field_names&#xa;&#xa;def getReferences(dialog, item, ref_layer, field_names):&#xa;    parent_ids = [dialog.toolTip()]&#xa;    item_parent = item.parent()&#xa;    if item_parent.parent():&#xa;        while item_parent:&#xa;            for i in range(0, item_parent.childCount()):&#xa;                child = item_parent.child(i)&#xa;                if child.data(1, 1) != 'class' and child != item:&#xa;                    parent_ids.append(child.text(0))&#xa;            item_parent = item_parent.parent()&#xa;&#xa;    identifier = item.text(0)&#xa;    if item.childCount() == 0 and identifier not in parent_ids:&#xa;        for feature in ref_layer.getFeatures(&quot;gml_id = '&quot; + identifier + &quot;'&quot;):&#xa;            for field_name in field_names.keys():&#xa;                field_value = feature.attribute(field_name)&#xa;                if field_value:&#xa;                    class_item = QTreeWidgetItem(item)&#xa;                    class_item.setText(0, field_names[field_name])&#xa;                    class_item.setData(1, 1, 'class')&#xa;                    addReferences(class_item, field_value)&#xa;                    tree.expandItem(class_item)&#xa;        for other_layer in QgsProject().instance().mapLayers().values():&#xa;            if other_layer.id() != ref_layer.id():&#xa;                for attr, relation in relations.get(other_layer.name(), {}).items():&#xa;                    if relation == ref_layer.name():&#xa;                        for other_feature in other_layer.getFeatures(&quot;\&quot;&quot; + attr + &quot;\&quot; LIKE '%&quot; + identifier + &quot;%'&quot;):&#xa;                            class_item = QTreeWidgetItem(item)&#xa;                            class_item.setText(0, other_layer.name())&#xa;                            class_item.setData(1, 1, 'class')&#xa;                            addReferences(class_item, other_feature.attribute(&quot;gml_id&quot;))&#xa;                            tree.expandItem(class_item)&#xa;    else:&#xa;        showMessage('Relacje obiektu', 'Relacje wskazanego obiektu zostały już wyświetlone')&#xa;&#xa;def addReferences(class_item, field_value):&#xa;    for href in field_value.split(', '):&#xa;        ref_item = QTreeWidgetItem(class_item)&#xa;        ref_item.setText(0, href)&#xa;        ref_item.setData(1, 1, 'href')&#xa;&#xa;def showMessage(title, text):&#xa;    mbox = QMessageBox(dialog)&#xa;    mbox.setWindowTitle(title)&#xa;    mbox.setText(text)&#xa;    mbox.exec()&#xa;&#xa;layers = project.mapLayersByName('[% @layer_name %]')&#xa;if len(relations) > 0:&#xa;    for layer in layers:&#xa;        if layer.id() == '[% @layer_id %]':&#xa;            feature = layer.getFeature([% $id %])&#xa;            dialog, tree = configureDialog('[% @layer_name %]', feature)&#xa;            has_hrefs = False&#xa;            for attr, relation in relations.get(layer.name(), {}).items():&#xa;                field_value = feature.attribute(attr)&#xa;                if field_value is not None and field_value:&#xa;                    has_hrefs = True&#xa;                    class_item = QTreeWidgetItem()&#xa;                    class_item.setText(0, relation)&#xa;                    class_item.setData(1, 1, 'class')&#xa;                    tree.addTopLevelItem(class_item)&#xa;                    addReferences(class_item, field_value)&#xa;            for other_layer in project.mapLayers().values():&#xa;                if other_layer.id() != layer.id():&#xa;                    for attr, relation in relations.get(other_layer.name(), {}).items():&#xa;                        if relation == layer.name():&#xa;                            class_item = QTreeWidgetItem()&#xa;                            class_item.setText(0, other_layer.name())&#xa;                            class_item.setData(1, 1, 'class')&#xa;                            for other_feature in other_layer.getFeatures(&quot;\&quot;&quot; + attr + &quot;\&quot; LIKE '%&quot; + feature.attribute(&quot;gml_id&quot;) + &quot;%'&quot;):&#xa;                                has_hrefs = True&#xa;                                tree.addTopLevelItem(class_item)&#xa;                                addReferences(class_item, other_feature.attribute(&quot;gml_id&quot;))&#xa;            if has_hrefs:&#xa;                dialog.show()&#xa;            else:&#xa;                showMessage('Relacje obiektu', 'Wskazany obiekt nie ma relacji do innych obiektów')&#xa;else:&#xa;    showMessage('Relacje obiektu', 'Warstwa relacji nie została wczytana do projektu')" id="{63b2e3c3-d4d9-4845-904e-e099810c49cd}" shortTitle="Wyświetl relacje" notificationMessage="" name="Wyświetl relacje" type="1" capture="0" icon="">
+      <actionScope id="Canvas"/>
+      <actionScope id="Field"/>
+      <actionScope id="Feature"/>
+    </actionsetting>
+    <actionsetting isEnabledOnlyWhenEditable="0" action="from qgis.PyQt.QtCore import Qt&#xa;from qgis.PyQt.QtGui import QCursor&#xa;from qgis.PyQt.QtWidgets import QApplication, QDialog, QTreeWidget, QTreeWidgetItem, QHeaderView, QMenu, QMessageBox&#xa;&#xa;&#xa;iface = qgis.utils.iface&#xa;&#xa;def configureDialog(layer_name):&#xa;    dialog = QDialog()&#xa;    dialog.setWindowFlags(Qt.WindowStaysOnTopHint)&#xa;    dialog.setWindowTitle('Obiekty archiwalne obiektu klasy %s' % layer_name)&#xa;    dialog.setMinimumWidth(600)&#xa;    dialog.setMinimumHeight(400)&#xa;    dialog.resizeEvent = adjustSize&#xa;    tree = QTreeWidget(dialog)&#xa;    tree.move(5, 5)&#xa;    tree.setColumnCount(1)&#xa;    tree.setHeaderHidden(True)&#xa;    tree.setAutoScroll(True)&#xa;    tree.header().setSectionResizeMode(0, QHeaderView.ResizeToContents)&#xa;    tree.itemDoubleClicked.connect(zoomToReference)&#xa;    tree.setContextMenuPolicy(Qt.CustomContextMenu)&#xa;    tree.customContextMenuRequested.connect(showMenu)&#xa;    return dialog, tree&#xa;&#xa;def adjustSize(event):&#xa;    width = event.size().width()&#xa;    height = event.size().height()&#xa;    tree.resize(width - 10, height - 10)&#xa;&#xa;def zoomToReference():&#xa;    current_item = tree.currentItem()&#xa;    if current_item.parent() is not None:&#xa;        layer_name = current_item.parent().text(0)&#xa;        identifier = current_item.text(0)&#xa;        ref_layers = QgsProject.instance().mapLayersByName(layer_name)&#xa;        if len(ref_layers) == 1:&#xa;            ref_layer = ref_layers[0]&#xa;            ref_layer.selectByExpression(&quot;gml_id = '&quot; + identifier + &quot;'&quot;)&#xa;            iface.mapCanvas().zoomToSelected(ref_layer)&#xa;&#xa;def showMenu():&#xa;    current_item = tree.currentItem()&#xa;    menu = QMenu('Menu', dialog)&#xa;    if current_item.data(1, 1) == 'href' and current_item is not None:&#xa;        menu.addAction('Identyfikuj')&#xa;        menu.addAction('Kopiuj identyfikator')&#xa;    action = menu.exec(QCursor.pos())&#xa;    if action is not None:&#xa;        executeMenuAction(action, current_item)&#xa;&#xa;def executeMenuAction(action, current_item):&#xa;    layer_name = current_item.parent().text(0)&#xa;    identifier = current_item.text(0)&#xa;    if action.text() == 'Identyfikuj':&#xa;        ref_layers = QgsProject.instance().mapLayersByName(layer_name)&#xa;        if len(ref_layers) == 1:&#xa;            ref_layer = ref_layers[0]&#xa;            ref_layer.selectByExpression(&quot;gml_id = '&quot; + identifier + &quot;'&quot;)&#xa;            for feature in ref_layer.selectedFeatures():&#xa;                iface.mapCanvas().zoomToSelected(ref_layer)&#xa;                iface.mapCanvas().waitWhileRendering()&#xa;                iface.openFeatureForm(ref_layer, feature)&#xa;    if action.text() == 'Kopiuj identyfikator':&#xa;        cb = QApplication.clipboard()&#xa;        cb.clear(mode=cb.Clipboard)&#xa;        cb.setText(identifier, mode=cb.Clipboard)&#xa;&#xa;def getRefLayerAndFields(layer_name):&#xa;    ref_layer = None&#xa;    field_names = {}&#xa;    layers = QgsProject.instance().mapLayersByName(layer_name)&#xa;    if len(layers) == 1:&#xa;        ref_layer = layers[0]&#xa;        for field in ref_layer.fields():&#xa;            if field.comment() != '':&#xa;                field_names[field.name()] = field.comment()&#xa;    return ref_layer, field_names&#xa;&#xa;def getReferences(item, ref_layer, field_names):&#xa;    identifier = item.text(0)&#xa;    for feature in ref_layer.getFeatures(&quot;gml_id = '&quot; + identifier + &quot;'&quot;):&#xa;        for field_name in field_names.keys():&#xa;            field_value = feature.attribute(field_name)&#xa;            if field_value is not None and field_value:&#xa;                class_item = QTreeWidgetItem(item)&#xa;                class_item.setText(0, field_names[field_name])&#xa;                class_item.setData(1, 1, 'class')&#xa;                addReferences(class_item, field_value)&#xa;                tree.expandItem(class_item)&#xa;    for other_layer in QgsProject().instance().mapLayers().values():&#xa;        if other_layer.id() != ref_layer.id():&#xa;            for field in other_layer.fields():&#xa;                if field.comment() == ref_layer.name():&#xa;                    for other_feature in other_layer.getFeatures(&quot;\&quot;&quot; + field.displayName() + &quot;\&quot; LIKE '%&quot; + feature.attribute(&quot;gml_id&quot;) + &quot;%'&quot;):&#xa;                        class_item = QTreeWidgetItem(item)&#xa;                        class_item.setText(0, other_layer.name())&#xa;                        class_item.setData(1, 1, 'class')&#xa;                        addReferences(class_item, other_feature.attribute(&quot;gml_id&quot;))&#xa;                        tree.expandItem(class_item)&#xa;&#xa;def addReferences(class_item, field_value):&#xa;    for href in field_value.split(', '):&#xa;        ref_item = QTreeWidgetItem(class_item)&#xa;        ref_item.setText(0, href)&#xa;        ref_item.setData(1, 1, 'href')&#xa;&#xa;def showMessage(title, text):&#xa;    mbox = QMessageBox(dialog)&#xa;    mbox.setWindowTitle(title)&#xa;    mbox.setText(text)&#xa;    mbox.exec()&#xa;&#xa;project = QgsProject.instance()&#xa;layers = project.mapLayersByName('[% @layer_name %]')&#xa;for layer in layers:&#xa;    if layer.id() == '[% @layer_id %]':&#xa;        dialog, tree = configureDialog('[% @layer_name %]')&#xa;        feature = layer.getFeature([% $id %])&#xa;        has_archival = False&#xa;        archival_layer_name = '%s_ARCH' % layer.name()&#xa;        if len(project.mapLayersByName(archival_layer_name)) == 1:&#xa;            archival_layer = project.mapLayersByName('%s_ARCH' % layer.name())[0]&#xa;            for field in layer.fields():&#xa;                if 'lokalnyId' in field.name() != '':&#xa;                    field_value = feature.attribute(field.name())&#xa;                    for archival_feature in archival_layer.getFeatures('&quot;%s&quot; = \'%s\'' %(field.name(), field_value)):&#xa;                        archival_id = archival_feature.attribute(&quot;gml_id&quot;)&#xa;                        if archival_id is not None and archival_id:&#xa;                            has_archival = True&#xa;                            class_item = QTreeWidgetItem()&#xa;                            class_item.setText(0, archival_layer_name)&#xa;                            class_item.setData(1, 1, 'class')&#xa;                            tree.addTopLevelItem(class_item)&#xa;                            addReferences(class_item, archival_id)&#xa;            if has_archival:&#xa;                dialog.show()&#xa;            else:&#xa;                showMessage('Obiekty archiwalne', 'Wskazany obiekt nie ma obiektów archiwalnych')&#xa;        else:&#xa;            showMessage('Obiekty archiwalne', 'Do projektu nie została wczytana warstwa archiwalna %s' % archival_layer_name)" id="{caba6be7-8d22-465e-a8c7-d55b41726a9b}" shortTitle="Wyświetl obiekty archiwalne" notificationMessage="" name="Wyświetl obiekty archiwalne" type="1" capture="0" icon="">
+      <actionScope id="Canvas"/>
+      <actionScope id="Field"/>
+      <actionScope id="Feature"/>
+    </actionsetting>
   </attributeactions>
   <layerGeometryType>0</layerGeometryType>
 </qgis>

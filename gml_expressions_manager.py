@@ -1003,16 +1003,29 @@ def generateLabelReference(map_scale, feature, parent):
         label_point = label_geom.get()
         reference_start_point = reference_start.get()
         heights_lengths = []
-        heights_lengths.append(len(str(feature.attribute("rzednaGory"))))
-        heights_lengths.append(len(str(feature.attribute("rzedna"))))
-        heights_lengths.append(len(str(feature.attribute("rzednaDolu"))))
+        try:
+            heights_lengths.append(len(str(feature.attribute("rzednaGory"))))
+            heights_lengths.append(len(str(feature.attribute("rzedna"))))
+            heights_lengths.append(len(str(feature.attribute("rzednaDolu"))))
+            condition = feature.attribute("rzedna") != NULL or (
+                    feature.attribute("rzednaGory") != NULL and feature.attribute("rzednaDolu") == NULL) or (
+                                feature.attribute("rzednaDolu") != NULL and feature.attribute("rzednaGory") == NULL)
+        except:
+            try:
+                heights_lengths.append(len(str(feature.attribute("rzednaGory"))))
+                heights_lengths.append(len(str(feature.attribute("rzednaDolu"))))
+                condition = (feature.attribute("rzednaGory") != NULL and feature.attribute("rzednaDolu") == NULL) or (
+                                    feature.attribute("rzednaDolu") != NULL and feature.attribute("rzednaGory") == NULL)
+            except:
+                condition = feature.attribute("PrezentacjaGraficzna_name") != NULL
+                heights_lengths.append(len(str(feature.attribute("PrezentacjaGraficzna_name"))))
         height_length = max(heights_lengths)
         if map_scale <= 501:
             dx = height_length * 0.34
         else:
             dx = height_length * 0.68
         dy = 0
-        if feature.attribute("rzedna") != NULL or (feature.attribute("rzednaGory") != NULL and feature.attribute("rzednaDolu") == NULL) or (feature.attribute("rzednaDolu") != NULL and feature.attribute("rzednaGory") == NULL):
+        if condition:
             if justification in (0, 1, 2):
                 dy = 0
             if justification in (3, 4, 5):
