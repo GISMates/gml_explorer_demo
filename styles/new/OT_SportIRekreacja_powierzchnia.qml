@@ -204,7 +204,7 @@
                 <Option name="color" value="255,0,0,255" type="QString"/>
                 <Option name="fixedAspectRatio" value="0" type="QString"/>
                 <Option name="horizontal_anchor_point" value="1" type="QString"/>
-                <Option name="name" value="D:/GML/DEV/gml_to_dxf_converter/gml_to_dxf/gml/symbols/placSportowy.svg" type="QString"/>
+                <Option name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/placSportowy.svg" type="QString"/>
                 <Option name="offset" value="0,0" type="QString"/>
                 <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
                 <Option name="offset_unit" value="MM" type="QString"/>
@@ -223,7 +223,7 @@
               <prop v="255,0,0,255" k="color"/>
               <prop v="0" k="fixedAspectRatio"/>
               <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="D:/GML/DEV/gml_to_dxf_converter/gml_to_dxf/gml/symbols/placSportowy.svg" k="name"/>
+              <prop v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/placSportowy.svg" k="name"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -370,7 +370,7 @@
                 <Option name="color" value="255,0,0,255" type="QString"/>
                 <Option name="fixedAspectRatio" value="0" type="QString"/>
                 <Option name="horizontal_anchor_point" value="1" type="QString"/>
-                <Option name="name" value="D:/GML/DEV/gml_to_dxf_converter/gml_to_dxf/gml/symbols/placGierZabaw.svg" type="QString"/>
+                <Option name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/placGierZabaw.svg" type="QString"/>
                 <Option name="offset" value="0,0" type="QString"/>
                 <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
                 <Option name="offset_unit" value="MM" type="QString"/>
@@ -389,7 +389,7 @@
               <prop v="255,0,0,255" k="color"/>
               <prop v="0" k="fixedAspectRatio"/>
               <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="D:/GML/DEV/gml_to_dxf_converter/gml_to_dxf/gml/symbols/placGierZabaw.svg" k="name"/>
+              <prop v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/placGierZabaw.svg" k="name"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
