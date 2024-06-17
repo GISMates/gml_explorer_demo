@@ -1276,7 +1276,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option name="active" type="bool" value="true"/>
-                  <Option name="expression" type="QString" value="string_to_array( &quot;PrezentacjaGraficzna_etykieta_Etykieta_justyfikacja&quot;  , ', ')[0] + 1"/>
+                  <Option name="expression" type="QString" value="string_to_array( &quot;PrezentacjaGraficzna_etykieta_Etykieta_justyfikacja&quot;  , ', ')[0] - 1"/>
                   <Option name="type" type="int" value="3"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -1496,7 +1496,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option name="active" type="bool" value="true"/>
-                  <Option name="expression" type="QString" value="string_to_array( &quot;PrezentacjaGraficzna_etykieta_Etykieta_justyfikacja&quot;  , ', ')[1] + 1"/>
+                  <Option name="expression" type="QString" value="string_to_array( &quot;PrezentacjaGraficzna_etykieta_Etykieta_justyfikacja&quot;  , ', ')[1] - 1"/>
                   <Option name="type" type="int" value="3"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -1716,7 +1716,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option name="active" type="bool" value="true"/>
-                  <Option name="expression" type="QString" value="string_to_array( &quot;PrezentacjaGraficzna_etykieta_Etykieta_justyfikacja&quot;  , ', ')[2] + 1"/>
+                  <Option name="expression" type="QString" value="string_to_array( &quot;PrezentacjaGraficzna_etykieta_Etykieta_justyfikacja&quot;  , ', ')[2] - 1"/>
                   <Option name="type" type="int" value="3"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -1936,7 +1936,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option name="active" type="bool" value="true"/>
-                  <Option name="expression" type="QString" value="string_to_array( &quot;PrezentacjaGraficzna_etykieta_Etykieta_justyfikacja&quot;  , ', ')[3] + 1"/>
+                  <Option name="expression" type="QString" value="string_to_array( &quot;PrezentacjaGraficzna_etykieta_Etykieta_justyfikacja&quot;  , ', ')[3] - 1"/>
                   <Option name="type" type="int" value="3"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -2156,7 +2156,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option name="active" type="bool" value="true"/>
-                  <Option name="expression" type="QString" value="string_to_array( &quot;PrezentacjaGraficzna_etykieta_Etykieta_justyfikacja&quot;  , ', ')[4] + 1"/>
+                  <Option name="expression" type="QString" value="string_to_array( &quot;PrezentacjaGraficzna_etykieta_Etykieta_justyfikacja&quot;  , ', ')[4] - 1"/>
                   <Option name="type" type="int" value="3"/>
                 </Option>
                 <Option name="Size" type="Map">

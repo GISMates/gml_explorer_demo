@@ -856,7 +856,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[0] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[0] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -1076,7 +1076,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[1] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[1] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -1296,7 +1296,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[2] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[2] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -1516,7 +1516,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[3] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[3] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -1736,7 +1736,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[4] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[4] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -1956,7 +1956,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[5] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[5] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -2176,7 +2176,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[6] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[6] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -2396,7 +2396,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[7] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[7] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -2616,7 +2616,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[8] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[8] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -2836,7 +2836,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[9] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[9] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -3056,7 +3056,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[10] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[10] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -3276,7 +3276,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[11] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[11] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -3496,7 +3496,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[12] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[12] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -3716,7 +3716,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[13] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[13] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -3936,7 +3936,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[14] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[14] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
@@ -4156,7 +4156,7 @@
                 </Option>
                 <Option name="OffsetQuad" type="Map">
                   <Option value="true" name="active" type="bool"/>
-                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[15] + 1" name="expression" type="QString"/>
+                  <Option value="string_to_array(&quot;KR_ObiektKarto_etykieta_KREtykieta_justyfikacja&quot;, ',')[15] - 1" name="expression" type="QString"/>
                   <Option value="3" name="type" type="int"/>
                 </Option>
                 <Option name="Size" type="Map">
