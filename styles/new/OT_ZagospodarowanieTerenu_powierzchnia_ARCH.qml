@@ -178,7 +178,7 @@
                 <Option name="color" type="QString" value="125,125,125,255"/>
                 <Option name="fixedAspectRatio" type="QString" value="0"/>
                 <Option name="horizontal_anchor_point" type="QString" value="1"/>
-                <Option name="name" type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/lasIglasty.svg"/>
+                <Option name="name" type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/lasIglasty.svg"/>
                 <Option name="offset" type="QString" value="0,0"/>
                 <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
                 <Option name="offset_unit" type="QString" value="MM"/>
@@ -197,7 +197,7 @@
               <prop k="color" v="125,125,125,255"/>
               <prop k="fixedAspectRatio" v="0"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/lasIglasty.svg"/>
+              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/lasIglasty.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
@@ -467,7 +467,7 @@
                 <Option name="color" type="QString" value="125,125,125,255"/>
                 <Option name="fixedAspectRatio" type="QString" value="0"/>
                 <Option name="horizontal_anchor_point" type="QString" value="1"/>
-                <Option name="name" type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/lasLisciasty.svg"/>
+                <Option name="name" type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/lasLisciasty.svg"/>
                 <Option name="offset" type="QString" value="0,0"/>
                 <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
                 <Option name="offset_unit" type="QString" value="MM"/>
@@ -486,7 +486,7 @@
               <prop k="color" v="125,125,125,255"/>
               <prop k="fixedAspectRatio" v="0"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/lasLisciasty.svg"/>
+              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/lasLisciasty.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
@@ -746,7 +746,7 @@
                 <Option name="color" type="QString" value="125,125,125,255"/>
                 <Option name="fixedAspectRatio" type="QString" value="0"/>
                 <Option name="horizontal_anchor_point" type="QString" value="1"/>
-                <Option name="name" type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/cmentarzChrzescijanski.svg"/>
+                <Option name="name" type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/cmentarzChrzescijanski.svg"/>
                 <Option name="offset" type="QString" value="0,0"/>
                 <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
                 <Option name="offset_unit" type="QString" value="MM"/>
@@ -765,7 +765,7 @@
               <prop k="color" v="125,125,125,255"/>
               <prop k="fixedAspectRatio" v="0"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/cmentarzChrzescijanski.svg"/>
+              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/cmentarzChrzescijanski.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
@@ -960,7 +960,7 @@
                 <Option name="color" type="QString" value="125,125,125,255"/>
                 <Option name="fixedAspectRatio" type="QString" value="0"/>
                 <Option name="horizontal_anchor_point" type="QString" value="1"/>
-                <Option name="name" type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/trawnik.svg"/>
+                <Option name="name" type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/trawnik.svg"/>
                 <Option name="offset" type="QString" value="0,0"/>
                 <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
                 <Option name="offset_unit" type="QString" value="MM"/>
@@ -979,7 +979,7 @@
               <prop k="color" v="125,125,125,255"/>
               <prop k="fixedAspectRatio" v="0"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/trawnik.svg"/>
+              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/trawnik.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>

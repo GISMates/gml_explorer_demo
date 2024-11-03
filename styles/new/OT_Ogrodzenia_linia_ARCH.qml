@@ -568,7 +568,7 @@
                 <Option name="color" value="125,125,125,255" type="QString"/>
                 <Option name="fixedAspectRatio" value="0" type="QString"/>
                 <Option name="horizontal_anchor_point" value="1" type="QString"/>
-                <Option name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/brama.svg" type="QString"/>
+                <Option name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/brama.svg" type="QString"/>
                 <Option name="offset" value="0,-0.59999999999999998" type="QString"/>
                 <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
                 <Option name="offset_unit" value="RenderMetersInMapUnits" type="QString"/>
@@ -587,7 +587,7 @@
               <prop v="125,125,125,255" k="color"/>
               <prop v="0" k="fixedAspectRatio"/>
               <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/brama.svg" k="name"/>
+              <prop v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/brama.svg" k="name"/>
               <prop v="0,-0.59999999999999998" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="RenderMetersInMapUnits" k="offset_unit"/>
@@ -756,7 +756,7 @@
                 <Option name="color" value="125,125,125,255" type="QString"/>
                 <Option name="fixedAspectRatio" value="0" type="QString"/>
                 <Option name="horizontal_anchor_point" value="0" type="QString"/>
-                <Option name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/furtka.svg" type="QString"/>
+                <Option name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/furtka.svg" type="QString"/>
                 <Option name="offset" value="-0.05,-0.59999999999999998" type="QString"/>
                 <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
                 <Option name="offset_unit" value="RenderMetersInMapUnits" type="QString"/>
@@ -775,7 +775,7 @@
               <prop v="125,125,125,255" k="color"/>
               <prop v="0" k="fixedAspectRatio"/>
               <prop v="0" k="horizontal_anchor_point"/>
-              <prop v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/furtka.svg" k="name"/>
+              <prop v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/furtka.svg" k="name"/>
               <prop v="-0.05,-0.59999999999999998" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="RenderMetersInMapUnits" k="offset_unit"/>

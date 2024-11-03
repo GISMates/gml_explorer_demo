@@ -477,7 +477,7 @@
                 <Option value="10,10,9,0" name="color" type="QString"/>
                 <Option value="0" name="fixedAspectRatio" type="QString"/>
                 <Option value="1" name="horizontal_anchor_point" type="QString"/>
-                <Option value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/trawnik.svg" name="name" type="QString"/>
+                <Option value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/trawnik.svg" name="name" type="QString"/>
                 <Option value="0,0" name="offset" type="QString"/>
                 <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
                 <Option value="MM" name="offset_unit" type="QString"/>
@@ -496,7 +496,7 @@
               <prop k="color" v="10,10,9,0"/>
               <prop k="fixedAspectRatio" v="0"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/trawnik.svg"/>
+              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/trawnik.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>

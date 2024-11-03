@@ -334,7 +334,7 @@
                 <Option type="QString" name="color" value="125,125,125,255"/>
                 <Option type="QString" name="fixedAspectRatio" value="0"/>
                 <Option type="QString" name="horizontal_anchor_point" value="1"/>
-                <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/pomnik.svg"/>
+                <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/pomnik.svg"/>
                 <Option type="QString" name="offset" value="0,0"/>
                 <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
                 <Option type="QString" name="offset_unit" value="MM"/>
@@ -353,7 +353,7 @@
               <prop k="color" v="125,125,125,255"/>
               <prop k="fixedAspectRatio" v="0"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/pomnik.svg"/>
+              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/pomnik.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
@@ -1597,7 +1597,7 @@
                 <Option type="QString" name="color" value="125,125,125,255"/>
                 <Option type="QString" name="fixedAspectRatio" value="0"/>
                 <Option type="QString" name="horizontal_anchor_point" value="1"/>
-                <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/fontannaPowierzchnia.svg"/>
+                <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/fontannaPowierzchnia.svg"/>
                 <Option type="QString" name="offset" value="0,0"/>
                 <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
                 <Option type="QString" name="offset_unit" value="MM"/>
@@ -1616,7 +1616,7 @@
               <prop k="color" v="125,125,125,255"/>
               <prop k="fixedAspectRatio" v="0"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer/symbols/fontannaPowierzchnia.svg"/>
+              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/fontannaPowierzchnia.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
