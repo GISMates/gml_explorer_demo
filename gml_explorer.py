@@ -104,6 +104,8 @@ class GMLExplorer:
 
     def closeWindow(self, e):
         self.pluginIsActive = False
+        self.gml_map_generator.rubber_band.reset()
+        self.map_canvas.refresh()
 
     def run(self):
         if not self.pluginIsActive:
