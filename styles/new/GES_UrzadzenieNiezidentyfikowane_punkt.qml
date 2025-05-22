@@ -2,7 +2,7 @@
 <qgis styleCategories="Symbology|Labeling" version="3.22.4-Białowieża" labelsEnabled="1">
   <renderer-v2 type="RuleRenderer" forceraster="0" enableorderby="0" symbollevels="0" referencescale="-1">
     <rules key="{cb5e162a-3ff2-4870-b3f3-0ea637c516c3}">
-      <rule symbol="0" filter=" &quot;rodzajUrzadzenia&quot; = 'u'" scalemindenom="1" scalemaxdenom="1001" label="urządzenie techniczne sieci niezidentyfikowanej SUNU" key="{3fe958e9-57d8-4822-a896-bb4d3196cb6d}"/>
+      <rule symbol="0" filter="1=1" scalemindenom="1" scalemaxdenom="1001" label="urządzenie techniczne sieci niezidentyfikowanej SUNU" key="{3fe958e9-57d8-4822-a896-bb4d3196cb6d}"/>
     </rules>
     <symbols>
       <symbol type="marker" alpha="1" name="0" clip_to_extent="1" force_rhr="0">
