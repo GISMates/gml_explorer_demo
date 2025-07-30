@@ -188,7 +188,7 @@
             <Option type="QString" name="color" value="255,255,255,0"/>
             <Option type="QString" name="fixedAspectRatio" value="0.666667"/>
             <Option type="QString" name="horizontal_anchor_point" value="1"/>
-            <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/Wlaz_prostokatny_SUPW.svg"/>
+            <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/Wlaz_prostokatny_SUPW.svg"/>
             <Option type="QString" name="offset" value="0,0"/>
             <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="offset_unit" value="MM"/>
@@ -207,7 +207,7 @@
           <prop v="255,255,255,0" k="color"/>
           <prop v="0.666667" k="fixedAspectRatio"/>
           <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/Wlaz_prostokatny_SUPW.svg" k="name"/>
+          <prop v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/Wlaz_prostokatny_SUPW.svg" k="name"/>
           <prop v="0,0" k="offset"/>
           <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
           <prop v="MM" k="offset_unit"/>
@@ -451,7 +451,7 @@
             <Option type="QString" name="color" value="0,0,0,255"/>
             <Option type="QString" name="fixedAspectRatio" value="0"/>
             <Option type="QString" name="horizontal_anchor_point" value="1"/>
-            <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/Slup_trakcyjny_SUPY.svg"/>
+            <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/Slup_trakcyjny_SUPY.svg"/>
             <Option type="QString" name="offset" value="-0.40000000000000002,-1.69999999999999996"/>
             <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="offset_unit" value="RenderMetersInMapUnits"/>
@@ -470,7 +470,7 @@
           <prop v="0,0,0,255" k="color"/>
           <prop v="0" k="fixedAspectRatio"/>
           <prop v="1" k="horizontal_anchor_point"/>
-          <prop v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/Slup_trakcyjny_SUPY.svg" k="name"/>
+          <prop v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/Slup_trakcyjny_SUPY.svg" k="name"/>
           <prop v="-0.40000000000000002,-1.69999999999999996" k="offset"/>
           <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
           <prop v="RenderMetersInMapUnits" k="offset_unit"/>

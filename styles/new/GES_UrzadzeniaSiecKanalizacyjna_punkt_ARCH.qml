@@ -254,7 +254,7 @@
           <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <prop k="size_unit" v="RenderMetersInMapUnits"/>
           <prop k="vertical_anchor_point" v="1"/>
-          <effect enabled="1" type="effectStack">
+          <effect enabled="0" type="effectStack">
             <effect type="dropShadow">
               <Option type="Map">
                 <Option value="13" type="QString" name="blend_mode"/>

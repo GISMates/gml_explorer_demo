@@ -21,14 +21,14 @@
         <layer enabled="1" locked="0" pass="0" class="SvgMarker">
           <Option type="Map">
             <Option type="QString" name="angle" value="0"/>
-            <Option type="QString" name="color" value="229,182,54,255"/>
+            <Option type="QString" name="color" value="0,128,0,255"/>
             <Option type="QString" name="fixedAspectRatio" value="0"/>
             <Option type="QString" name="horizontal_anchor_point" value="1"/>
             <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/drzewoIglaste.svg"/>
             <Option type="QString" name="offset" value="0,0"/>
             <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="offset_unit" value="MM"/>
-            <Option type="QString" name="outline_color" value="35,35,35,255"/>
+            <Option type="QString" name="outline_color" value="0,128,0,255"/>
             <Option type="QString" name="outline_width" value="0"/>
             <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="outline_width_unit" value="MM"/>
@@ -40,14 +40,14 @@
             <Option type="QString" name="vertical_anchor_point" value="1"/>
           </Option>
           <prop v="0" k="angle"/>
-          <prop v="229,182,54,255" k="color"/>
+          <prop v="0,128,0,255" k="color"/>
           <prop v="0" k="fixedAspectRatio"/>
           <prop v="1" k="horizontal_anchor_point"/>
           <prop v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/drzewoIglaste.svg" k="name"/>
           <prop v="0,0" k="offset"/>
           <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
           <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
+          <prop v="0,128,0,255" k="outline_color"/>
           <prop v="0" k="outline_width"/>
           <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
           <prop v="MM" k="outline_width_unit"/>
@@ -83,14 +83,14 @@
         <layer enabled="1" locked="0" pass="0" class="SvgMarker">
           <Option type="Map">
             <Option type="QString" name="angle" value="0"/>
-            <Option type="QString" name="color" value="229,182,54,255"/>
+            <Option type="QString" name="color" value="0,128,0,255"/>
             <Option type="QString" name="fixedAspectRatio" value="0"/>
             <Option type="QString" name="horizontal_anchor_point" value="1"/>
             <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/drzewoIglastePomnikPrzyrody.svg"/>
             <Option type="QString" name="offset" value="0,0"/>
             <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="offset_unit" value="MM"/>
-            <Option type="QString" name="outline_color" value="35,35,35,255"/>
+            <Option type="QString" name="outline_color" value="0,128,0,255"/>
             <Option type="QString" name="outline_width" value="0"/>
             <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="outline_width_unit" value="MM"/>
@@ -102,14 +102,14 @@
             <Option type="QString" name="vertical_anchor_point" value="1"/>
           </Option>
           <prop v="0" k="angle"/>
-          <prop v="229,182,54,255" k="color"/>
+          <prop v="0,128,0,255" k="color"/>
           <prop v="0" k="fixedAspectRatio"/>
           <prop v="1" k="horizontal_anchor_point"/>
           <prop v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/drzewoIglastePomnikPrzyrody.svg" k="name"/>
           <prop v="0,0" k="offset"/>
           <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
           <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
+          <prop v="0,128,0,255" k="outline_color"/>
           <prop v="0" k="outline_width"/>
           <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
           <prop v="MM" k="outline_width_unit"/>
@@ -145,14 +145,14 @@
         <layer enabled="1" locked="0" pass="0" class="SvgMarker">
           <Option type="Map">
             <Option type="QString" name="angle" value="0"/>
-            <Option type="QString" name="color" value="229,182,54,255"/>
+            <Option type="QString" name="color" value="0,128,0,255"/>
             <Option type="QString" name="fixedAspectRatio" value="0"/>
             <Option type="QString" name="horizontal_anchor_point" value="1"/>
             <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/drzewoLisciaste.svg"/>
             <Option type="QString" name="offset" value="0,0"/>
             <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="offset_unit" value="MM"/>
-            <Option type="QString" name="outline_color" value="35,35,35,255"/>
+            <Option type="QString" name="outline_color" value="0,128,0,255"/>
             <Option type="QString" name="outline_width" value="0"/>
             <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="outline_width_unit" value="MM"/>
@@ -164,14 +164,14 @@
             <Option type="QString" name="vertical_anchor_point" value="1"/>
           </Option>
           <prop v="0" k="angle"/>
-          <prop v="229,182,54,255" k="color"/>
+          <prop v="0,128,0,255" k="color"/>
           <prop v="0" k="fixedAspectRatio"/>
           <prop v="1" k="horizontal_anchor_point"/>
           <prop v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/drzewoLisciaste.svg" k="name"/>
           <prop v="0,0" k="offset"/>
           <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
           <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
+          <prop v="0,128,0,255" k="outline_color"/>
           <prop v="0" k="outline_width"/>
           <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
           <prop v="MM" k="outline_width_unit"/>
@@ -207,14 +207,14 @@
         <layer enabled="1" locked="0" pass="0" class="SvgMarker">
           <Option type="Map">
             <Option type="QString" name="angle" value="0"/>
-            <Option type="QString" name="color" value="229,182,54,255"/>
+            <Option type="QString" name="color" value="0,128,0,255"/>
             <Option type="QString" name="fixedAspectRatio" value="0"/>
             <Option type="QString" name="horizontal_anchor_point" value="1"/>
             <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/drzewoLisciastePomnikPrzyrody.svg"/>
             <Option type="QString" name="offset" value="0,0"/>
             <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="offset_unit" value="MM"/>
-            <Option type="QString" name="outline_color" value="35,35,35,255"/>
+            <Option type="QString" name="outline_color" value="0,128,0,255"/>
             <Option type="QString" name="outline_width" value="0"/>
             <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="outline_width_unit" value="MM"/>
@@ -226,14 +226,14 @@
             <Option type="QString" name="vertical_anchor_point" value="1"/>
           </Option>
           <prop v="0" k="angle"/>
-          <prop v="229,182,54,255" k="color"/>
+          <prop v="0,128,0,255" k="color"/>
           <prop v="0" k="fixedAspectRatio"/>
           <prop v="1" k="horizontal_anchor_point"/>
           <prop v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/drzewoLisciastePomnikPrzyrody.svg" k="name"/>
           <prop v="0,0" k="offset"/>
           <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
           <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
+          <prop v="0,128,0,255" k="outline_color"/>
           <prop v="0" k="outline_width"/>
           <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
           <prop v="MM" k="outline_width_unit"/>

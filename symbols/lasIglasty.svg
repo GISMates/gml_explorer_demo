@@ -1,8 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8"?> 
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmsvgsym="http://www.intergraph.com/GeoMedia/svgsym">
-<symbol id="LasIglasty" viewBox="-0.00065000005997717381 -0.00100000016391277310 0.00130000011995434760 0.00200000032782554630" style="stroke-linejoin:round"><!-- Creator: SVG Document for Symbols-->
-<path id ="LineString2d_0"  style = " stroke-width: 0.0001800000;stroke: #0a0909; fill: none; "  d="M -0.0006500000 0.0010000000 L 0.0000000000 -0.0010000000 L 0.0006500000 0.0010000000"/>
-
+﻿<svg xmlns="http://www.w3.org/2000/svg">
+<symbol id="LasIglasty" viewBox="-0.00065000005997717381 -0.00100000016391277310 0.00130000011995434760 0.00200000032782554630" style="stroke-linejoin:round">
+<path d="M -0.0006500000 0.0010000000 L 0.0000000000 -0.0010000000 L 0.0006500000 0.0010000000" stroke-width="0.0001800000" stroke="param(outline)" fill="none"/>
 </symbol>
 </svg>

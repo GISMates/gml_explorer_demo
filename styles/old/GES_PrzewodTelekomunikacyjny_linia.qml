@@ -306,7 +306,7 @@
                 <Option name="offset" value="0,0" type="QString"/>
                 <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
                 <Option name="offset_unit" value="RenderMetersInMapUnits" type="QString"/>
-                <Option name="outline_color" value="35,35,35,255" type="QString"/>
+                <Option name="outline_color" value="255,145,0,255" type="QString"/>
                 <Option name="outline_width" value="0" type="QString"/>
                 <Option name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
                 <Option name="outline_width_unit" value="MM" type="QString"/>
@@ -325,7 +325,7 @@
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="RenderMetersInMapUnits" k="offset_unit"/>
-              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="255,145,0,255" k="outline_color"/>
               <prop v="0" k="outline_width"/>
               <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
               <prop v="MM" k="outline_width_unit"/>
@@ -369,7 +369,7 @@
                 <Option name="offset" value="0,0" type="QString"/>
                 <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
                 <Option name="offset_unit" value="RenderMetersInMapUnits" type="QString"/>
-                <Option name="outline_color" value="35,35,35,255" type="QString"/>
+                <Option name="outline_color" value="255,145,0,255" type="QString"/>
                 <Option name="outline_width" value="0" type="QString"/>
                 <Option name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
                 <Option name="outline_width_unit" value="MM" type="QString"/>
@@ -388,7 +388,7 @@
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="RenderMetersInMapUnits" k="offset_unit"/>
-              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="255,145,0,255" k="outline_color"/>
               <prop v="0" k="outline_width"/>
               <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
               <prop v="MM" k="outline_width_unit"/>

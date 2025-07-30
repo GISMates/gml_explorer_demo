@@ -887,7 +887,7 @@
                 <Option type="QString" name="color" value="255,0,0,255"/>
                 <Option type="QString" name="fixedAspectRatio" value="0"/>
                 <Option type="QString" name="horizontal_anchor_point" value="0"/>
-                <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/ekranAkustyczny.svg"/>
+                <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/ekranAkustyczny.svg"/>
                 <Option type="QString" name="offset" value="0,0"/>
                 <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
                 <Option type="QString" name="offset_unit" value="MM"/>
@@ -906,7 +906,7 @@
               <prop k="color" v="255,0,0,255"/>
               <prop k="fixedAspectRatio" v="0"/>
               <prop k="horizontal_anchor_point" v="0"/>
-              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/ekranAkustyczny.svg"/>
+              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/ekranAkustyczny.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
@@ -1156,7 +1156,7 @@
                 <Option type="QString" name="color" value="10,9,9,255"/>
                 <Option type="QString" name="fixedAspectRatio" value="0"/>
                 <Option type="QString" name="horizontal_anchor_point" value="1"/>
-                <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/kolejLinowa.svg"/>
+                <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/kolejLinowa.svg"/>
                 <Option type="QString" name="offset" value="0,0"/>
                 <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
                 <Option type="QString" name="offset_unit" value="MM"/>
@@ -1175,7 +1175,7 @@
               <prop k="color" v="10,9,9,255"/>
               <prop k="fixedAspectRatio" v="0"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/kolejLinowa.svg"/>
+              <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/kolejLinowa.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>

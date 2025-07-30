@@ -152,7 +152,7 @@
             <Option type="QString" name="color" value="0,0,255,255"/>
             <Option type="QString" name="fixedAspectRatio" value="0"/>
             <Option type="QString" name="horizontal_anchor_point" value="1"/>
-            <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUUS02_hydrant.svg"/>
+            <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUUS02_hydrant.svg"/>
             <Option type="QString" name="offset" value="0,-0.20000000000000001"/>
             <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="offset_unit" value="RenderMetersInMapUnits"/>
@@ -171,7 +171,7 @@
           <prop k="color" v="0,0,255,255"/>
           <prop k="fixedAspectRatio" v="0"/>
           <prop k="horizontal_anchor_point" v="1"/>
-          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUUS02_hydrant.svg"/>
+          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUUS02_hydrant.svg"/>
           <prop k="offset" v="0,-0.20000000000000001"/>
           <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <prop k="offset_unit" v="RenderMetersInMapUnits"/>
@@ -185,7 +185,7 @@
           <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <prop k="size_unit" v="RenderMetersInMapUnits"/>
           <prop k="vertical_anchor_point" v="1"/>
-          <effect type="effectStack" enabled="1">
+          <effect type="effectStack" enabled="0">
             <effect type="dropShadow">
               <Option type="Map">
                 <Option type="QString" name="blend_mode" value="13"/>
@@ -375,7 +375,7 @@
             <Option type="QString" name="color" value="0,0,0,255"/>
             <Option type="QString" name="fixedAspectRatio" value="0"/>
             <Option type="QString" name="horizontal_anchor_point" value="1"/>
-            <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUUS28_zdroj uliczny.svg"/>
+            <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUUS28_zdroj uliczny.svg"/>
             <Option type="QString" name="offset" value="0,-0.20000000000000001"/>
             <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="offset_unit" value="RenderMetersInMapUnits"/>
@@ -394,7 +394,7 @@
           <prop k="color" v="0,0,0,255"/>
           <prop k="fixedAspectRatio" v="0"/>
           <prop k="horizontal_anchor_point" v="1"/>
-          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUUS28_zdroj uliczny.svg"/>
+          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUUS28_zdroj uliczny.svg"/>
           <prop k="offset" v="0,-0.20000000000000001"/>
           <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <prop k="offset_unit" v="RenderMetersInMapUnits"/>
@@ -571,7 +571,7 @@
             <Option type="QString" name="color" value="0,0,0,255"/>
             <Option type="QString" name="fixedAspectRatio" value="0"/>
             <Option type="QString" name="horizontal_anchor_point" value="1"/>
-            <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUUS14_studnia glebinowa.svg"/>
+            <Option type="QString" name="name" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUUS14_studnia glebinowa.svg"/>
             <Option type="QString" name="offset" value="0,-0.25"/>
             <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="offset_unit" value="RenderMetersInMapUnits"/>
@@ -590,7 +590,7 @@
           <prop k="color" v="0,0,0,255"/>
           <prop k="fixedAspectRatio" v="0"/>
           <prop k="horizontal_anchor_point" v="1"/>
-          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUUS14_studnia glebinowa.svg"/>
+          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUUS14_studnia glebinowa.svg"/>
           <prop k="offset" v="0,-0.25"/>
           <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <prop k="offset_unit" v="RenderMetersInMapUnits"/>

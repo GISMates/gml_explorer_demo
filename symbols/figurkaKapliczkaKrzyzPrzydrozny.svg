@@ -1,9 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?> 
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmsvgsym="http://www.intergraph.com/GeoMedia/svgsym">
-<symbol id="FigurkaKapliczkaKrzyzPrzydrozny" viewBox="-0.00100000016391277310 -0.00299695343710482120 0.00200433877762407060 0.00300000029483271650" style="stroke-linejoin:round"><!-- Creator: SVG Document for Symbols-->
-<polyline points= " -0.0010000000 -0.0020000000 0.0010000000 -0.0020000000"  style = "  stroke-width: 0.0001800000; stroke-linecap: round;stroke: #0a0909; fill: none; " />
-<path id ="LineString2d_0"  style = " stroke-width: 0.0001800000;stroke: #0a0909; fill: none; "  d="M 0.0000043385 -0.0029969531 L 0.0000043385 0.0000030469 L 0.0010043385 0.0000030469"/>
-
+﻿<svg xmlns="http://www.w3.org/2000/svg">
+<symbol id="FigurkaKapliczkaKrzyzPrzydrozny" viewBox="-0.00100000016391277310 -0.00299695343710482120 0.00200433877762407060 0.00300000029483271650" style="stroke-linejoin:round">
+<polyline points= " -0.0010000000 -0.0020000000 0.0010000000 -0.0020000000" stroke-width="0.0001800000" stroke-linecap="round" stroke="param(outline)" fill="none"/>
+<path d="M 0.0000043385 -0.0029969531 L 0.0000043385 0.0000030469 L 0.0010043385 0.0000030469" stroke-width="0.0001800000" stroke="param(outline)" fill="none"/>
 </symbol>
 </svg>

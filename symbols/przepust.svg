@@ -1,8 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?> 
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmsvgsym="http://www.intergraph.com/GeoMedia/svgsym">
-<symbol id="Przepust" viewBox="-0.00085000006947666407 -0.00085000006947666407 0.00085000006947666407 0.00170000013895332810" style="stroke-linejoin:round"><!-- Creator: SVG Document for Symbols-->
-<polyline points= " 0.0000000000 -0.0000000000 -0.0008500000 -0.0008500000"  style = "  stroke-width: 0.0003500000; stroke-linecap: round;stroke: #0a0909; fill: none; " />
-<polyline points= " 0.0000000000 -0.0000000000 -0.0008500000 0.0008500000"  style = "  stroke-width: 0.0003500000; stroke-linecap: round;stroke: #0a0909; fill: none; " />
+﻿<svg xmlns="http://www.w3.org/2000/svg">
+<symbol id="Przepust" viewBox="-0.00085000006947666407 -0.00085000006947666407 0.00085000006947666407 0.00170000013895332810" style="stroke-linejoin:round">
+<polyline points= " 0.0000000000 -0.0000000000 -0.0008500000 -0.0008500000"  stroke-width="0.0003500000" stroke-linecap="round" stroke="param(outline)" fill="none" />
+<polyline points= " 0.0000000000 -0.0000000000 -0.0008500000 0.0008500000"  stroke-width="0.0003500000" stroke-linecap="round" stroke="param(outline)" fill="none" />
 </symbol>
 </svg>

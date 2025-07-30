@@ -221,11 +221,11 @@
             <Option value="128,51,0,255" type="QString" name="color"/>
             <Option value="0" type="QString" name="fixedAspectRatio"/>
             <Option value="1" type="QString" name="horizontal_anchor_point"/>
-            <Option value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUUS05_kratka sciekowa.svg" type="QString" name="name"/>
+            <Option value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUUS05_kratka sciekowa.svg" type="QString" name="name"/>
             <Option value="0,0" type="QString" name="offset"/>
             <Option value="3x:0,0,0,0,0,0" type="QString" name="offset_map_unit_scale"/>
             <Option value="MM" type="QString" name="offset_unit"/>
-            <Option value="35,35,35,255" type="QString" name="outline_color"/>
+            <Option value="128,51,0,255" type="QString" name="outline_color"/>
             <Option value="0" type="QString" name="outline_width"/>
             <Option value="3x:0,0,0,0,0,0" type="QString" name="outline_width_map_unit_scale"/>
             <Option value="MM" type="QString" name="outline_width_unit"/>
@@ -240,11 +240,11 @@
           <prop k="color" v="128,51,0,255"/>
           <prop k="fixedAspectRatio" v="0"/>
           <prop k="horizontal_anchor_point" v="1"/>
-          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUUS05_kratka sciekowa.svg"/>
+          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUUS05_kratka sciekowa.svg"/>
           <prop k="offset" v="0,0"/>
           <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <prop k="offset_unit" v="MM"/>
-          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_color" v="128,51,0,255"/>
           <prop k="outline_width" v="0"/>
           <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <prop k="outline_width_unit" v="MM"/>
@@ -254,14 +254,14 @@
           <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <prop k="size_unit" v="RenderMetersInMapUnits"/>
           <prop k="vertical_anchor_point" v="1"/>
-          <effect enabled="1" type="effectStack">
+          <effect enabled="0" type="effectStack">
             <effect type="dropShadow">
               <Option type="Map">
                 <Option value="13" type="QString" name="blend_mode"/>
                 <Option value="2.645" type="QString" name="blur_level"/>
                 <Option value="MM" type="QString" name="blur_unit"/>
                 <Option value="3x:0,0,0,0,0,0" type="QString" name="blur_unit_scale"/>
-                <Option value="0,0,0,255" type="QString" name="color"/>
+                <Option value="128,51,0,255" type="QString" name="color"/>
                 <Option value="2" type="QString" name="draw_mode"/>
                 <Option value="0" type="QString" name="enabled"/>
                 <Option value="135" type="QString" name="offset_angle"/>

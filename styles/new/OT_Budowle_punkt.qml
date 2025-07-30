@@ -23,7 +23,7 @@
             <Option type="QString" value="125,139,143,255" name="color"/>
             <Option type="QString" value="0" name="fixedAspectRatio"/>
             <Option type="QString" value="1" name="horizontal_anchor_point"/>
-            <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/figurkaKapliczkaKrzyzPrzydrozny.svg" name="name"/>
+            <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/figurkaKapliczkaKrzyzPrzydrozny.svg" name="name"/>
             <Option type="QString" value="0,-0.69999999999999996" name="offset"/>
             <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
             <Option type="QString" value="RenderMetersInMapUnits" name="offset_unit"/>
@@ -42,7 +42,7 @@
           <prop k="color" v="125,139,143,255"/>
           <prop k="fixedAspectRatio" v="0"/>
           <prop k="horizontal_anchor_point" v="1"/>
-          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/figurkaKapliczkaKrzyzPrzydrozny.svg"/>
+          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/figurkaKapliczkaKrzyzPrzydrozny.svg"/>
           <prop k="offset" v="0,-0.69999999999999996"/>
           <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <prop k="offset_unit" v="RenderMetersInMapUnits"/>
@@ -90,7 +90,7 @@
             <Option type="QString" value="125,139,143,255" name="color"/>
             <Option type="QString" value="0" name="fixedAspectRatio"/>
             <Option type="QString" value="1" name="horizontal_anchor_point"/>
-            <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/fontanna.svg" name="name"/>
+            <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/fontanna.svg" name="name"/>
             <Option type="QString" value="0,-0.69999999999999996" name="offset"/>
             <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
             <Option type="QString" value="RenderMetersInMapUnits" name="offset_unit"/>
@@ -109,7 +109,7 @@
           <prop k="color" v="125,139,143,255"/>
           <prop k="fixedAspectRatio" v="0"/>
           <prop k="horizontal_anchor_point" v="1"/>
-          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/fontanna.svg"/>
+          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/fontanna.svg"/>
           <prop k="offset" v="0,-0.69999999999999996"/>
           <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <prop k="offset_unit" v="RenderMetersInMapUnits"/>
@@ -157,7 +157,7 @@
             <Option type="QString" value="125,139,143,255" name="color"/>
             <Option type="QString" value="0" name="fixedAspectRatio"/>
             <Option type="QString" value="1" name="horizontal_anchor_point"/>
-            <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/pomnik.svg" name="name"/>
+            <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/pomnik.svg" name="name"/>
             <Option type="QString" value="0,-0.69999999999999996" name="offset"/>
             <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
             <Option type="QString" value="RenderMetersInMapUnits" name="offset_unit"/>
@@ -176,7 +176,7 @@
           <prop k="color" v="125,139,143,255"/>
           <prop k="fixedAspectRatio" v="0"/>
           <prop k="horizontal_anchor_point" v="1"/>
-          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/pomnik.svg"/>
+          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/pomnik.svg"/>
           <prop k="offset" v="0,-0.69999999999999996"/>
           <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <prop k="offset_unit" v="RenderMetersInMapUnits"/>

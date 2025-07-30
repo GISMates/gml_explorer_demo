@@ -1,8 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8"?> 
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmsvgsym="http://www.intergraph.com/GeoMedia/svgsym">
-<symbol id="CmentarzInny" viewBox="-0.00099409872200340033 -0.00299713178537786010 0.00200000021141022440 0.00300000022002677720" style="stroke-linejoin:round"><!-- Creator: SVG Document for Symbols-->
-<path id ="LineString2d_0"  style = " stroke-width: 0.0001800000;stroke: #0a0909; fill: none; "  d="M 0.0000059014 0.0000028684 L 0.0000059014 -0.0029971316 L 0.0010059014 -0.0019971316 L -0.0009940986 -0.0019971316"/>
-
+﻿<svg xmlns="http://www.w3.org/2000/svg">
+<symbol id="CmentarzInny" viewBox="-0.00099409872200340033 -0.00299713178537786010 0.00200000021141022440 0.00300000022002677720" style="stroke-linejoin:round">
+<path d="M 0.0000059014 0.0000028684 L 0.0000059014 -0.0029971316 L 0.0010059014 -0.0019971316 L -0.0009940986 -0.0019971316" stroke-width="0.0001800000" stroke="param(outline)" fill="none"/>
 </symbol>
 </svg>

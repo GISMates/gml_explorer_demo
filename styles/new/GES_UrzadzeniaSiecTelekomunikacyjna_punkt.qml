@@ -160,7 +160,7 @@
             <Option type="QString" value="0,0,0,255" name="color"/>
             <Option type="QString" value="1.66667" name="fixedAspectRatio"/>
             <Option type="QString" value="1" name="horizontal_anchor_point"/>
-            <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/Wieza_telekomunikacyjna_SUTW.svg" name="name"/>
+            <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/Wieza_telekomunikacyjna_SUTW.svg" name="name"/>
             <Option type="QString" value="0,0" name="offset"/>
             <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
             <Option type="QString" value="RenderMetersInMapUnits" name="offset_unit"/>
@@ -179,7 +179,7 @@
           <prop k="color" v="0,0,0,255"/>
           <prop k="fixedAspectRatio" v="1.66667"/>
           <prop k="horizontal_anchor_point" v="1"/>
-          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/Wieza_telekomunikacyjna_SUTW.svg"/>
+          <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/Wieza_telekomunikacyjna_SUTW.svg"/>
           <prop k="offset" v="0,0"/>
           <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <prop k="offset_unit" v="RenderMetersInMapUnits"/>

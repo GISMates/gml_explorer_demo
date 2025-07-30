@@ -906,7 +906,7 @@
                     <Option type="QString" value="255,255,255,255" name="color"/>
                     <Option type="QString" value="1.33333" name="fixedAspectRatio"/>
                     <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                    <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUEP.svg" name="name"/>
+                    <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUEP.svg" name="name"/>
                     <Option type="QString" value="0,0" name="offset"/>
                     <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
                     <Option type="QString" value="MM" name="offset_unit"/>
@@ -925,7 +925,7 @@
                   <prop k="color" v="255,255,255,255"/>
                   <prop k="fixedAspectRatio" v="1.33333"/>
                   <prop k="horizontal_anchor_point" v="1"/>
-                  <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUEP.svg"/>
+                  <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUEP.svg"/>
                   <prop k="offset" v="0,0"/>
                   <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
                   <prop k="offset_unit" v="MM"/>
@@ -1136,7 +1136,7 @@
                     <Option type="QString" value="255,255,255,255" name="color"/>
                     <Option type="QString" value="1.33333" name="fixedAspectRatio"/>
                     <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                    <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUEP.svg" name="name"/>
+                    <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUEP.svg" name="name"/>
                     <Option type="QString" value="0,1.99999999999999933" name="offset"/>
                     <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
                     <Option type="QString" value="RenderMetersInMapUnits" name="offset_unit"/>
@@ -1155,7 +1155,7 @@
                   <prop k="color" v="255,255,255,255"/>
                   <prop k="fixedAspectRatio" v="1.33333"/>
                   <prop k="horizontal_anchor_point" v="1"/>
-                  <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUEP.svg"/>
+                  <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUEP.svg"/>
                   <prop k="offset" v="0,1.99999999999999933"/>
                   <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
                   <prop k="offset_unit" v="RenderMetersInMapUnits"/>
@@ -1204,7 +1204,7 @@
                     <Option type="QString" value="255,255,255,255" name="color"/>
                     <Option type="QString" value="1.33333" name="fixedAspectRatio"/>
                     <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                    <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUEP.svg" name="name"/>
+                    <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUEP.svg" name="name"/>
                     <Option type="QString" value="0,0" name="offset"/>
                     <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
                     <Option type="QString" value="MM" name="offset_unit"/>
@@ -1223,7 +1223,7 @@
                   <prop k="color" v="255,255,255,255"/>
                   <prop k="fixedAspectRatio" v="1.33333"/>
                   <prop k="horizontal_anchor_point" v="1"/>
-                  <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUEP.svg"/>
+                  <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUEP.svg"/>
                   <prop k="offset" v="0,0"/>
                   <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
                   <prop k="offset_unit" v="MM"/>
@@ -2249,7 +2249,7 @@
                     <Option type="QString" value="255,255,255,255" name="color"/>
                     <Option type="QString" value="1.33333" name="fixedAspectRatio"/>
                     <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                    <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUEP.svg" name="name"/>
+                    <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUEP.svg" name="name"/>
                     <Option type="QString" value="0,0" name="offset"/>
                     <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
                     <Option type="QString" value="MM" name="offset_unit"/>
@@ -2268,7 +2268,7 @@
                   <prop k="color" v="255,255,255,255"/>
                   <prop k="fixedAspectRatio" v="1.33333"/>
                   <prop k="horizontal_anchor_point" v="1"/>
-                  <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUEP.svg"/>
+                  <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUEP.svg"/>
                   <prop k="offset" v="0,0"/>
                   <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
                   <prop k="offset_unit" v="MM"/>
@@ -2484,7 +2484,7 @@
                     <Option type="QString" value="255,255,255,255" name="color"/>
                     <Option type="QString" value="1.33333" name="fixedAspectRatio"/>
                     <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                    <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUEP.svg" name="name"/>
+                    <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUEP.svg" name="name"/>
                     <Option type="QString" value="0,1.99999999999999933" name="offset"/>
                     <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
                     <Option type="QString" value="RenderMetersInMapUnits" name="offset_unit"/>
@@ -2503,7 +2503,7 @@
                   <prop k="color" v="255,255,255,255"/>
                   <prop k="fixedAspectRatio" v="1.33333"/>
                   <prop k="horizontal_anchor_point" v="1"/>
-                  <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUEP.svg"/>
+                  <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUEP.svg"/>
                   <prop k="offset" v="0,1.99999999999999933"/>
                   <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
                   <prop k="offset_unit" v="RenderMetersInMapUnits"/>
@@ -2552,7 +2552,7 @@
                     <Option type="QString" value="255,255,255,255" name="color"/>
                     <Option type="QString" value="1.33333" name="fixedAspectRatio"/>
                     <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                    <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUEP.svg" name="name"/>
+                    <Option type="QString" value="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUEP.svg" name="name"/>
                     <Option type="QString" value="0,0" name="offset"/>
                     <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
                     <Option type="QString" value="MM" name="offset_unit"/>
@@ -2571,7 +2571,7 @@
                   <prop k="color" v="255,255,255,255"/>
                   <prop k="fixedAspectRatio" v="1.33333"/>
                   <prop k="horizontal_anchor_point" v="1"/>
-                  <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/gml_explorer_dev/symbols/SUEP.svg"/>
+                  <prop k="name" v="C:/Users/wizipisi/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins/cgeo_gml_explorer_demo/symbols/SUEP.svg"/>
                   <prop k="offset" v="0,0"/>
                   <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
                   <prop k="offset_unit" v="MM"/>

@@ -1,9 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8"?> 
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmsvgsym="http://www.intergraph.com/GeoMedia/svgsym">
-<symbol id="Furtka" viewBox="0.00000000000000000260 -0.00259807636030018330 0.00150000012945383530 0.00259807636030018330" style="stroke-linejoin:round"><!-- Creator: SVG Document for Symbols-->
-<g id ="Arc2d_0" style = " stroke-width: 0.0001800000;stroke: #0a0909; fill: none; " >
-<path d="M 0.0000000000 -0.0000000000 A0.0030000000 0.0030000000 0 0 1 0.0015000000 -0.0025980762 " />
-</g>
+﻿<svg xmlns="http://www.w3.org/2000/svg">
+<symbol id="Furtka" viewBox="0.00000000000000000260 -0.00259807636030018330 0.00150000012945383530 0.00259807636030018330" style="stroke-linejoin:round">
+<path d="M 0.0000000000 -0.0000000000 A0.0030000000 0.0030000000 0 0 1 0.0015000000 -0.0025980762 " stroke-width="0.0001800000" stroke="param(outline)" fill="none"/>
 </symbol>
 </svg>

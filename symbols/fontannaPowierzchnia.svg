@@ -1,12 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?> 
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmsvgsym="http://www.intergraph.com/GeoMedia/svgsym">
-<symbol id="Fontanna" viewBox="-0.00174314493779093030 -0.00100000016391277310 0.00348628987558186050 0.00100000016391277490" style="stroke-linejoin:round"><!-- Creator: SVG Document for Symbols-->
-<g id ="Arc2d_0" style = " stroke-width: 0.0001800000;stroke: #0a0909; fill: none; " >
-<path d="M 0.0000000000 0.0000000000 A0.0010000000 0.0010000000 0 0 1 0.0017431448 -0.0006691306 " />
-</g>
-<g id ="Arc2d_1" style = " stroke-width: 0.0001800000;stroke: #0a0909; fill: none; " >
-<path d="M -0.0017431448 -0.0006691306 A0.0010000000 0.0010000000 0 0 1 -0.0000000000 0.0000000000 " />
-</g>
+﻿<svg xmlns="http://www.w3.org/2000/svg">
+<symbol id="Fontanna" viewBox="-0.00174314493779093030 -0.00100000016391277310 0.00348628987558186050 0.00100000016391277490" style="stroke-linejoin:round">
+<path d="M 0.0000000000 0.0000000000 A0.0010000000 0.0010000000 0 0 1 0.0017431448 -0.0006691306 " stroke-width="0.0001800000" stroke="param(outline)" fill="none"/>
+<path d="M -0.0017431448 -0.0006691306 A0.0010000000 0.0010000000 0 0 1 -0.0000000000 0.0000000000 " stroke-width="0.0001800000" stroke="param(outline)" fill="none"/>
 </symbol>
 </svg>

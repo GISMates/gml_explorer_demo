@@ -18,6 +18,7 @@ from .gml_reports_manager import GMLReportsManager
 from .gml_map_generator import GMLMapGenerator
 from .wms.project_manager import ProjectManager
 from .gml_explorer_dockwidget import GMLExplorerDockWidget
+from .map_color_manager import MapColorManager
 
 
 class GMLExplorer:
@@ -117,6 +118,7 @@ class GMLExplorer:
                 self.gml_reports_manager = GMLReportsManager(self.iface, self.project, self.dockwidget, self.logger)
                 self.gml_validator = GMLValidator(self.dockwidget, self.logger)
                 self.project_manager = ProjectManager(self.dockwidget, self.iface, self.logger)
+                self.map_color_manager = MapColorManager(self.dockwidget, self.project, self.map_canvas, self.logger)
                 GMLExpressionsManager()
                 self.dockwidget.load_gml_button.clicked.connect(self.loadSampleProject)
                 self.dockwidget.validate_gml_button.clicked.connect(lambda: self.gml_validator.validateGML(self.dockwidget.gml_path_2.text()))
